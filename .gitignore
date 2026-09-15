@@ -7,6 +7,8 @@ data/*
 !data/meta/
 data/meta/*
 !data/meta/index_membership.json
+# Zdarzenia końcowe z SEC: 1,3 MB danych publicznych, których nie da się odtworzyć bez pobrania 800 MB z EDGAR
+!data/meta/sec-events.json
 
 # Zrzuty stron Wikipedii/SEC użyte jednorazowo przy budowie składu indeksu
 archive/scraping/
@@ -14,4 +16,5 @@ archive/scraping/
 # Artefakty są generowane — z wyjątkiem logu sejfu holdout, który jest ścieżką audytu i MUSI być w repo
 artifacts/*
 !artifacts/holdout_log.json
+!artifacts/sec-events-report.md
 !artifacts/holdout_log.archived-*.json

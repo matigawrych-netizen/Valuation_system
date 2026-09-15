@@ -13,6 +13,7 @@ export const DATA_DIR = 'data';
 export const MEMBERSHIP_JSON = 'data/meta/index_membership.json';
 export const ACCN_MAP_JSON = 'data/meta/accnMap.json';
 export const FRED_PIT_JSON = 'data/macro/fred-pit.json';
+export const SEC_EVENTS_JSON = 'data/meta/sec-events.json';
 
 // ── Dataset ──
 export const DATASET_CSV = 'data/backtest-results.csv';
@@ -48,6 +49,7 @@ export const CORPSES_TEST_JSON = 'artifacts/corpses-test.json';
 export const GONOGO_REPORT = 'artifacts/gonogo-report.md';
 export const ARCHETYPE_HISTORY_MD = 'artifacts/archetypes-history.md';
 export const EXPERT_REPLAY_PREFIX = 'artifacts/expert-replay-';
+export const SEC_EVENTS_REPORT = 'artifacts/sec-events-report.md';
 export const ACCEPTANCE_CRITERIA_DOC = 'docs/acceptance-criteria.md';
 
 // ── Podział czasowy (rok daty decyzji `asOf`) ──
