@@ -1,0 +1,17 @@
+node_modules/
+.env
+
+# Dane NIE trafiają do repozytorium (883 MB; ceny Yahoo i część serii FRED nie mogą być publikowane).
+# Wyjątek: skład indeksu w czasie — mały i potrzebny do odtworzenia uniwersum.
+data/*
+!data/meta/
+data/meta/*
+!data/meta/index_membership.json
+
+# Zrzuty stron Wikipedii/SEC użyte jednorazowo przy budowie składu indeksu
+archive/scraping/
+
+# Artefakty są generowane — z wyjątkiem logu sejfu holdout, który jest ścieżką audytu i MUSI być w repo
+artifacts/*
+!artifacts/holdout_log.json
+!artifacts/holdout_log.archived-*.json

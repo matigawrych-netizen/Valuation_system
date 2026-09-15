@@ -1,0 +1,5889 @@
+[
+  {
+    "cik": "0000066740",
+    "ticker": "MMM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000091142",
+    "ticker": "AOS",
+    "date_added": "2017-07-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000001800",
+    "ticker": "ABT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001551152",
+    "ticker": "ABBV",
+    "date_added": "2013-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001467373",
+    "ticker": "ACN",
+    "date_added": "2011-07-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000796343",
+    "ticker": "ADBE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000002488",
+    "ticker": "AMD",
+    "date_added": "2017-03-19",
+    "date_removed": "2013-09-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000874761",
+    "ticker": "AES",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000004977",
+    "ticker": "AFL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001090872",
+    "ticker": "A",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000002969",
+    "ticker": "APD",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001559720",
+    "ticker": "ABNB",
+    "date_added": "2023-09-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001086222",
+    "ticker": "AKAM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000915913",
+    "ticker": "ALB",
+    "date_added": "2016-06-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001035443",
+    "ticker": "ARE",
+    "date_added": "2017-03-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001097149",
+    "ticker": "ALGN",
+    "date_added": "2017-06-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001579241",
+    "ticker": "ALLE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000352541",
+    "ticker": "LNT",
+    "date_added": "2016-06-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000899051",
+    "ticker": "ALL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001652044",
+    "ticker": "GOOGL",
+    "date_added": "2014-04-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001652044",
+    "ticker": "GOOG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000764180",
+    "ticker": "MO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001018724",
+    "ticker": "AMZN",
+    "date_added": "2005-11-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001748790",
+    "ticker": "AMCR",
+    "date_added": "2019-06-10",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001002910",
+    "ticker": "AEE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000004904",
+    "ticker": "AEP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000004962",
+    "ticker": "AXP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000005272",
+    "ticker": "AIG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001053507",
+    "ticker": "AMT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001410636",
+    "ticker": "AWK",
+    "date_added": "2016-03-03",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000820027",
+    "ticker": "AMP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001037868",
+    "ticker": "AME",
+    "date_added": "2013-09-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000318154",
+    "ticker": "AMGN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000820313",
+    "ticker": "APH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000006281",
+    "ticker": "ADI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000315293",
+    "ticker": "AON",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001841666",
+    "ticker": "APA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001858681",
+    "ticker": "APO",
+    "date_added": "2024-12-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000320193",
+    "ticker": "AAPL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000006951",
+    "ticker": "AMAT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001751008",
+    "ticker": "APP",
+    "date_added": "2025-09-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001521332",
+    "ticker": "APTV",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000947484",
+    "ticker": "ACGL",
+    "date_added": "2022-10-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000007084",
+    "ticker": "ADM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001176948",
+    "ticker": "ARES",
+    "date_added": "2025-12-10",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001596532",
+    "ticker": "ANET",
+    "date_added": "2018-08-27",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000354190",
+    "ticker": "AJG",
+    "date_added": "2016-05-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001267238",
+    "ticker": "AIZ",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000732717",
+    "ticker": "T",
+    "date_added": "1900-01-01",
+    "date_removed": "2005-11-17",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000731802",
+    "ticker": "ATO",
+    "date_added": "2019-02-14",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000769397",
+    "ticker": "ADSK",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000008670",
+    "ticker": "ADP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000866787",
+    "ticker": "AZO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000008818",
+    "ticker": "AVY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001069183",
+    "ticker": "AXON",
+    "date_added": "2023-05-03",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001701605",
+    "ticker": "BKR",
+    "date_added": "2017-07-06",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000009389",
+    "ticker": "BALL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000070858",
+    "ticker": "BAC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000010456",
+    "ticker": "BAX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000010795",
+    "ticker": "BDX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000764478",
+    "ticker": "BBY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000842023",
+    "ticker": "TECH",
+    "date_added": "2021-08-29",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000875045",
+    "ticker": "BIIB",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002012383",
+    "ticker": "BLK",
+    "date_added": "2011-03-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001393818",
+    "ticker": "BX",
+    "date_added": "2023-09-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001512673",
+    "ticker": "XYZ",
+    "date_added": "2025-07-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001390777",
+    "ticker": "BNY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000012927",
+    "ticker": "BA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001075531",
+    "ticker": "BKNG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000885725",
+    "ticker": "BSX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000014272",
+    "ticker": "BMY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001730168",
+    "ticker": "AVGO",
+    "date_added": "2014-05-07",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001383312",
+    "ticker": "BR",
+    "date_added": "2018-06-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000079282",
+    "ticker": "BRO",
+    "date_added": "2021-09-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001316835",
+    "ticker": "BLDR",
+    "date_added": "2023-12-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001996862",
+    "ticker": "BG",
+    "date_added": "2023-03-14",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001037540",
+    "ticker": "BXP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001043277",
+    "ticker": "CHRW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000813672",
+    "ticker": "CDNS",
+    "date_added": "2017-09-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000906345",
+    "ticker": "CPT",
+    "date_added": "2022-04-03",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000927628",
+    "ticker": "COF",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000721371",
+    "ticker": "CAH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000815097",
+    "ticker": "CCL",
+    "date_added": "1998-12-10",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001783180",
+    "ticker": "CARR",
+    "date_added": "2020-04-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001690820",
+    "ticker": "CVNA",
+    "date_added": "2025-12-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000726958",
+    "ticker": "CASY",
+    "date_added": "2026-04-08",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000018230",
+    "ticker": "CAT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001374310",
+    "ticker": "CBOE",
+    "date_added": "2017-02-28",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001138118",
+    "ticker": "CBRE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001402057",
+    "ticker": "CDW",
+    "date_added": "2019-09-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001140859",
+    "ticker": "COR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001071739",
+    "ticker": "CNC",
+    "date_added": "2016-03-29",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001130310",
+    "ticker": "CNP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001324404",
+    "ticker": "CF",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001100682",
+    "ticker": "CRL",
+    "date_added": "2021-05-13",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000316709",
+    "ticker": "SCHW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001091667",
+    "ticker": "CHTR",
+    "date_added": "2016-09-07",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000093410",
+    "ticker": "CVX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001058090",
+    "ticker": "CMG",
+    "date_added": "2011-04-26",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000896159",
+    "ticker": "CB",
+    "date_added": "2010-07-13",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000313927",
+    "ticker": "CHD",
+    "date_added": "2015-12-28",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000936395",
+    "ticker": "CIEN",
+    "date_added": "2026-02-08",
+    "date_removed": "2009-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001739940",
+    "ticker": "CI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000020286",
+    "ticker": "CINF",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000723254",
+    "ticker": "CTAS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000858877",
+    "ticker": "CSCO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000831001",
+    "ticker": "C",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000759944",
+    "ticker": "CFG",
+    "date_added": "2016-01-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000021076",
+    "ticker": "CLX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001156375",
+    "ticker": "CME",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000811156",
+    "ticker": "CMS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000021344",
+    "ticker": "KO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001058290",
+    "ticker": "CTSH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000820318",
+    "ticker": "COHR",
+    "date_added": "2026-03-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001679788",
+    "ticker": "COIN",
+    "date_added": "2025-05-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000021665",
+    "ticker": "CL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001166691",
+    "ticker": "CMCSA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001035983",
+    "ticker": "FIX",
+    "date_added": "2025-12-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001163165",
+    "ticker": "COP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001047862",
+    "ticker": "ED",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000016918",
+    "ticker": "STZ",
+    "date_added": "2005-06-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001868275",
+    "ticker": "CEG",
+    "date_added": "2022-02-01",
+    "date_removed": "2012-03-12",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000711404",
+    "ticker": "COO",
+    "date_added": "2016-09-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000900075",
+    "ticker": "CPRT",
+    "date_added": "2018-07-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000024741",
+    "ticker": "GLW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001175454",
+    "ticker": "CPAY",
+    "date_added": "2024-03-24",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001755672",
+    "ticker": "CTVA",
+    "date_added": "2019-06-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001057352",
+    "ticker": "CSGP",
+    "date_added": "2022-09-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000909832",
+    "ticker": "COST",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000849395",
+    "ticker": "CRH",
+    "date_added": "2025-12-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001535527",
+    "ticker": "CRWD",
+    "date_added": "2024-06-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001051470",
+    "ticker": "CCI",
+    "date_added": "2012-03-12",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000277948",
+    "ticker": "CSX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000026172",
+    "ticker": "CMI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000064803",
+    "ticker": "CVS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000313616",
+    "ticker": "DHR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000940944",
+    "ticker": "DRI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001561550",
+    "ticker": "DDOG",
+    "date_added": "2025-07-08",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000927066",
+    "ticker": "DVA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000910521",
+    "ticker": "DECK",
+    "date_added": "2024-03-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000315189",
+    "ticker": "DE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001571996",
+    "ticker": "DELL",
+    "date_added": "2024-09-22",
+    "date_removed": "2013-10-28",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000027904",
+    "ticker": "DAL",
+    "date_added": "2013-09-09",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001090012",
+    "ticker": "DVN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001093557",
+    "ticker": "DXCM",
+    "date_added": "2020-05-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001539838",
+    "ticker": "FANG",
+    "date_added": "2018-12-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001297996",
+    "ticker": "DLR",
+    "date_added": "2016-05-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000029534",
+    "ticker": "DG",
+    "date_added": "2012-12-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000935703",
+    "ticker": "DLTR",
+    "date_added": "2011-12-15",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000715957",
+    "ticker": "D",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001286681",
+    "ticker": "DPZ",
+    "date_added": "2020-05-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001792789",
+    "ticker": "DASH",
+    "date_added": "2025-03-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000029905",
+    "ticker": "DOV",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001751788",
+    "ticker": "DOW",
+    "date_added": "2019-04-01",
+    "date_removed": "2017-08-31",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000882184",
+    "ticker": "DHI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000936340",
+    "ticker": "DTE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001326160",
+    "ticker": "DUK",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001666700",
+    "ticker": "DD",
+    "date_added": "2019-06-02",
+    "date_removed": "2017-08-31",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001551182",
+    "ticker": "ETN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001065088",
+    "ticker": "EBAY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001415404",
+    "ticker": "ECHO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000031462",
+    "ticker": "ECL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000827052",
+    "ticker": "EIX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001099800",
+    "ticker": "EW",
+    "date_added": "2011-03-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001156039",
+    "ticker": "ELV",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000105634",
+    "ticker": "EME",
+    "date_added": "2025-09-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000032604",
+    "ticker": "EMR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000065984",
+    "ticker": "ETR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000821189",
+    "ticker": "EOG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000033213",
+    "ticker": "EQT",
+    "date_added": "2022-10-02",
+    "date_removed": "2018-11-12",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000033185",
+    "ticker": "EFX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001101239",
+    "ticker": "EQIX",
+    "date_added": "2015-03-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000922621",
+    "ticker": "ERIE",
+    "date_added": "2024-09-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000920522",
+    "ticker": "ESS",
+    "date_added": "2014-04-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001001250",
+    "ticker": "EL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001095073",
+    "ticker": "EG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001711269",
+    "ticker": "EVRG",
+    "date_added": "2018-06-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000072741",
+    "ticker": "ES",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001109357",
+    "ticker": "EXC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000895126",
+    "ticker": "EXE",
+    "date_added": "2025-03-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001324424",
+    "ticker": "EXPE",
+    "date_added": "2007-10-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000746515",
+    "ticker": "EXPD",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001289490",
+    "ticker": "EXR",
+    "date_added": "2016-01-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002115436",
+    "ticker": "XOM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001048695",
+    "ticker": "FFIV",
+    "date_added": "2010-12-16",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001013237",
+    "ticker": "FDS",
+    "date_added": "2021-12-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000814547",
+    "ticker": "FICO",
+    "date_added": "2023-03-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000815556",
+    "ticker": "FAST",
+    "date_added": "2008-09-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000034903",
+    "ticker": "FRT",
+    "date_added": "2016-01-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001048911",
+    "ticker": "FDX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002082247",
+    "ticker": "FDXF",
+    "date_added": "2026-05-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002011641",
+    "ticker": "FERG",
+    "date_added": "2026-08-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001136893",
+    "ticker": "FIS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000035527",
+    "ticker": "FITB",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001274494",
+    "ticker": "FSLR",
+    "date_added": "2022-12-18",
+    "date_removed": "2017-03-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001031296",
+    "ticker": "FE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000798354",
+    "ticker": "FISV",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000866374",
+    "ticker": "FLEX",
+    "date_added": "2026-06-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000037996",
+    "ticker": "F",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001262039",
+    "ticker": "FTNT",
+    "date_added": "2018-10-10",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001659166",
+    "ticker": "FTV",
+    "date_added": "2016-07-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001754301",
+    "ticker": "FOXA",
+    "date_added": "2019-03-18",
+    "date_removed": "2019-03-18",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0001754301",
+    "ticker": "FOX",
+    "date_added": "2015-09-17",
+    "date_removed": "2019-03-18",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0000038777",
+    "ticker": "BEN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000831259",
+    "ticker": "FCX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001121788",
+    "ticker": "GRMN",
+    "date_added": "2012-12-10",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000749251",
+    "ticker": "IT",
+    "date_added": "2017-04-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000040545",
+    "ticker": "GE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001932393",
+    "ticker": "GEHC",
+    "date_added": "2023-01-03",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001996810",
+    "ticker": "GEV",
+    "date_added": "2024-04-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000849399",
+    "ticker": "GEN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001474735",
+    "ticker": "GNRC",
+    "date_added": "2021-03-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000040533",
+    "ticker": "GD",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000040704",
+    "ticker": "GIS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001467858",
+    "ticker": "GM",
+    "date_added": "2013-06-05",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000040987",
+    "ticker": "GPC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000882095",
+    "ticker": "GILD",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001123360",
+    "ticker": "GPN",
+    "date_added": "2016-04-24",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000320335",
+    "ticker": "GL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001609711",
+    "ticker": "GDDY",
+    "date_added": "2024-06-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000886982",
+    "ticker": "GS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000045012",
+    "ticker": "HAL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000874766",
+    "ticker": "HIG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000046080",
+    "ticker": "HAS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000860730",
+    "ticker": "HCA",
+    "date_added": "2015-01-26",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000765880",
+    "ticker": "DOC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001000228",
+    "ticker": "HSIC",
+    "date_added": "2015-03-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000047111",
+    "ticker": "HSY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001645590",
+    "ticker": "HPE",
+    "date_added": "2015-11-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001585689",
+    "ticker": "HLT",
+    "date_added": "2017-06-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000354950",
+    "ticker": "HD",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002089271",
+    "ticker": "HONA",
+    "date_added": "2026-06-28",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000773840",
+    "ticker": "HON",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000048465",
+    "ticker": "HRL",
+    "date_added": "2009-03-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001070750",
+    "ticker": "HST",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000004281",
+    "ticker": "HWM",
+    "date_added": "2020-03-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000047217",
+    "ticker": "HPQ",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000048898",
+    "ticker": "HUBB",
+    "date_added": "2023-10-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000049071",
+    "ticker": "HUM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000049196",
+    "ticker": "HBAN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001501585",
+    "ticker": "HII",
+    "date_added": "2018-01-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000051143",
+    "ticker": "IBM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000832101",
+    "ticker": "IEX",
+    "date_added": "2019-08-08",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000874716",
+    "ticker": "IDXX",
+    "date_added": "2017-01-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000049826",
+    "ticker": "ITW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000879169",
+    "ticker": "INCY",
+    "date_added": "2017-02-27",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001699150",
+    "ticker": "IR",
+    "date_added": "2010-11-16",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001145197",
+    "ticker": "PODD",
+    "date_added": "2023-03-14",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000050863",
+    "ticker": "INTC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001381197",
+    "ticker": "IBKR",
+    "date_added": "2025-08-27",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001571949",
+    "ticker": "ICE",
+    "date_added": "2007-09-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000051253",
+    "ticker": "IFF",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000051434",
+    "ticker": "IP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000896878",
+    "ticker": "INTU",
+    "date_added": "2000-12-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001035267",
+    "ticker": "ISRG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000914208",
+    "ticker": "IVZ",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001687229",
+    "ticker": "INVH",
+    "date_added": "2022-09-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001478242",
+    "ticker": "IQV",
+    "date_added": "2017-11-14",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001020569",
+    "ticker": "IRM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000728535",
+    "ticker": "JBHT",
+    "date_added": "2015-06-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000898293",
+    "ticker": "JBL",
+    "date_added": "2023-12-17",
+    "date_removed": "2014-11-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000779152",
+    "ticker": "JKHY",
+    "date_added": "2018-11-12",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000052988",
+    "ticker": "J",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000200406",
+    "ticker": "JNJ",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000833444",
+    "ticker": "JCI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000019617",
+    "ticker": "JPM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001944048",
+    "ticker": "KVUE",
+    "date_added": "2023-08-24",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001418135",
+    "ticker": "KDP",
+    "date_added": "2022-06-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000091576",
+    "ticker": "KEY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001601046",
+    "ticker": "KEYS",
+    "date_added": "2018-11-05",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000055785",
+    "ticker": "KMB",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000879101",
+    "ticker": "KIM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001506307",
+    "ticker": "KMI",
+    "date_added": "2012-05-16",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001404912",
+    "ticker": "KKR",
+    "date_added": "2024-06-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000319201",
+    "ticker": "KLAC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001637459",
+    "ticker": "KHC",
+    "date_added": "2015-07-05",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000056873",
+    "ticker": "KR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000202058",
+    "ticker": "LHX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000920148",
+    "ticker": "LH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000707549",
+    "ticker": "LRCX",
+    "date_added": "2012-06-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001300514",
+    "ticker": "LVS",
+    "date_added": "2019-10-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001336920",
+    "ticker": "LDOS",
+    "date_added": "2019-08-08",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000920760",
+    "ticker": "LEN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001069202",
+    "ticker": "LII",
+    "date_added": "2024-12-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000059478",
+    "ticker": "LLY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001707925",
+    "ticker": "LIN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001335258",
+    "ticker": "LYV",
+    "date_added": "2019-12-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000936468",
+    "ticker": "LMT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000060086",
+    "ticker": "L",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000060667",
+    "ticker": "LOW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001397187",
+    "ticker": "LULU",
+    "date_added": "2023-10-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001633978",
+    "ticker": "LITE",
+    "date_added": "2026-03-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001489393",
+    "ticker": "LYB",
+    "date_added": "2012-09-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000036270",
+    "ticker": "MTB",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001510295",
+    "ticker": "MPC",
+    "date_added": "2011-06-29",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001048286",
+    "ticker": "MAR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000062709",
+    "ticker": "MRSH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000916076",
+    "ticker": "MLM",
+    "date_added": "2014-07-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001835632",
+    "ticker": "MRVL",
+    "date_added": "2026-06-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000062996",
+    "ticker": "MAS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001141391",
+    "ticker": "MA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000063754",
+    "ticker": "MKC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000063908",
+    "ticker": "MCD",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000927653",
+    "ticker": "MCK",
+    "date_added": "1900-01-01",
+    "date_removed": "1994-09-29",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001613103",
+    "ticker": "MDT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000310158",
+    "ticker": "MRK",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001326801",
+    "ticker": "META",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001099219",
+    "ticker": "MET",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001037646",
+    "ticker": "MTD",
+    "date_added": "2016-09-05",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000789570",
+    "ticker": "MGM",
+    "date_added": "2017-07-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000827054",
+    "ticker": "MCHP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000723125",
+    "ticker": "MU",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000789019",
+    "ticker": "MSFT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000912595",
+    "ticker": "MAA",
+    "date_added": "2016-12-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001682852",
+    "ticker": "MRNA",
+    "date_added": "2021-07-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000024545",
+    "ticker": "TAP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001103982",
+    "ticker": "MDLZ",
+    "date_added": "2012-10-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001280452",
+    "ticker": "MPWR",
+    "date_added": "2021-02-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000865752",
+    "ticker": "MNST",
+    "date_added": "2012-06-28",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001059556",
+    "ticker": "MCO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000895421",
+    "ticker": "MS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001285785",
+    "ticker": "MOS",
+    "date_added": "2011-09-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000068505",
+    "ticker": "MSI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001408198",
+    "ticker": "MSCI",
+    "date_added": "2018-04-03",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001120193",
+    "ticker": "NDAQ",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001002047",
+    "ticker": "NTAP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001065280",
+    "ticker": "NFLX",
+    "date_added": "2010-12-16",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001164727",
+    "ticker": "NEM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001564708",
+    "ticker": "NWSA",
+    "date_added": "2013-06-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001564708",
+    "ticker": "NWS",
+    "date_added": "2015-09-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000753308",
+    "ticker": "NEE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000320187",
+    "ticker": "NKE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001111711",
+    "ticker": "NI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000072331",
+    "ticker": "NDSN",
+    "date_added": "2022-02-14",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000702165",
+    "ticker": "NSC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000073124",
+    "ticker": "NTRS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001133421",
+    "ticker": "NOC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001513761",
+    "ticker": "NCLH",
+    "date_added": "2017-10-12",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001013871",
+    "ticker": "NRG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000073309",
+    "ticker": "NUE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001045810",
+    "ticker": "NVDA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000906163",
+    "ticker": "NVR",
+    "date_added": "2019-09-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001413447",
+    "ticker": "NXPI",
+    "date_added": "2021-03-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000898173",
+    "ticker": "ORLY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000797468",
+    "ticker": "OXY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000878927",
+    "ticker": "ODFL",
+    "date_added": "2019-12-08",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000029989",
+    "ticker": "OMC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001097864",
+    "ticker": "ON",
+    "date_added": "2022-06-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001039684",
+    "ticker": "OKE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001341439",
+    "ticker": "ORCL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001781335",
+    "ticker": "OTIS",
+    "date_added": "2020-04-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000075362",
+    "ticker": "PCAR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000075677",
+    "ticker": "PKG",
+    "date_added": "2017-07-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001321655",
+    "ticker": "PLTR",
+    "date_added": "2024-09-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001327567",
+    "ticker": "PANW",
+    "date_added": "2023-06-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002041610",
+    "ticker": "PSKY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000076334",
+    "ticker": "PH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000723531",
+    "ticker": "PAYX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001633917",
+    "ticker": "PYPL",
+    "date_added": "2015-07-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000077360",
+    "ticker": "PNR",
+    "date_added": "2012-09-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000077476",
+    "ticker": "PEP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000078003",
+    "ticker": "PFE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001004980",
+    "ticker": "PCG",
+    "date_added": "2022-10-02",
+    "date_removed": "2019-01-17",
+    "removal_reason": "bankruptcy"
+  },
+  {
+    "cik": "0001413329",
+    "ticker": "PM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001534701",
+    "ticker": "PSX",
+    "date_added": "2012-04-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000764622",
+    "ticker": "PNW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000713676",
+    "ticker": "PNC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000079879",
+    "ticker": "PPG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000922224",
+    "ticker": "PPL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001126328",
+    "ticker": "PFG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000080424",
+    "ticker": "PG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000080661",
+    "ticker": "PGR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001045609",
+    "ticker": "PLD",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001137774",
+    "ticker": "PRU",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000788784",
+    "ticker": "PEG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000857005",
+    "ticker": "PTC",
+    "date_added": "2021-04-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001393311",
+    "ticker": "PSA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000822416",
+    "ticker": "PHM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001050915",
+    "ticker": "PWR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000804328",
+    "ticker": "QCOM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001022079",
+    "ticker": "DGX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002058873",
+    "ticker": "Q",
+    "date_added": "2017-08-28",
+    "date_removed": "2011-03-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001037038",
+    "ticker": "RL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000720005",
+    "ticker": "RJF",
+    "date_added": "2017-03-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001713445",
+    "ticker": "RDDT",
+    "date_added": "2026-08-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000101829",
+    "ticker": "RTX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000726728",
+    "ticker": "O",
+    "date_added": "2015-04-06",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000910606",
+    "ticker": "REG",
+    "date_added": "2017-03-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000872589",
+    "ticker": "REGN",
+    "date_added": "2013-04-29",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001281761",
+    "ticker": "RF",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001060391",
+    "ticker": "RSG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000943819",
+    "ticker": "RMD",
+    "date_added": "2017-07-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000031791",
+    "ticker": "RVTY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001783879",
+    "ticker": "HOOD",
+    "date_added": "2025-09-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001024478",
+    "ticker": "ROK",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000084839",
+    "ticker": "ROL",
+    "date_added": "2018-09-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000882835",
+    "ticker": "ROP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000745732",
+    "ticker": "ROST",
+    "date_added": "2009-12-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000884887",
+    "ticker": "RCL",
+    "date_added": "2014-12-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000064040",
+    "ticker": "SPGI",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001108524",
+    "ticker": "CRM",
+    "date_added": "2008-09-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002023554",
+    "ticker": "SNDK",
+    "date_added": "2025-11-27",
+    "date_removed": "2016-05-12",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001034054",
+    "ticker": "SBAC",
+    "date_added": "2017-08-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000087347",
+    "ticker": "SLB",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001137789",
+    "ticker": "STX",
+    "date_added": "2012-07-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001032208",
+    "ticker": "SRE",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001373715",
+    "ticker": "NOW",
+    "date_added": "2019-11-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000089800",
+    "ticker": "SHW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001063761",
+    "ticker": "SPG",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000004127",
+    "ticker": "SWKS",
+    "date_added": "2015-03-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000091419",
+    "ticker": "SJM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0002005951",
+    "ticker": "SW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000091440",
+    "ticker": "SNA",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001964738",
+    "ticker": "SOLV",
+    "date_added": "2024-03-31",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000092122",
+    "ticker": "SO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000092380",
+    "ticker": "LUV",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000093556",
+    "ticker": "SWK",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000829224",
+    "ticker": "SBUX",
+    "date_added": "2000-06-06",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000093751",
+    "ticker": "STT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001022671",
+    "ticker": "STLD",
+    "date_added": "2022-12-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001757898",
+    "ticker": "STE",
+    "date_added": "2019-12-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000310764",
+    "ticker": "SYK",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001375365",
+    "ticker": "SMCI",
+    "date_added": "2024-03-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001601712",
+    "ticker": "SYF",
+    "date_added": "2015-11-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000883241",
+    "ticker": "SNPS",
+    "date_added": "2017-03-15",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000096021",
+    "ticker": "SYY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001283699",
+    "ticker": "TMUS",
+    "date_added": "2019-07-14",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001113169",
+    "ticker": "TROW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000946581",
+    "ticker": "TTWO",
+    "date_added": "2018-03-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001116132",
+    "ticker": "TPR",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001389170",
+    "ticker": "TRGP",
+    "date_added": "2022-10-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000027419",
+    "ticker": "TGT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001385157",
+    "ticker": "TEL",
+    "date_added": "2011-10-13",
+    "date_removed": "2009-06-24",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001094285",
+    "ticker": "TDY",
+    "date_added": "2020-06-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000097210",
+    "ticker": "TER",
+    "date_added": "2020-09-20",
+    "date_removed": "2013-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001318605",
+    "ticker": "TSLA",
+    "date_added": "2020-12-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000097476",
+    "ticker": "TXN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001811074",
+    "ticker": "TPL",
+    "date_added": "2024-11-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000217346",
+    "ticker": "TXT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000097745",
+    "ticker": "TMO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000109198",
+    "ticker": "TJX",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001973266",
+    "ticker": "TKO",
+    "date_added": "2025-03-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001671933",
+    "ticker": "TTD",
+    "date_added": "2025-07-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000916365",
+    "ticker": "TSCO",
+    "date_added": "2014-01-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001466258",
+    "ticker": "TT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001260221",
+    "ticker": "TDG",
+    "date_added": "2016-06-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000086312",
+    "ticker": "TRV",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000864749",
+    "ticker": "TRMB",
+    "date_added": "2021-01-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000092230",
+    "ticker": "TFC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000860731",
+    "ticker": "TYL",
+    "date_added": "2020-06-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000100493",
+    "ticker": "TSN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000036104",
+    "ticker": "USB",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001543151",
+    "ticker": "UBER",
+    "date_added": "2023-12-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000074208",
+    "ticker": "UDR",
+    "date_added": "2016-03-06",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001403568",
+    "ticker": "ULTA",
+    "date_added": "2016-04-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000100885",
+    "ticker": "UNP",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000100517",
+    "ticker": "UAL",
+    "date_added": "2015-09-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001090727",
+    "ticker": "UPS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001067701",
+    "ticker": "URI",
+    "date_added": "2014-09-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000731766",
+    "ticker": "UNH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000352915",
+    "ticker": "UHS",
+    "date_added": "2014-09-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001035002",
+    "ticker": "VLO",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001393052",
+    "ticker": "VEEV",
+    "date_added": "2026-05-06",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000740260",
+    "ticker": "VTR",
+    "date_added": "2009-03-02",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001967680",
+    "ticker": "VLTO",
+    "date_added": "2023-10-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001014473",
+    "ticker": "VRSN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001442145",
+    "ticker": "VRSK",
+    "date_added": "2015-10-06",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000732712",
+    "ticker": "VZ",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000875320",
+    "ticker": "VRTX",
+    "date_added": "2013-09-19",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001674101",
+    "ticker": "VRT",
+    "date_added": "2026-03-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001792044",
+    "ticker": "VTRS",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001705696",
+    "ticker": "VICI",
+    "date_added": "2022-06-07",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001403161",
+    "ticker": "V",
+    "date_added": "2009-12-17",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001692819",
+    "ticker": "VST",
+    "date_added": "2024-05-07",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000906107",
+    "ticker": "VMRK",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001396009",
+    "ticker": "VMC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000011544",
+    "ticker": "WRB",
+    "date_added": "2019-12-04",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000277135",
+    "ticker": "GWW",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000943452",
+    "ticker": "WAB",
+    "date_added": "2019-02-26",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000104169",
+    "ticker": "WMT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001744489",
+    "ticker": "DIS",
+    "date_added": "1976-06-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001437107",
+    "ticker": "WBD",
+    "date_added": "2022-04-10",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000823768",
+    "ticker": "WM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001000697",
+    "ticker": "WAT",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000783325",
+    "ticker": "WEC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000072971",
+    "ticker": "WFC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000766704",
+    "ticker": "WELL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000105770",
+    "ticker": "WST",
+    "date_added": "2020-05-21",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000106040",
+    "ticker": "WDC",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000106535",
+    "ticker": "WY",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000719955",
+    "ticker": "WSM",
+    "date_added": "2025-03-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000107263",
+    "ticker": "WMB",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001140536",
+    "ticker": "WTW",
+    "date_added": "2022-01-09",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001327811",
+    "ticker": "WDAY",
+    "date_added": "2024-12-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001174922",
+    "ticker": "WYNN",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000072903",
+    "ticker": "XEL",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001524472",
+    "ticker": "XYL",
+    "date_added": "2011-10-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001041061",
+    "ticker": "YUM",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000877212",
+    "ticker": "ZBRA",
+    "date_added": "2019-12-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001136869",
+    "ticker": "ZBH",
+    "date_added": "1900-01-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001555280",
+    "ticker": "ZTS",
+    "date_added": "2013-06-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000915912",
+    "ticker": "AVB",
+    "date_added": "2007-01-09",
+    "date_removed": "2026-08-17",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000712515",
+    "ticker": "EA",
+    "date_added": "1900-01-01",
+    "date_removed": "2026-08-04",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000023217",
+    "ticker": "CAG",
+    "date_added": "1900-01-01",
+    "date_removed": "2026-06-29",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000945841",
+    "ticker": "POOL",
+    "date_added": "2020-10-06",
+    "date_removed": "2026-06-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000016732",
+    "ticker": "CPB",
+    "date_added": "1900-01-01",
+    "date_removed": "2026-06-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001352010",
+    "ticker": "EPAM",
+    "date_added": "2021-12-13",
+    "date_removed": "2026-06-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001065680",
+    "ticker": "CTRA",
+    "date_added": "1900-01-01",
+    "date_removed": "2026-05-06",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000859737",
+    "ticker": "HOLX",
+    "date_added": "2016-03-29",
+    "date_removed": "2026-04-08",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000891103",
+    "ticker": "MTCH",
+    "date_added": "2021-09-19",
+    "date_removed": "2026-03-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001179929",
+    "ticker": "MOH",
+    "date_added": "2022-03-01",
+    "date_removed": "2026-03-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001679273",
+    "ticker": "LW",
+    "date_added": "2018-12-02",
+    "date_removed": "2026-03-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001415404",
+    "ticker": "SATS",
+    "date_added": "2026-03-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001590955",
+    "ticker": "PAYC",
+    "date_added": "2020-01-27",
+    "date_removed": "2026-03-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001496678",
+    "ticker": "DAY",
+    "date_added": "2024-01-31",
+    "date_removed": "2026-02-08",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001065696",
+    "ticker": "LKQ",
+    "date_added": "2016-05-22",
+    "date_removed": "2025-12-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0002064953",
+    "ticker": "SOLS",
+    "date_added": "2025-10-29",
+    "date_removed": "2025-12-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000851968",
+    "ticker": "MHK",
+    "date_added": "2013-12-22",
+    "date_removed": "2025-12-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000055067",
+    "ticker": "K",
+    "date_added": "1900-01-01",
+    "date_removed": "2025-12-10",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000051644",
+    "ticker": "IPG",
+    "date_added": "1900-01-01",
+    "date_removed": "2025-11-27",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000915389",
+    "ticker": "EMN",
+    "date_added": "1900-01-01",
+    "date_removed": "2025-11-03",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001170010",
+    "ticker": "KMX",
+    "date_added": "2010-06-27",
+    "date_removed": "2025-10-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001463101",
+    "ticker": "ENPH",
+    "date_added": "2021-01-06",
+    "date_removed": "2025-09-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001590895",
+    "ticker": "CZR",
+    "date_added": "2021-03-21",
+    "date_removed": "2025-09-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001278021",
+    "ticker": "MKTX",
+    "date_added": "2019-06-30",
+    "date_removed": "2025-09-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001669077",
+    "ticker": "WBA",
+    "date_added": "1900-01-01",
+    "date_removed": "2025-08-27",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001013462",
+    "ticker": "ANSS",
+    "date_added": "2017-06-18",
+    "date_removed": "2025-07-17",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001043604",
+    "ticker": "JNPR",
+    "date_added": "2006-06-01",
+    "date_removed": "2025-07-08",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000908255",
+    "ticker": "BWA",
+    "date_added": "2011-12-15",
+    "date_removed": "2025-03-23",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000096943",
+    "ticker": "TFX",
+    "date_added": "2019-01-17",
+    "date_removed": "2025-03-23",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001306830",
+    "ticker": "CE",
+    "date_added": "2018-12-23",
+    "date_removed": "2025-03-23",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000037785",
+    "ticker": "FMC",
+    "date_added": "2009-08-18",
+    "date_removed": "2025-03-23",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001604778",
+    "ticker": "QRVO",
+    "date_added": "2015-06-10",
+    "date_removed": "2024-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0002011286",
+    "ticker": "AMTM",
+    "date_added": "2024-09-29",
+    "date_removed": "2024-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001573641",
+    "ticker": "CTLT",
+    "date_added": "2020-09-20",
+    "date_removed": "2024-12-22",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000101778",
+    "ticker": "MRO",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-11-25",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000701985",
+    "ticker": "BBWI",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-09-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000006201",
+    "ticker": "AAL",
+    "date_added": "2015-03-22",
+    "date_removed": "2024-09-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001370637",
+    "ticker": "ETSY",
+    "date_added": "2020-09-20",
+    "date_removed": "2024-09-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000012208",
+    "ticker": "BIO",
+    "date_added": "2020-06-21",
+    "date_removed": "2024-09-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000315213",
+    "ticker": "RHI",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-06-23",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001537293",
+    "ticker": "CMA",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-06-23",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001110803",
+    "ticker": "ILMN",
+    "date_added": "2015-11-18",
+    "date_removed": "2024-06-23",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001038357",
+    "ticker": "PXD",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-05-07",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000818479",
+    "ticker": "XRAY",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-04-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000103379",
+    "ticker": "VFC",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-04-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001175454",
+    "ticker": "FLT",
+    "date_added": "2018-06-19",
+    "date_removed": "2024-03-24",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000106640",
+    "ticker": "WHR",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-03-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000109380",
+    "ticker": "ZION",
+    "date_added": "1900-01-01",
+    "date_removed": "2024-03-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001124887",
+    "ticker": "CDAY",
+    "date_added": "2021-09-19",
+    "date_removed": "2024-01-31",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000088204",
+    "ticker": "SEE",
+    "date_added": "1900-01-01",
+    "date_removed": "2023-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000766421",
+    "ticker": "ALK",
+    "date_added": "2016-05-12",
+    "date_removed": "2023-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001419612",
+    "ticker": "SEDG",
+    "date_added": "2021-12-19",
+    "date_removed": "2023-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001821825",
+    "ticker": "OGN",
+    "date_added": "2021-06-02",
+    "date_removed": "2023-10-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000718877",
+    "ticker": "ATVI",
+    "date_added": "2015-08-27",
+    "date_removed": "2023-10-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001688568",
+    "ticker": "DXC",
+    "date_added": "2017-04-03",
+    "date_removed": "2023-10-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000059558",
+    "ticker": "LNC",
+    "date_added": "1900-01-01",
+    "date_removed": "2023-09-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000814453",
+    "ticker": "NWL",
+    "date_added": "1900-01-01",
+    "date_removed": "2023-09-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001158449",
+    "ticker": "AAP",
+    "date_added": "2015-07-07",
+    "date_removed": "2023-08-24",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000920436",
+    "ticker": "DISH",
+    "date_added": "2017-03-12",
+    "date_removed": "2023-06-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001132979",
+    "ticker": "FRC",
+    "date_added": "2019-01-01",
+    "date_removed": "2023-05-03",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000018926",
+    "ticker": "LUMN",
+    "date_added": "1900-01-01",
+    "date_removed": "2023-03-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001288784",
+    "ticker": "SBNY",
+    "date_added": "2021-12-19",
+    "date_removed": "2023-03-14",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000719739",
+    "ticker": "SIVB",
+    "date_added": "2018-03-18",
+    "date_removed": "2023-03-14",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000899689",
+    "ticker": "VNO",
+    "date_added": "1900-01-01",
+    "date_removed": "2023-01-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000815094",
+    "ticker": "ABMD",
+    "date_added": "2018-05-30",
+    "date_removed": "2022-12-21",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001941365",
+    "ticker": "MBC",
+    "date_added": "2022-12-14",
+    "date_removed": "2022-12-18",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001418091",
+    "ticker": "TWTR",
+    "date_added": "2018-06-06",
+    "date_removed": "2022-10-31",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001492633",
+    "ticker": "NLSN",
+    "date_added": "2013-07-07",
+    "date_removed": "2022-10-11",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000877890",
+    "ticker": "CTXS",
+    "date_added": "1900-01-01",
+    "date_removed": "2022-10-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000783280",
+    "ticker": "DRE",
+    "date_added": "2017-07-25",
+    "date_removed": "2022-10-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000078239",
+    "ticker": "PVH",
+    "date_added": "2013-02-14",
+    "date_removed": "2022-09-18",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000921738",
+    "ticker": "PENN",
+    "date_added": "2021-03-21",
+    "date_removed": "2022-09-18",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001336917",
+    "ticker": "UA",
+    "date_added": "2014-04-30",
+    "date_removed": "2022-06-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001336917",
+    "ticker": "UAA",
+    "date_added": "1900-01-01",
+    "date_removed": "2022-06-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001111928",
+    "ticker": "IPGP",
+    "date_added": "2018-03-06",
+    "date_removed": "2022-06-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000804753",
+    "ticker": "CERN",
+    "date_added": "2010-04-28",
+    "date_removed": "2022-06-07",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001437107",
+    "ticker": "DISCA",
+    "date_added": "1900-01-01",
+    "date_removed": "2022-04-10",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0001437107",
+    "ticker": "DISCK",
+    "date_added": "2014-08-05",
+    "date_removed": "2022-04-10",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0001378946",
+    "ticker": "PBCT",
+    "date_added": "1900-01-01",
+    "date_removed": "2022-04-03",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001598014",
+    "ticker": "INFO",
+    "date_added": "2017-06-01",
+    "date_removed": "2022-03-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000743988",
+    "ticker": "XLNX",
+    "date_added": "1900-01-01",
+    "date_removed": "2022-02-14",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000039911",
+    "ticker": "GPS",
+    "date_added": "1900-01-01",
+    "date_removed": "2022-02-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001140536",
+    "ticker": "WLTW",
+    "date_added": "2016-01-04",
+    "date_removed": "2022-01-09",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001359841",
+    "ticker": "HBI",
+    "date_added": "2015-03-22",
+    "date_removed": "2021-12-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001365135",
+    "ticker": "WU",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-12-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000054480",
+    "ticker": "KSU",
+    "date_added": "2013-05-22",
+    "date_removed": "2021-12-13",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001585364",
+    "ticker": "PRGO",
+    "date_added": "2011-12-15",
+    "date_removed": "2021-09-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000005513",
+    "ticker": "UNM",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-09-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001021860",
+    "ticker": "NOV",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-09-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000743316",
+    "ticker": "MXIM",
+    "date_added": "2018-12-02",
+    "date_removed": "2007-09-26",
+    "removal_reason": "delisting_other"
+  },
+  {
+    "cik": "0000899866",
+    "ticker": "ALXN",
+    "date_added": "2012-05-20",
+    "date_removed": "2021-07-20",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000048039",
+    "ticker": "HFC",
+    "date_added": "2018-06-17",
+    "date_removed": "2021-06-03",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000354908",
+    "ticker": "FLIR",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-05-13",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000203527",
+    "ticker": "VAR",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-04-19",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000030625",
+    "ticker": "FLS",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-03-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001040971",
+    "ticker": "SLG",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-03-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001770450",
+    "ticker": "XRX",
+    "date_added": "1900-01-01",
+    "date_removed": "2021-03-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001786842",
+    "ticker": "VNT",
+    "date_added": "2020-10-08",
+    "date_removed": "2021-03-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001681459",
+    "ticker": "FTI",
+    "date_added": "2009-06-04",
+    "date_removed": "2021-02-11",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001364389",
+    "ticker": "CXO",
+    "date_added": "2016-02-21",
+    "date_removed": "2021-01-20",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000922864",
+    "ticker": "AIV",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-12-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000072207",
+    "ticker": "NBL",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-10-11",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000905428",
+    "ticker": "ETFC",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-10-06",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000012659",
+    "ticker": "HRB",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-09-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001024305",
+    "ticker": "COTY",
+    "date_added": "2016-09-29",
+    "date_removed": "2020-09-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000885639",
+    "ticker": "KSS",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-09-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001101215",
+    "ticker": "ADS",
+    "date_added": "2013-12-22",
+    "date_removed": "2020-06-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000793952",
+    "ticker": "HOG",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-06-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000072333",
+    "ticker": "JWN",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-06-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000046765",
+    "ticker": "HP",
+    "date_added": "2010-02-25",
+    "date_removed": "2020-05-21",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001530721",
+    "ticker": "CPRI",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-05-11",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001578845",
+    "ticker": "AGN",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-03-22",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000794367",
+    "ticker": "M",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-04-05",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000082267",
+    "ticker": "RTN",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-04-05",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000004281",
+    "ticker": "ARNC",
+    "date_added": "1900-01-01",
+    "date_removed": "2020-03-31",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001168054",
+    "ticker": "XEC",
+    "date_added": "2014-06-19",
+    "date_removed": "2020-03-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001887927",
+    "ticker": "WCG",
+    "date_added": "2018-09-13",
+    "date_removed": "2020-01-27",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001004434",
+    "ticker": "AMG",
+    "date_added": "2014-06-30",
+    "date_removed": "2019-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001526520",
+    "ticker": "TRIP",
+    "date_added": "2011-12-19",
+    "date_removed": "2019-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000912242",
+    "ticker": "MAC",
+    "date_added": "2013-05-07",
+    "date_removed": "2019-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001881551",
+    "ticker": "STI",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-12-08",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001870271",
+    "ticker": "VIAB",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-12-04",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001581774",
+    "ticker": "CELG",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-11-20",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000906709",
+    "ticker": "NKTR",
+    "date_added": "2018-03-18",
+    "date_removed": "2019-10-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000096223",
+    "ticker": "JEF",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-09-25",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0002080921",
+    "ticker": "APC",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-08-08",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000850209",
+    "ticker": "FL",
+    "date_added": "2016-04-03",
+    "date_removed": "2019-08-08",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001367535",
+    "ticker": "RHT",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-07-14",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001039101",
+    "ticker": "LLL",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-06-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001491863",
+    "ticker": "BMS",
+    "date_added": "2019-06-06",
+    "date_removed": "2014-12-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000063276",
+    "ticker": "MAT",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-06-06",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0002036968",
+    "ticker": "DWDP",
+    "date_added": "2017-08-31",
+    "date_removed": "2019-06-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001124198",
+    "ticker": "FLR",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-06-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001685040",
+    "ticker": "BHF",
+    "date_added": "2017-08-07",
+    "date_removed": "2019-04-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000042582",
+    "ticker": "GT",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-02-26",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000912750",
+    "ticker": "NFX",
+    "date_added": "2010-12-16",
+    "date_removed": "2019-02-14",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000754737",
+    "ticker": "SCG",
+    "date_added": "1900-01-01",
+    "date_removed": "2019-01-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000885721",
+    "ticker": "ESRX",
+    "date_added": "2003-09-24",
+    "date_removed": "2018-12-23",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001137411",
+    "ticker": "COL",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-12-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001013761",
+    "ticker": "AET",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-12-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000861878",
+    "ticker": "SRCL",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-12-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001678531",
+    "ticker": "EVHC",
+    "date_added": "2016-12-01",
+    "date_removed": "2018-10-10",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000050104",
+    "ticker": "ANDV",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-09-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000875159",
+    "ticker": "XL",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-09-13",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001496048",
+    "ticker": "GGP",
+    "date_added": "2013-12-09",
+    "date_removed": "2018-08-27",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001418135",
+    "ticker": "DPS",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-07-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001105705",
+    "ticker": "TWX",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-06-19",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000315852",
+    "ticker": "RRC",
+    "date_added": "2007-12-19",
+    "date_removed": "2018-06-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001144215",
+    "ticker": "AYI",
+    "date_added": "2016-05-02",
+    "date_removed": "2018-06-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000067686",
+    "ticker": "MON",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-06-06",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001593538",
+    "ticker": "NAVI",
+    "date_added": "2014-04-30",
+    "date_removed": "2018-06-04",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001361658",
+    "ticker": "WYN",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-05-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001646383",
+    "ticker": "CSRA",
+    "date_added": "2015-11-30",
+    "date_removed": "2018-04-03",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000832988",
+    "ticker": "SIG",
+    "date_added": "2015-07-28",
+    "date_removed": "2018-03-18",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000895126",
+    "ticker": "CHK",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-03-18",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001430602",
+    "ticker": "SNI",
+    "date_added": "1900-01-01",
+    "date_removed": "2018-03-06",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000794323",
+    "ticker": "LVLT",
+    "date_added": "2014-11-04",
+    "date_removed": "2017-10-12",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000791519",
+    "ticker": "SPLS",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-09-17",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000865436",
+    "ticker": "WFM",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-08-28",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000350698",
+    "ticker": "AN",
+    "date_added": "1900-01-01",
+    "date_removed": "1998-12-10",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001451505",
+    "ticker": "RIG",
+    "date_added": "2013-10-28",
+    "date_removed": "2017-07-25",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000717423",
+    "ticker": "MUR",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-07-25",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001567892",
+    "ticker": "MNK",
+    "date_added": "2014-08-17",
+    "date_removed": "2017-07-25",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001275283",
+    "ticker": "RAI",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-07-25",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000808362",
+    "ticker": "BHI",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-07-06",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0001446437",
+    "ticker": "YHOO",
+    "date_added": "1999-12-07",
+    "date_removed": "2017-06-18",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000816761",
+    "ticker": "TDC",
+    "date_added": "2007-09-30",
+    "date_removed": "2017-06-18",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000085961",
+    "ticker": "R",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-06-18",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001095072",
+    "ticker": "RE",
+    "date_added": "2017-06-18",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001452575",
+    "ticker": "MJN",
+    "date_added": "2009-12-17",
+    "date_removed": "2017-06-18",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000039899",
+    "ticker": "TGNA",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-06-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000007332",
+    "ticker": "SWN",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-04-03",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0000912615",
+    "ticker": "URBN",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-03-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000020520",
+    "ticker": "FTR",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-03-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000800459",
+    "ticker": "HAR",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-03-15",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000791907",
+    "ticker": "LLTC",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-03-12",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001593034",
+    "ticker": "ENDP",
+    "date_added": "2015-01-26",
+    "date_removed": "2017-03-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000078814",
+    "ticker": "PBI",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-02-28",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001373835",
+    "ticker": "SE",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-02-27",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000203077",
+    "ticker": "STJ",
+    "date_added": "1900-01-01",
+    "date_removed": "2017-01-04",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000812074",
+    "ticker": "OI",
+    "date_added": "2008-12-30",
+    "date_removed": "2000-12-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000704051",
+    "ticker": "LM",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-12-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0002061095",
+    "ticker": "Arconic",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-12-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000949039",
+    "ticker": "DO",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-09-29",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001608109",
+    "ticker": "TYC",
+    "date_added": "2010-08-25",
+    "date_removed": "2016-09-05",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001004155",
+    "ticker": "GAS",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-06-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001992243",
+    "ticker": "TE",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-06-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000784681",
+    "ticker": "CVC",
+    "date_added": "2010-12-16",
+    "date_removed": "2016-06-21",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001620546",
+    "ticker": "BXLT",
+    "date_added": "2015-06-30",
+    "date_removed": "2016-06-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000804212",
+    "ticker": "ARG",
+    "date_added": "2009-09-27",
+    "date_removed": "2016-05-22",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001450621",
+    "ticker": "TWC",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-05-17",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001703056",
+    "ticker": "ADT",
+    "date_added": "2012-09-30",
+    "date_removed": "2016-05-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001326380",
+    "ticker": "GME",
+    "date_added": "2007-12-12",
+    "date_removed": "2016-04-24",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000070318",
+    "ticker": "THC",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-04-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001281057",
+    "ticker": "CAM",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-04-03",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001877971",
+    "ticker": "POM",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-03-29",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000314808",
+    "ticker": "ESV",
+    "date_added": "2012-07-30",
+    "date_removed": "2016-03-29",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000909954",
+    "ticker": "GMCR",
+    "date_added": "2014-03-20",
+    "date_removed": "2016-03-06",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001070412",
+    "ticker": "CNX",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-03-03",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000849213",
+    "ticker": "PCL",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-02-21",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000020171",
+    "ticker": "ACE",
+    "date_added": "1900-01-01",
+    "date_removed": "2016-01-18",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000883569",
+    "ticker": "FOSL",
+    "date_added": "2012-04-02",
+    "date_removed": "2016-01-04",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0000768251",
+    "ticker": "ALTR",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-12-28",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001276520",
+    "ticker": "GNW",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-11-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000921847",
+    "ticker": "HCBK",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-11-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000801898",
+    "ticker": "JOY",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-10-06",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001274057",
+    "ticker": "HSP",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-09-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001465112",
+    "ticker": "DTV",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-07-28",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001895262",
+    "ticker": "NE",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-07-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001672071",
+    "ticker": "FDO",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-07-07",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001103982",
+    "ticker": "KRFT",
+    "date_added": "2012-10-01",
+    "date_removed": "2015-07-05",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0001018963",
+    "ticker": "ATI",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-07-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000916863",
+    "ticker": "TEG",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-06-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001108827",
+    "ticker": "QEP",
+    "date_added": "2010-06-29",
+    "date_removed": "2015-06-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000862178",
+    "ticker": "LO",
+    "date_added": "2008-06-09",
+    "date_removed": "2015-06-10",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000945764",
+    "ticker": "DNR",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-03-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000008868",
+    "ticker": "AVP",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-03-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001457543",
+    "ticker": "CFN",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-03-17",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000863157",
+    "ticker": "PETM",
+    "date_added": "2012-10-09",
+    "date_removed": "2015-03-11",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000086144",
+    "ticker": "SWY",
+    "date_added": "1900-01-01",
+    "date_removed": "2015-01-26",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001385187",
+    "ticker": "COV",
+    "date_added": "2011-02-27",
+    "date_removed": "2009-06-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001064728",
+    "ticker": "BTU",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-09-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000104889",
+    "ticker": "GHC",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-09-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000085408",
+    "ticker": "RDC",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-08-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001163302",
+    "ticker": "X",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-07-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000038074",
+    "ticker": "FRX",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-06-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000353944",
+    "ticker": "IGT",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-06-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001745999",
+    "ticker": "BEAM",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-04-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001032033",
+    "ticker": "SLM",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-04-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000764065",
+    "ticker": "CLF",
+    "date_added": "2009-12-17",
+    "date_removed": "2014-04-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0002086955",
+    "ticker": "WPX",
+    "date_added": "2011-12-30",
+    "date_removed": "2014-03-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001788451",
+    "ticker": "LIFE",
+    "date_added": "1900-01-01",
+    "date_removed": "2014-01-23",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001018840",
+    "ticker": "ANF",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001257179",
+    "ticker": "JDSU",
+    "date_added": "2000-07-26",
+    "date_removed": "2013-12-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001326801",
+    "ticker": "FB",
+    "date_added": "2013-12-22",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000067472",
+    "ticker": "MOLX",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-12-09",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001579241",
+    "ticker": "ALLE |",
+    "date_added": "2013-12-01",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001530721",
+    "ticker": "KORS",
+    "date_added": "2013-11-12",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001368007",
+    "ticker": "NYX",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-11-12",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001571123",
+    "ticker": "SAI",
+    "date_added": "2009-12-17",
+    "date_removed": "2013-09-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000835729",
+    "ticker": "BMC",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-09-09",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001583708",
+    "ticker": "S",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-07-07",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000929887",
+    "ticker": "APOL",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-06-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000036966",
+    "ticker": "FHN",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-06-20",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001599585",
+    "ticker": "HNZ",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-06-05",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000931336",
+    "ticker": "DF",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-05-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001054833",
+    "ticker": "CVH",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-05-07",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001121026",
+    "ticker": "PCS",
+    "date_added": "2009-06-28",
+    "date_removed": "2013-04-29",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000768835",
+    "ticker": "BIG",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-02-14",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001001639",
+    "ticker": "FII",
+    "date_added": "1900-01-01",
+    "date_removed": "2013-01-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001521332",
+    "ticker": "DLPH",
+    "date_added": "2012-12-20",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001011657",
+    "ticker": "TIE",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-12-20",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000029669",
+    "ticker": "RRD",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-12-10",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001584296",
+    "ticker": "CBE",
+    "date_added": "2011-11-17",
+    "date_removed": "2009-09-27",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001552275",
+    "ticker": "SUN",
+    "date_added": "1900-01-01",
+    "date_removed": "1998-12-10",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001304026",
+    "ticker": "ANR",
+    "date_added": "2011-05-31",
+    "date_removed": "2012-10-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001103982",
+    "ticker": "KFT",
+    "date_added": "2007-03-29",
+    "date_removed": "2012-10-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001001288",
+    "ticker": "LXK",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-09-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001819928",
+    "ticker": "DV",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-09-30",
+    "removal_reason": "merger"
+  },
+  {
+    "cik": "0001310067",
+    "ticker": "SHLD",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-09-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001094093",
+    "ticker": "PGN",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-07-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001621672",
+    "ticker": "SLE",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-06-28",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000836106",
+    "ticker": "NVLS",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-06-04",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001578732",
+    "ticker": "MMI",
+    "date_added": "2011-01-02",
+    "date_removed": "2012-05-20",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000887396",
+    "ticker": "EP",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-05-16",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000095521",
+    "ticker": "SVU",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-04-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001170650",
+    "ticker": "MHS",
+    "date_added": "1900-01-01",
+    "date_removed": "2012-04-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000827099",
+    "ticker": "CPWR",
+    "date_added": "1998-12-10",
+    "date_removed": "2011-12-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000317771",
+    "ticker": "TLAB",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-12-19",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000918192",
+    "ticker": "AKS",
+    "date_added": "2008-06-30",
+    "date_removed": "2011-12-15",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001020416",
+    "ticker": "MWW",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-12-15",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000945436",
+    "ticker": "WFR",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-12-15",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001065865",
+    "ticker": "JNS",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-11-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000216228",
+    "ticker": "ITT |",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-10-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000873364",
+    "ticker": "CEPH",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-10-13",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000070530",
+    "ticker": "NSM",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-09-22",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001958713",
+    "ticker": "MI",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-07-04",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000096289",
+    "ticker": "RSH",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-06-29",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000037748",
+    "ticker": "MEE",
+    "date_added": "2008-06-22",
+    "date_removed": "2011-05-31",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000758004",
+    "ticker": "NOVL",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-04-26",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000732485",
+    "ticker": "GENZ",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-03-31",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001783317",
+    "ticker": "MFE",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-02-27",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000801898",
+    "ticker": "JOYG",
+    "date_added": "2011-02-24",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000003673",
+    "ticker": "AYE",
+    "date_added": "2000-12-04",
+    "date_removed": "1976-06-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000065011",
+    "ticker": "MDP",
+    "date_added": "1900-01-01",
+    "date_removed": "2011-01-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0002055116",
+    "ticker": "KG",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-12-16",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000031235",
+    "ticker": "EK",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-12-16",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000800240",
+    "ticker": "ODP",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-12-16",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000071691",
+    "ticker": "NYT",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-12-16",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001089976",
+    "ticker": "PTV",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-11-16",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001512920",
+    "ticker": "SII",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-08-25",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000066479",
+    "ticker": "MIL",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-07-13",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000751652",
+    "ticker": "STR",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-06-29",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000868809",
+    "ticker": "XTO",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-06-27",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000864328",
+    "ticker": "BJS",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-04-28",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001058083",
+    "ticker": "RX",
+    "date_added": "1900-01-01",
+    "date_removed": "2010-02-25",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001818794",
+    "ticker": "DYN",
+    "date_added": "1900-01-01",
+    "date_removed": "2009-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000795266",
+    "ticker": "KBH",
+    "date_added": "1900-01-01",
+    "date_removed": "2009-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001062047",
+    "ticker": "CVG",
+    "date_added": "2000-06-11",
+    "date_removed": "2009-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000814585",
+    "ticker": "MBI",
+    "date_added": "1900-01-01",
+    "date_removed": "2009-12-17",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001778922",
+    "ticker": "SGP",
+    "date_added": "1900-01-01",
+    "date_removed": "2009-11-02",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000018532",
+    "ticker": "CTX",
+    "date_added": "1900-01-01",
+    "date_removed": "2009-08-18",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001435992",
+    "ticker": "ACAS",
+    "date_added": "1900-01-01",
+    "date_removed": "2009-03-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000874016",
+    "ticker": "JNY",
+    "date_added": "1900-01-01",
+    "date_removed": "2009-03-02",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001595761",
+    "ticker": "WB",
+    "date_added": "1900-01-01",
+    "date_removed": "2008-12-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000806085",
+    "ticker": "LEH",
+    "date_added": "1900-01-01",
+    "date_removed": "2008-09-15",
+    "removal_reason": "bankruptcy"
+  },
+  {
+    "cik": "0000025191",
+    "ticker": "CFC",
+    "date_added": "1900-01-01",
+    "date_removed": "2008-06-30",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000014930",
+    "ticker": "BC",
+    "date_added": "1900-01-01",
+    "date_removed": "2008-06-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000012978",
+    "ticker": "OMX",
+    "date_added": "1900-01-01",
+    "date_removed": "2008-06-22",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000874501",
+    "ticker": "ABK",
+    "date_added": "2000-12-04",
+    "date_removed": "2008-06-09",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000726513",
+    "ticker": "TRB",
+    "date_added": "1900-01-01",
+    "date_removed": "2007-12-19",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000029924",
+    "ticker": "DJ",
+    "date_added": "1900-01-01",
+    "date_removed": "2007-12-12",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000878737",
+    "ticker": "JEC",
+    "date_added": "2007-10-25",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001116521",
+    "ticker": "AV",
+    "date_added": "1900-01-01",
+    "date_removed": "2007-10-25",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000835541",
+    "ticker": "SLR",
+    "date_added": "1900-01-01",
+    "date_removed": "2007-10-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000883980",
+    "ticker": "FDC",
+    "date_added": "1900-01-01",
+    "date_removed": "2007-09-25",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000096223",
+    "ticker": "LUK",
+    "date_added": "2007-08-23",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001062379",
+    "ticker": "KSE",
+    "date_added": "1900-01-01",
+    "date_removed": "2007-08-23",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001771910",
+    "ticker": "ADCT",
+    "date_added": "1900-01-01",
+    "date_removed": "2007-07-01",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000278352",
+    "ticker": "SBL",
+    "date_added": "2000-12-04",
+    "date_removed": "2007-01-09",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0001284719",
+    "ticker": "ABS",
+    "date_added": "1900-01-01",
+    "date_removed": "2006-06-01",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000043362",
+    "ticker": "GLK",
+    "date_added": "1900-01-01",
+    "date_removed": "2005-06-30",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000919623",
+    "ticker": "QTRN",
+    "date_added": "1900-01-01",
+    "date_removed": "2003-09-24",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000011860",
+    "ticker": "BS",
+    "date_added": "1900-01-01",
+    "date_removed": "2000-12-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001012100",
+    "ticker": "GRA",
+    "date_added": "1900-01-01",
+    "date_removed": "2000-12-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001219601",
+    "ticker": "CCK",
+    "date_added": "1900-01-01",
+    "date_removed": "2000-12-04",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0000084129",
+    "ticker": "RAD",
+    "date_added": "1900-01-01",
+    "date_removed": "2000-07-26",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001798562",
+    "ticker": "TMC",
+    "date_added": "1900-01-01",
+    "date_removed": "2000-06-11",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000089415",
+    "ticker": "SMS",
+    "date_added": "1900-01-01",
+    "date_removed": "2000-06-06",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000737874",
+    "ticker": "LDW",
+    "date_added": "1900-01-01",
+    "date_removed": "1999-12-07",
+    "removal_reason": "index_decision"
+  },
+  {
+    "cik": "0001156039",
+    "ticker": "WLP",
+    "date_added": "1999-06-08",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000801898",
+    "ticker": "HPH",
+    "date_added": "1900-01-01",
+    "date_removed": "1999-06-08",
+    "removal_reason": "bankruptcy"
+  },
+  {
+    "cik": "0001823529",
+    "ticker": "ACT",
+    "date_added": "1999-04-11",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000900691",
+    "ticker": "FSR",
+    "date_added": "1998-12-10",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000312070",
+    "ticker": "GRN",
+    "date_added": "1900-01-01",
+    "date_removed": "1998-12-10",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000025191",
+    "ticker": "CCR",
+    "date_added": "1997-06-16",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001405528",
+    "ticker": "USL",
+    "date_added": "1900-01-01",
+    "date_removed": "1997-06-16",
+    "removal_reason": "acquisition"
+  },
+  {
+    "cik": "0000069970",
+    "ticker": "NCC",
+    "date_added": "1994-09-29",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0001668717",
+    "ticker": "BUD",
+    "date_added": "1976-06-30",
+    "date_removed": null,
+    "removal_reason": null
+  },
+  {
+    "cik": "0000077332",
+    "ticker": "BSC",
+    "date_added": "1900-01-01",
+    "date_removed": "2008-05-30",
+    "removal_reason": "acquisition"
+  }
+]

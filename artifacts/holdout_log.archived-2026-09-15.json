@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2026-09-14T19:53:46.359Z",
+    "commitHash": "NO_GIT_TRACKING",
+    "description": "Pierwszy test po wdrozeniu",
+    "results": {
+      "MAPE": 3.976279813928951,
+      "IC": null,
+      "n": 2,
+      "pValueThreshold": 0.05
+    }
+  },
+  {
+    "date": "2026-09-14T19:53:53.345Z",
+    "commitHash": "NO_GIT_TRACKING",
+    "description": "Drugi test",
+    "results": {
+      "MAPE": 3.976279813928951,
+      "IC": null,
+      "n": 2,
+      "pValueThreshold": 0.025
+    }
+  },
+  {
+    "date": "2026-09-14T19:54:00.658Z",
+    "commitHash": "NO_GIT_TRACKING",
+    "description": "Trzeci test - ostatnia szansa",
+    "results": {
+      "MAPE": 3.976279813928951,
+      "IC": null,
+      "n": 2,
+      "pValueThreshold": 0.016666666666666666
+    }
+  }
+]

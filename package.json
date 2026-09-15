@@ -1,0 +1,44 @@
+{
+  "name": "valuation-api",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "download": "tsx scripts/download-cache.ts",
+    "download:macro": "tsx scripts/download-macro-fred.ts",
+    "train:default-model": "tsx scripts/train-default-model.ts",
+    "dataset": "tsx scripts/generate-dataset.ts",
+    "report:dataset": "tsx scripts/report-dataset.ts",
+    "train": "tsx scripts/train.ts",
+    "accuracy-profile": "tsx scripts/build-accuracy-profile.ts",
+    "test:purging": "tsx scripts/test-purging.ts",
+    "report:calibration": "tsx scripts/report-calibration.ts",
+    "report:benchmarks": "tsx scripts/report-benchmarks.ts",
+    "report:deciles": "tsx scripts/report-deciles.ts",
+    "report:diversity": "tsx scripts/test-ensemble-diversity.ts",
+    "report:stability": "tsx scripts/stability-test.ts",
+    "report:macro-cap": "tsx scripts/report-macro-cap.ts",
+    "report:archetypes": "tsx scripts/report-archetypes.ts",
+    "report:corpses": "vitest run tests/corpses.test.ts --reporter=json --outputFile=artifacts/corpses-test.json",
+    "report:gonogo": "tsx scripts/report-gonogo.ts",
+    "evolve": "tsx scripts/evolve.ts",
+    "holdout": "tsx scripts/evaluate-holdout.ts",
+    "backtest:legacy-yahoo": "tsx scripts/backtest.ts"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "technicalindicators": "^3.1.0",
+    "yahoo-finance2": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
