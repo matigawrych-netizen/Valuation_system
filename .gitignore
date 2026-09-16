@@ -22,4 +22,6 @@ artifacts/*
 !artifacts/facts.json
 !artifacts/bands-calibration.json
 !artifacts/facts-panel-stats.json
+# Raporty pełnego uniwersum (małe pliki; same dane leżą poza repo, w UNIVERSE_DATA_DIR)
+!artifacts/universe/
 !artifacts/holdout_log.archived-*.json

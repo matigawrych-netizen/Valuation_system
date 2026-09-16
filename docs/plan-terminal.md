@@ -110,6 +110,10 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
   różną o ok. 22–26%, bo zmienia się poziom wzrostu i wycen całego rynku. Wniosek: specjaliści uczeni na
   różnych okresach mają uzasadnienie i wchodzą do kroku (d).
 - **(c) Pełne uniwersum NYSE/Nasdaq** (≥ ~1 mld USD) na dysku E:.
+  **Wykonane 2026-09-16** (`docs/RAPORT-KROK-C.md`): 1 836 spółek, 63 590 wierszy, K1 zdane (79,7–81,5%).
+  Fakty do dalszych kroków bierzemy z pełnego uniwersum, nie z S&P. Otwarte: panel zawiera praktycznie
+  wyłącznie spółki notowane do dziś (brak darmowych cen 2 008 spółek wycofanych) — do zmierzenia rocznym
+  kursem przybliżonym z SEC, zanim pasy trafią do terminala.
 - **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową:
 
   Specjalista = **sposób uczenia się × długość pamięci**. Temperament nie tworzy osobnych modeli.

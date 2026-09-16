@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-09-16T19:05:39.357Z",
+  "candidates": 4875,
+  "companiesByStatus": {
+    "in_panel": 1836,
+    "no_prices": 2094,
+    "price_mismatch": 123,
+    "price_no_float_data": 261,
+    "no_rows": 477,
+    "excluded": 61,
+    "price_no_overlap": 23
+  },
+  "rows": 63590,
+  "lastDataDay": "2026-09-16",
+  "minMarketCap": 1000000000,
+  "skips": {
+    "noPrice": 41811,
+    "noRevenue": 49886,
+    "staleRevenue": 3031,
+    "noShares": 1225,
+    "staleShares": 2123,
+    "belowMinMarketCap": 23374
+  },
+  "rowsWithForwardPrice": {
+    "1": 60710,
+    "2": 55053,
+    "3": 49595,
+    "4": 44210,
+    "5": 38834
+  },
+  "factsDroppedWithoutAcceptanceTime": 149,
+  "factsKept": 9253557
+}
