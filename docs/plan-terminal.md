@@ -98,8 +98,16 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
   koniec raportowania (formularz 15). Naprawa błędu przetrwania.
 - **(b) Fakty wspólne na S&P** — wygasanie wzrostu, powrót wielokrotności, kwantyle błędu 1–5 lat.
   **Warunek uzgodniony z właścicielem:** zanim powstaną „specjaliści od różnych okresów”, mierzymy,
-  czy te fakty faktycznie różnią się między okresami 2009–13 / 2013–17 / 2017–21. Budujemy ich tylko
-  wtedy, gdy różnica przekracza szum.
+  czy te fakty faktycznie różnią się między okresami. Reguła zapisana przed pomiarem:
+  okresy to **2009–2013, 2014–2017, 2018–2021** (rozłączne), a fakty uznajemy za różne w czasie,
+  gdy przedziały ufności 95% współczynnika (bootstrap po kwartałach) **nie nachodzą na siebie
+  dla co najmniej 3 z 5 horyzontów**. Poniżej tego progu budujemy jeden wspólny fakt i nie tworzymy
+  specjalistów od okresów. Pomiar: `artifacts/facts-stability.md`.
+
+  **Wynik pomiaru (2026-09-16): fakty RÓŻNIĄ SIĘ w czasie.** Wygasanie wzrostu: 4 z 5 horyzontów,
+  powrót wielokrotności: 5 z 5. Co ważniejsze, różnica jest też praktyczna, nie tylko statystyczna —
+  użycie modelu z innego okresu zmienia przewidywaną cenę po 5 latach o ok. 21% (wzrost) i 26% (wielokrotność).
+  Wniosek: specjaliści uczeni na różnych okresach mają uzasadnienie i wchodzą do kroku (d).
 - **(c) Pełne uniwersum NYSE/Nasdaq** (≥ ~1 mld USD) na dysku E:.
 - **(d) ~10 specjalistów** z osobowościami, każdy zdaje ten sam egzamin.
 - **(e) Konsensus i karta spółki** — wyjście dla terminala.

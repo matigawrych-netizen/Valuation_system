@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-09-16T00:06:20.348Z",
+  "rows": 20852,
+  "ciks": 437,
+  "lastDataDay": "2026-09-10",
+  "skips": {
+    "noPrice": 10722,
+    "noFundamentals": 0,
+    "noRevenue": 6064,
+    "noShares": 951
+  },
+  "rowsWithForwardPrice": {
+    "1": 19981,
+    "2": 18271,
+    "3": 16610,
+    "4": 14995,
+    "5": 13421
+  }
+}

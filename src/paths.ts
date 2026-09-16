@@ -19,6 +19,7 @@ export const SEC_EVENTS_JSON = 'data/meta/sec-events.json';
 export const DATASET_CSV = 'data/backtest-results.csv';
 export const SNAPSHOTS_JSONL = 'data/snapshots.jsonl';
 export const LEGACY_YAHOO_BACKTEST_CSV = 'data/legacy-yahoo-backtest.csv';
+export const FACTS_PANEL_CSV = 'data/facts-panel.csv';
 
 // ── Artefakty ──
 export const ARTIFACTS_DIR = 'artifacts';
@@ -50,6 +51,12 @@ export const GONOGO_REPORT = 'artifacts/gonogo-report.md';
 export const ARCHETYPE_HISTORY_MD = 'artifacts/archetypes-history.md';
 export const EXPERT_REPLAY_PREFIX = 'artifacts/expert-replay-';
 export const SEC_EVENTS_REPORT = 'artifacts/sec-events-report.md';
+export const FACTS_PANEL_STATS = 'artifacts/facts-panel-stats.json';
+export const FACTS_REPORT = 'artifacts/facts-report.md';
+export const FACTS_JSON = 'artifacts/facts.json';
+export const FACTS_STABILITY_REPORT = 'artifacts/facts-stability.md';
+export const FACTS_STABILITY_JSON = 'artifacts/facts-stability.json';
+export const BANDS_CALIBRATION_JSON = 'artifacts/bands-calibration.json';
 export const ACCEPTANCE_CRITERIA_DOC = 'docs/acceptance-criteria.md';
 
 // ── Podział czasowy (rok daty decyzji `asOf`) ──

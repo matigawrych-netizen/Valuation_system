@@ -17,4 +17,9 @@ archive/scraping/
 artifacts/*
 !artifacts/holdout_log.json
 !artifacts/sec-events-report.md
+!artifacts/facts-report.md
+!artifacts/facts-stability.md
+!artifacts/facts.json
+!artifacts/bands-calibration.json
+!artifacts/facts-panel-stats.json
 !artifacts/holdout_log.archived-*.json
