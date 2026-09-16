@@ -14,6 +14,8 @@ export const MEMBERSHIP_JSON = 'data/meta/index_membership.json';
 export const ACCN_MAP_JSON = 'data/meta/accnMap.json';
 export const FRED_PIT_JSON = 'data/macro/fred-pit.json';
 export const SEC_EVENTS_JSON = 'data/meta/sec-events.json';
+/** SPY z Yahoo (kurs skorygowany o dywidendy) — punkt odniesienia K2. Nie trafia do repozytorium. */
+export const SPY_JSON = 'data/macro/SPY.json';
 
 // ── Dataset ──
 export const DATASET_CSV = 'data/backtest-results.csv';
@@ -58,6 +60,8 @@ export const FACTS_STABILITY_REPORT = 'artifacts/facts-stability.md';
 export const FACTS_STABILITY_JSON = 'artifacts/facts-stability.json';
 export const BANDS_CALIBRATION_JSON = 'artifacts/bands-calibration.json';
 export const ACCEPTANCE_CRITERIA_DOC = 'docs/acceptance-criteria.md';
+export const SPECIALISTS_EXAM_REPORT = 'artifacts/universe/specialists-exam.md';
+export const SPECIALISTS_EXAM_JSON = 'artifacts/universe/specialists-exam.json';
 
 // ── Pełne uniwersum spółek (duże dane poza repozytorium, katalog z .env) ──
 

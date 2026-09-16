@@ -292,6 +292,43 @@ export function bootstrapGroups<T>(
   };
 }
 
+/**
+ * Bootstrap ruchomych bloków: grupy (np. kwartały) muszą być uporządkowane w czasie. Losuje odcinki
+ * `blockLength` kolejnych grup (z zawijaniem), aż próbka ma tyle grup co oryginał. Stosowany, gdy wyniki
+ * sąsiednich kwartałów zachodzą na siebie (np. roczne trzymanie akcji kupionych co kwartał).
+ */
+export function movingBlockBootstrap<T>(
+  groups: T[][],
+  blockLength: number,
+  stat: (sample: T[][]) => number | null,
+  B = 1000,
+  seed = 12345
+): BootstrapCI {
+  const rnd = mulberry32(seed);
+  const k = groups.length;
+  const L = Math.max(1, Math.min(Math.floor(blockLength), k));
+  const estimate = stat(groups);
+  const draws: number[] = [];
+  for (let b = 0; b < B && k > 0; b++) {
+    const sample: T[][] = [];
+    while (sample.length < k) {
+      const start = Math.floor(rnd() * k);
+      for (let j = 0; j < L && sample.length < k; j++) sample.push(groups[(start + j) % k]);
+    }
+    const v = stat(sample);
+    if (v != null && Number.isFinite(v)) draws.push(v);
+  }
+  draws.sort((a, b) => a - b);
+  return {
+    estimate,
+    lo: draws.length ? quantileSorted(draws, 0.025) : null,
+    hi: draws.length ? quantileSorted(draws, 0.975) : null,
+    B,
+    validDraws: draws.length,
+    seed,
+  };
+}
+
 // ── Algebra liniowa ──
 
 /** Rozwiązuje A x = b eliminacją Gaussa z częściowym wyborem elementu głównego. */

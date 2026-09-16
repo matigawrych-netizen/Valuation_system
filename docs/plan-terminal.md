@@ -159,6 +159,9 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
 
 - **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową.
   **Szczegółowy projekt: `docs/specjalisci.md`** (skład, wejścia, pamięć, cena zakupu, egzamin). Trening wstrzymany do zgody właściciela.
+  **Kod gotowy 2026-09-17, przed treningiem** — doprecyzowania reguł egzaminu: `docs/specjalisci.md`, punkt 10.
+  Wynik egzaminu trafi do `artifacts/universe/specialists-exam.md` (K1–K4, K6, bramka, różnorodność), K2 także tam
+  (zamiast planowanego wcześniej `artifacts/limit-backtest.json`).
 
   Specjalista = **sposób uczenia się × długość pamięci**. Temperament nie tworzy osobnych modeli.
 

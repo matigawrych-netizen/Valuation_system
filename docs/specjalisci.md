@@ -46,7 +46,7 @@ Wyłącznie dane znane w dniu decyzji (panel point-in-time):
 | wzrost | przychody rok do roku, przychody średniorocznie z 3 lat, zmiana marży netto rok do roku |
 | jakość i ryzyko | marża netto, marża wolnych przepływów, zobowiązania/aktywa, gotówka/aktywa |
 | wielkość i branża | logarytm kapitalizacji, sektor (z kodu SIC) |
-| do dodania do panelu | zmiana kursu z ostatnich 12 miesięcy bez ostatniego miesiąca, zmiana liczby akcji w ostatnim roku |
+| dopisane do panelu (2026-09-17) | zmiana kursu z ostatnich 12 miesięcy bez ostatniego miesiąca, zmiana liczby akcji w ostatnim roku |
 
 - **Model prosty** używa tylko trzech wielkości — tempa wzrostu przychodów, ceny/przychodów i zmiany liczby akcji —
   tak jak fakty wspólne. Dzięki temu da się go w pełni wytłumaczyć.
@@ -124,7 +124,9 @@ wymagany zwrot:
 - **Dywidendy wliczone** do wymaganego zwrotu **[decyzja właściciela]**; w prognozach cen nadal pokazywane osobno.
 - Skutek średniej: ceny trzech temperamentów są bliżej siebie i bliżej dzisiejszego kursu niż przy samym horyzoncie
   5-letnim (krótkie horyzonty dyskontują mniej). Przykład przy prognozach 108/117/127/138/150 za 1–5 lat, bez dywidend:
-  średnia 107,0 / 98,4 / 88,4 zamiast 111,8 / 97,3 / 81,2 dla samego 5-letniego horyzontu. Ostrożny kupuje częściej.
+  średnia 106,8 / 98,2 / 88,3 zamiast 112,1 / 97,5 / 81,4 dla samego 5-letniego horyzontu. Ostrożny kupuje częściej.
+  (Poprawka rachunkowa 2026-09-17: wcześniej podane 107,0 / 98,4 / 88,4 i 111,8 / 97,3 / 81,2 nie wynikały dokładnie
+  z tych prognoz; ten sam rachunek sprawdza test `tests/buy-price.test.ts`.)
 
 Prognoza sama zależy od ceny: przy niższej cenie spółka jest tańsza, więc jej wycena ma więcej miejsca do powrotu.
 Dlatego cena zakupu jest szukana krok po kroku (bisekcja po cenie), a nie liczona z dzisiejszej prognozy.
@@ -152,8 +154,9 @@ ufności bootstrapem po kwartałach, testy porównawcze z korektą Newey-West.
 Dodatkowo:
 - **Bramka dla drzew i sieci:** wchodzą do konsensusu tylko wtedy, gdy zdają K1 i nie są istotnie gorsze od modelu
   prostego z tą samą pamięcią (test Diebolda-Mariano, p < 0,05).
-- **Różnorodność:** para specjalistów z korelacją błędów prognozy ≥ 0,95 zostaje połączona w jednego. Cel dla
-  zespołu: efektywna liczba niezależnych specjalistów n_eff > 3.
+- **Różnorodność:** para specjalistów z korelacją prognoz ≥ 0,95 zostaje połączona w jednego. Cel dla
+  zespołu: efektywna liczba niezależnych specjalistów n_eff > 3. (Zmiana 2026-09-17, przed treningiem: pierwotnie
+  „korelacja błędów” — uzasadnienie w punkcie 10.)
 - **Specjalista, który nie zda K1:** nie ma głosu w konsensusie, ale jest widoczny w szczegółach z oznaczeniem
   „nie zdał egzaminu” **[decyzja właściciela]**.
 - K2 wymaga porównania ze zwrotem całkowitym S&P 500 (z dywidendami) — trzeba pobrać notowania funduszu SPY,
@@ -171,3 +174,81 @@ Do sprawdzenia przy konsensusie: środek prognozy może być zawyżony przez oca
 
 Egzamin: 6 lat treningów × 5 horyzontów × 3 długości pamięci. Model prosty — sekundy. Drzewa — ok. 1–2 godzin,
 sieć — podobnie lub dłużej. Uruchamiane pojedynczo, z obniżonym priorytetem, najlepiej w nocy.
+
+## 10. Doprecyzowania zapisane przed treningiem (2026-09-17)
+
+Kod specjalistów i egzaminu powstał 2026-09-17, **przed jakimkolwiek treningiem na prawdziwych danych** (sprawdzony
+testami i jednym przebiegiem na danych sztucznych, których wyniki nie są raportowane). Poniższe reguły obowiązują
+od tej chwili; zmiana po zobaczeniu wyników egzaminu wymaga opisania jej jako zmiany po fakcie.
+
+**Kalendarz i pamięć** (`src/specialist-memory.ts`)
+- Treningi 15 lutego 2016–2021; model obsługuje decyzje do następnego lutego. Decyzje egzaminu: 2016–2021.
+- Pamięć M lat = wynik zrealizowany w przedziale (dzień treningu − M, dzień treningu]. Walidacja do wcześniejszego
+  zatrzymania = ostatni rok pamięci; model końcowy uczy się na całej pamięci z wybraną liczbą drzew / epok.
+- Do pamięci wchodzą obserwacje ze znanym wynikiem i obiema kluczowymi cechami: cena/przychody oraz tempo wzrostu
+  przychodów z 3 lat. Model powstaje, gdy pamięć ma ≥ 1 000 obserwacji, a jej ostatni rok ≥ 300 — ta sama reguła
+  dla wszystkich metod. Inaczej specjalista nie ma modelu dla tego horyzontu.
+- Nie stosujemy dodatkowego podziału po spółkach (plan, „Podział danych”): w egzaminie kroczącym wyniki z pamięci
+  kończą się najpóźniej w dniu treningu, a oceniane decyzje zaczynają się tego dnia lub później — okna się nie nakładają.
+
+**Pas i mediana** (`src/specialists.ts`)
+- Centyle 10/50/90 błędów (prawdziwa zmiana − surowa prognoza) na całej pamięci. Mediana = surowa prognoza + 50. centyl,
+  pas 80% = surowa prognoza + 10. i 90. centyl. Jedna metoda dla wszystkich.
+
+**Parametry techniczne ustalone teraz**
+- Drzewa: dodatkowo 64 przedziały wartości cechy, zatrzymanie po 50 drzewach bez poprawy na walidacji.
+- Sieć: ReLU, Adam (krok 0,001), paczki po 256, L2 = 0,0001, najwyżej 100 epok, zatrzymanie po 10 epokach bez poprawy,
+  brak wartości = 0 plus kolumna „brak danych”, ziarno losowości wyznaczone z nazwy specjalisty, dnia treningu i horyzontu.
+
+**Wstrzymanie się od głosu**
+- Kluczowe cechy: cena/przychody i tempo wzrostu przychodów z 3 lat. Brak którejś albo wartość poza 1.–99. centylem
+  pamięci tego specjalisty = „nie wiem” dla danego horyzontu. Cena zakupu wymaga prognoz dla wszystkich 5 horyzontów.
+
+**Cena zakupu** (`src/buy-price.ts`)
+- Szukana wyłącznie w zakresie cen, przy których cena/przychody spółki mieści się między 1. a 99. centylem pamięci
+  specjalisty (81 punktów siatki, potem 20 kroków bisekcji). Poza tym zakresem drzewa i sieć nie mają oparcia w danych.
+  Jeśli warunek nie jest spełniony nawet na dole zakresu albo jest spełniony jeszcze na górze, cena = granica zakresu
+  z oznaczeniem; udział takich cen jest w raporcie.
+- Brak dywidend w raporcie spółki liczony jako brak dywidendy; udział takich przypadków jest w raporcie.
+
+**Punkty odniesienia**
+- K3 „cena się nie zmieni”: mediana 0, pas z centyli zrealizowanych zmian ceny w tej samej pamięci.
+- K4 „stała wielokrotność”: model prosty z tą samą pamięcią bez powrotu wyceny (wzrost przychodów i zmiana liczby
+  akcji jak w modelu prostym, cena/przychody bez zmian).
+- Informacyjnie „typowy zwrot”: mediana zrealizowanych zmian ceny w pamięci, bez patrzenia na spółkę.
+
+**Egzamin** (`src/specialist-exam.ts`, `src/limit-backtest.ts`)
+- K1 zmierzone, gdy jest ≥ 100 ocenionych prognoz z ≥ 4 kwartałów. Głos: K1 PASS na wszystkich 5 horyzontach.
+- K3, K4 i bramka: strata kwantylowa (centyle 10/50/90) uśredniona w każdym kwartale, test Diebolda-Mariano na szeregu
+  kwartalnym z korektą Newey-West (opóźnienie 4h − 1). Test tylko przy co najmniej 2 nienachodzących na siebie oknach
+  h-letnich (kwartałów ≥ 8h); inaczej „brak pomiaru”. Przy danych z 2016–2021 oznacza to zwykle brak testu dla 4–5 lat.
+- Bramka: FAIL, gdy na którymkolwiek zmierzonym horyzoncie strata jest wyższa przy p < 0,05; PASS, gdy zmierzono co
+  najmniej jeden horyzont i żaden nie jest FAIL.
+- K2: zlecenie ważne od następnej sesji do dnia następnej decyzji (3 miesiące), realizacja po pierwszym zamknięciu
+  ≤ cena zrównoważona, po tym zamknięciu. Trzymanie **1 rok**; zwrot z dywidendami spółki minus zwrot SPY z tych samych
+  dni. Średnia po transakcjach; CI95 bootstrapem ruchomych bloków po 4 kwartały decyzji (roczne trzymania zachodzą na
+  siebie). Pomiar od 30 transakcji z 4 kwartałów. Informacyjnie: zakup bez limitu w następnej sesji — pokazuje, ile daje
+  sam wybór spółek z panelu (zawyżony przez błąd przetrwania).
+- K6: pary kolejnych kwartałów tej samej spółki (decyzje odległe o 3 miesiące); dodatkowo ta sama miara dla każdego
+  horyzontu osobno, żeby było widać, które składniki średniej są rozchwiane.
+- **Różnorodność — zmiana miary.** Korelacja *błędów* jest bliska 1 dla każdych dwóch prognoz, gdy prawdziwy ruch
+  kursu jest dużo większy niż różnice między prognozami (tak jest przy cenach akcji). Pokazuje to test na danych
+  sztucznych: dwie niezależne prognozy mają korelację błędów > 0,95 i korelację prognoz ≈ 0. Reguła łączenia i n_eff
+  liczone są więc z korelacji median prognoz; korelacja błędów zostaje w raporcie informacyjnie.
+
+**Wagi głosów po egzaminie (propozycja do kroku e, zapisana przed egzaminem)**
+- Waga specjalisty z głosem ∝ 1 / średnia strata kwantylowa (horyzonty 1–5, obserwacje ocenione przez wszystkich
+  głosujących); bez głosu = 0. Właściciel może tę regułę zmienić **przed** uruchomieniem egzaminu.
+
+**Czego spodziewamy się po danych (zanim zobaczymy wyniki)**
+- Tempo wzrostu z 3 lat jest w panelu od 2012–2013 r., więc modele dla 4–5 lat powstaną dopiero w treningach
+  2017–2019. Ceny zakupu (wymagają wszystkich 5 horyzontów) będą więc tylko dla decyzji z ok. 2018–2021 i tylko na nich
+  zmierzymy K2 i K6.
+
+**Uruchomienie** (każdy skrypt sam obniża swój priorytet; przerwany egzamin można wznowić)
+1. `npm run download:spy` — notowania SPY do K2.
+2. `npm run specialists:features` — dopisanie zmiany kursu 12-1 i zmiany liczby akcji (czyta notowania z dysku E:).
+3. `npm run specialists:exam -- --method simple` — model prosty i punkty odniesienia.
+4. `npm run specialists:exam -- --method trees --probe`, potem `--method trees` — drzewa.
+5. `npm run specialists:exam -- --method nn --probe`, potem `--method nn` — sieć.
+6. `npm run specialists:report` — raport `artifacts/universe/specialists-exam.md`.

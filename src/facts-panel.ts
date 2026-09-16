@@ -93,9 +93,15 @@ export interface PanelRecord {
   netIncomeTTM: number | null;
   ebitTTM: number | null;
   fcfTTM: number | null;
+  dividendsTTM: number | null;
   equity: number | null;
+  assets: number | null;
+  /** Zobowiązania ogółem (w CSV kolumna `totalDebt` — nazwa historyczna, wartość to wszystkie zobowiązania). */
+  liabilities: number | null;
+  cash: number | null;
   revenueTTM_1y: number | null;
   revenueTTM_3y: number | null;
+  netIncomeTTM_1y: number | null;
   netIncomeTTM_3y: number | null;
   ps: number | null;
   pe: number | null;
@@ -154,9 +160,14 @@ export function parsePanel(file: string): PanelRecord[] {
       netIncomeTTM: g('netIncomeTTM'),
       ebitTTM: g('ebitTTM'),
       fcfTTM: g('fcfTTM'),
+      dividendsTTM: g('dividendsTTM'),
       equity: g('equity'),
+      assets: g('assets'),
+      liabilities: g('totalDebt'),
+      cash: g('cash'),
       revenueTTM_1y: g('revenueTTM_1y'),
       revenueTTM_3y: g('revenueTTM_3y'),
+      netIncomeTTM_1y: g('netIncomeTTM_1y'),
       netIncomeTTM_3y: g('netIncomeTTM_3y'),
       ps: g('ps'),
       pe: g('pe'),
