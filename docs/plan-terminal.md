@@ -114,6 +114,38 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
   Fakty do dalszych kroków bierzemy z pełnego uniwersum, nie z S&P. Otwarte: panel zawiera praktycznie
   wyłącznie spółki notowane do dziś (brak darmowych cen 2 008 spółek wycofanych) — do zmierzenia rocznym
   kursem przybliżonym z SEC, zanim pasy trafią do terminala.
+- **(c2) Pomiar błędu przetrwania** — zapisane 2026-09-16, **przed** pomiarem. Właściciel: najpierw ten pomiar,
+  specjalistów na razie nie trenujemy.
+
+  *Pytanie:* o ile szersze byłyby pasy cenowe, gdyby spółki, które zniknęły z rynku, były w danych.
+
+  *Miara:* wartość akcji w wolnym obrocie z raportów rocznych SEC (`dei:EntityPublicFloat`) — ta sama dla wszystkich
+  spółek, także tych bez notowań. Obserwacja = spółka z floatem ≥ 1 mld USD na dzień wyceny z lat 2009–2021.
+  Wynik = zmiana tej wartości po h = 1..5 latach (wycena z tego samego miesiąca ± 75 dni), tylko gdy dzień
+  t+h ≤ 2025-08-15 (później dane SEC są jeszcze niekompletne).
+
+  *Grupy:* **A — ocalałe**: obserwacje, dla których wartość po h latach istnieje. **B — wszystkie**: A plus spółki,
+  które przestały raportować przed t+h, z wartością końcową liczoną od ostatniej znanej wartości:
+
+  | co się stało | wariant podstawowy | wariant alternatywny |
+  |---|---|---|
+  | upadłość (8-K 1.03 między t a ostatnim raportem) | −99% | −70% |
+  | zniknięcie z formularzem 25/15, bez upadłości (zwykle przejęcie) | 0% | +30% (premia za przejęcie) |
+  | zniknięcie bez żadnego z tych formularzy | 0% | −50% |
+
+  Spółki, które nadal raportują, ale nie mają floatu po h latach, są pomijane w obu grupach i liczone osobno.
+
+  *Kryteria:*
+  - **S1 — czy błąd jest istotny:** jeśli w wariancie podstawowym 10. centyl zmiany w grupie B leży o ≥ 5 punktów
+    procentowych niżej niż w grupie A dla któregokolwiek horyzontu, pasy w terminalu trzeba poszerzyć w dół
+    (poprawka: prawdopodobieństwo zniknięcia w h latach × wartość końcowa).
+  - **K1b — K1 po uwzględnieniu spółek, które zniknęły:** pas 80% wyznaczony na grupie A (10.–90. centyl),
+    sprawdzony na grupie B. Pokrycie < 72% dla któregokolwiek horyzontu = K1 niezdane po uwzględnieniu
+    spółek, które zniknęły.
+  - **Kontrola zastępnika:** dla spółek z potwierdzonymi notowaniami porównujemy centyle zmiany floatu z centylami
+    zmiany kursu z Yahoo w tych samych obserwacjach. Zastępnik uznajemy za użyteczny, gdy 10. i 90. centyl
+    różnią się o mniej niż 10 punktów procentowych.
+
 - **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową:
 
   Specjalista = **sposób uczenia się × długość pamięci**. Temperament nie tworzy osobnych modeli.
