@@ -23,6 +23,7 @@
     "universe:facts": "node --max-old-space-size=8192 ./node_modules/tsx/dist/cli.mjs scripts/learn-facts.ts --universe",
     "universe:stability": "node --max-old-space-size=8192 ./node_modules/tsx/dist/cli.mjs scripts/report-facts-stability.ts --universe",
     "universe:report": "tsx scripts/report-universe.ts",
+    "universe:survivorship": "tsx scripts/report-survivorship.ts",
     "train:default-model": "tsx scripts/train-default-model.ts",
     "dataset": "tsx scripts/generate-dataset.ts",
     "report:dataset": "tsx scripts/report-dataset.ts",

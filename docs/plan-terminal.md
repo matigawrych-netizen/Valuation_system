@@ -151,6 +151,11 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
     zmiany kursu z Yahoo w tych samych obserwacjach. Zastępnik uznajemy za użyteczny, gdy 10. i 90. centyl
     różnią się o mniej niż 10 punktów procentowych.
 
+  **Wynik (2026-09-16, `docs/RAPORT-KROK-C2.md`):** S1 nieistotne (10. centyl przesuwa się o ≤ 1 p.p.), K1b zdane
+  (80–81%). Zastępnik zdał kontrolę tylko dla 1 roku — dla 2–5 lat wynik formalnie niepotwierdzony (rozjazd dotyczy
+  górnej granicy; dolna zgadza się z kursem do 3–4 p.p.). Decyzja: pasy 80% bez poszerzania w dół. Do sprawdzenia
+  przy konsensusie: środek prognozy może być zawyżony przez ocalałe spółki o ok. 5–11 p.p. po 5 latach.
+
 - **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową:
 
   Specjalista = **sposób uczenia się × długość pamięci**. Temperament nie tworzy osobnych modeli.
