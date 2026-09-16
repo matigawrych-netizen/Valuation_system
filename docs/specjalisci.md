@@ -228,7 +228,9 @@ od tej chwili; zmiana po zobaczeniu wyników egzaminu wymaga opisania jej jako z
   ≤ cena zrównoważona, po tym zamknięciu. Trzymanie **1 rok**; zwrot z dywidendami spółki minus zwrot SPY z tych samych
   dni. Średnia po transakcjach; CI95 bootstrapem ruchomych bloków po 4 kwartały decyzji (roczne trzymania zachodzą na
   siebie). Pomiar od 30 transakcji z 4 kwartałów. Informacyjnie: zakup bez limitu w następnej sesji — pokazuje, ile daje
-  sam wybór spółek z panelu (zawyżony przez błąd przetrwania).
+  sam wybór spółek z panelu (zawyżony przez błąd przetrwania) — oraz te same transakcje względem funduszu całego rynku
+  USA (VTI: NYSE, Nasdaq, także małe spółki; dopisane 2026-09-17 na prośbę właściciela, przed egzaminem). Kryterium K2
+  zostaje względem S&P 500, jak w preregistracji: to fundusz, który realnie można kupić zamiast akcji.
 - K6: pary kolejnych kwartałów tej samej spółki (decyzje odległe o 3 miesiące); dodatkowo ta sama miara dla każdego
   horyzontu osobno, żeby było widać, które składniki średniej są rozchwiane.
 - **Różnorodność — zmiana miary.** Korelacja *błędów* jest bliska 1 dla każdych dwóch prognoz, gdy prawdziwy ruch
@@ -246,7 +248,7 @@ od tej chwili; zmiana po zobaczeniu wyników egzaminu wymaga opisania jej jako z
   zmierzymy K2 i K6.
 
 **Uruchomienie** (każdy skrypt sam obniża swój priorytet; przerwany egzamin można wznowić)
-1. `npm run download:spy` — notowania SPY do K2.
+1. `npm run download:market` — notowania SPY i VTI do K2.
 2. `npm run specialists:features` — dopisanie zmiany kursu 12-1 i zmiany liczby akcji (czyta notowania z dysku E:).
 3. `npm run specialists:exam -- --method simple` — model prosty i punkty odniesienia.
 4. `npm run specialists:exam -- --method trees --probe`, potem `--method trees` — drzewa.

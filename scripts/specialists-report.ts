@@ -2,7 +2,7 @@
  * Krok (d): raport z egzaminu specjalistów.
  *   npm run specialists:report
  *
- * Czyta wyniki `specialists-exam` z <UNIVERSE_DATA_DIR>/specialists, notowania spółek (K2) i SPY.
+ * Czyta wyniki `specialists-exam` z <UNIVERSE_DATA_DIR>/specialists, notowania spółek (K2), SPY i VTI.
  * Prognozujący, których egzamin się nie odbył, mają „BRAK POMIARU” — nigdy PASS.
  * Wynik: artifacts/universe/specialists-exam.md i .json (same zestawienia, bez notowań).
  */
@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import { HORIZONS, type Horizon } from '../src/facts-panel.js';
 import { K2_HOLD_YEARS, findLimitFill, nextSession, tradeVersusMarket, type TradeResult } from '../src/limit-backtest.js';
-import { SPECIALISTS_EXAM_JSON, SPECIALISTS_EXAM_REPORT, SPY_JSON, universeDir } from '../src/paths.js';
+import { SPECIALISTS_EXAM_JSON, SPECIALISTS_EXAM_REPORT, SPY_JSON, VTI_JSON, universeDir } from '../src/paths.js';
 import {
   GATE_P,
   K1_RANGE,
@@ -72,20 +72,36 @@ interface K2Result {
   meanStock: number | null;
   meanMarket: number | null;
   noLimit: { trades: number; meanExcess: number | null };
+  /** Informacyjnie: te same transakcje względem całego rynku USA (VTI). */
+  totalMarket: { trades: number; meanExcess: number | null; lo: number | null; hi: number | null };
   status: Status;
 }
 
 const K2_MIN_TRADES = 30;
 const K2_MIN_QUARTERS = 4;
 
-function k2Summary(orders: number, fills: number, trades: TradeResult[], noLimit: TradeResult[]): K2Result {
+/** Nadwyżki pogrupowane po kwartale decyzji, w kolejności czasu. */
+function excessByQuarter(trades: TradeResult[]): number[][] {
   const byQuarter = new Map<string, number[]>();
   for (const t of trades) {
     const g = byQuarter.get(t.decision) ?? [];
     g.push(t.excess);
     byQuarter.set(t.decision, g);
   }
-  const groups = [...byQuarter.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, g]) => g);
+  return [...byQuarter.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, g]) => g);
+}
+
+// Roczne trzymanie akcji kupowanych co kwartał: sąsiednie kwartały zachodzą na siebie — bloki po 4·lata kwartałów.
+const meanExcessCi = (groups: number[][]) =>
+  movingBlockBootstrap(groups, 4 * K2_HOLD_YEARS, (sample) => {
+    const flat = sample.flat();
+    return flat.length ? mean(flat) : null;
+  });
+
+function k2Summary(orders: number, fills: number, trades: TradeResult[], noLimit: TradeResult[], totalMarket: TradeResult[]): K2Result {
+  const groups = excessByQuarter(trades);
+  const totalGroups = excessByQuarter(totalMarket);
+  const totalCi = totalMarket.length >= K2_MIN_TRADES && totalGroups.length >= K2_MIN_QUARTERS ? meanExcessCi(totalGroups) : null;
   const base = {
     orders,
     fills,
@@ -95,15 +111,17 @@ function k2Summary(orders: number, fills: number, trades: TradeResult[], noLimit
     meanStock: trades.length ? mean(trades.map((t) => t.stockReturn)) : null,
     meanMarket: trades.length ? mean(trades.map((t) => t.marketReturn)) : null,
     noLimit: { trades: noLimit.length, meanExcess: noLimit.length ? mean(noLimit.map((t) => t.excess)) : null },
+    totalMarket: {
+      trades: totalMarket.length,
+      meanExcess: totalMarket.length ? mean(totalMarket.map((t) => t.excess)) : null,
+      lo: totalCi?.lo ?? null,
+      hi: totalCi?.hi ?? null,
+    },
   };
   if (trades.length < K2_MIN_TRADES || groups.length < K2_MIN_QUARTERS) {
     return { ...base, meanExcess: trades.length ? mean(trades.map((t) => t.excess)) : null, lo: null, hi: null, status: 'BRAK POMIARU' };
   }
-  // Roczne trzymanie akcji kupowanych co kwartał: sąsiednie kwartały zachodzą na siebie — bloki po 4·lata kwartałów.
-  const ci = movingBlockBootstrap(groups, 4 * K2_HOLD_YEARS, (sample) => {
-    const flat = sample.flat();
-    return flat.length ? mean(flat) : null;
-  });
+  const ci = meanExcessCi(groups);
   const m = mean(trades.map((t) => t.excess));
   return { ...base, meanExcess: m, lo: ci.lo, hi: ci.hi, status: m > 0 && ci.lo != null && ci.lo > 0 ? 'PASS' : 'FAIL' };
 }
@@ -136,12 +154,15 @@ async function main() {
     // brak uprawnień do zmiany priorytetu nie zmienia wyników
   }
   const dir = universeDir('specialists');
-  if (!fs.existsSync(SPY_JSON)) {
-    console.error(`Brak ${SPY_JSON} (potrzebny do K2). Uruchom: npm run download:spy`);
-    process.exit(1);
+  for (const file of [SPY_JSON, VTI_JSON]) {
+    if (!fs.existsSync(file)) {
+      console.error(`Brak ${file} (potrzebny do K2). Uruchom: npm run download:market`);
+      process.exit(1);
+    }
   }
   const spy = loadPriceFile(SPY_JSON);
-  if (!spy) throw new Error(`Plik ${SPY_JSON} nie zawiera notowań.`);
+  const vti = loadPriceFile(VTI_JSON);
+  if (!spy || !vti) throw new Error(`Plik ${SPY_JSON} albo ${VTI_JSON} nie zawiera notowań.`);
 
   const exams = new Map<string, ExamRecord[]>();
   const buys = new Map<string, BuyRecord[]>();
@@ -158,8 +179,8 @@ async function main() {
   console.error(`Wyniki: ${[...exams.keys()].join(', ')}.`);
 
   // ── K2: zlecenia z limitem (notowania wczytywane po jednej spółce) ──
-  const tradesById = new Map<string, { orders: number; fills: number; trades: TradeResult[]; noLimit: TradeResult[] }>();
-  for (const id of buys.keys()) tradesById.set(id, { orders: 0, fills: 0, trades: [], noLimit: [] });
+  const tradesById = new Map<string, { orders: number; fills: number; trades: TradeResult[]; noLimit: TradeResult[]; totalMarket: TradeResult[] }>();
+  for (const id of buys.keys()) tradesById.set(id, { orders: 0, fills: 0, trades: [], noLimit: [], totalMarket: [] });
   const buysByCik = new Map<string, { id: string; b: BuyRecord }[]>();
   for (const [id, list] of buys) {
     for (const b of list) {
@@ -183,6 +204,8 @@ async function main() {
         acc.fills++;
         const t = tradeVersusMarket(cik, b.asOf, series, fill, spy);
         if (t) acc.trades.push(t);
+        const total = tradeVersusMarket(cik, b.asOf, series, fill, vti);
+        if (total) acc.totalMarket.push(total);
       }
       const next = nextSession(series, b.asOf);
       const free = next ? tradeVersusMarket(cik, b.asOf, series, next, spy) : null;
@@ -251,7 +274,7 @@ async function main() {
     const b = buys.get(def.id) ?? [];
     r.k6 = buyPriceStability(b);
     const t = tradesById.get(def.id)!;
-    r.k2 = k2Summary(t.orders, t.fills, t.trades, t.noLimit);
+    r.k2 = k2Summary(t.orders, t.fills, t.trades, t.noLimit, t.totalMarket);
     for (const x of b) r.buyByYear[x.asOf.slice(0, 4)] = (r.buyByYear[x.asOf.slice(0, 4)] ?? 0) + 1;
     r.censoredShare = b.length ? b.filter((x) => x.censored > 0).length / b.length : null;
     r.dividendUnknownShare = b.length ? b.filter((x) => !x.dividendKnown).length / b.length : null;
@@ -397,7 +420,7 @@ async function main() {
   );
   L.push(
     table(
-      ['specjalista', 'zlecenia', 'zrealizowane', 'z wynikiem', 'kwartały', 'spółka', 'SPY', 'nadwyżka (CI95)', 'wynik', 'bez limitu: nadwyżka'],
+      ['specjalista', 'zlecenia', 'zrealizowane', 'z wynikiem', 'kwartały', 'spółka', 'SPY', 'nadwyżka (CI95)', 'wynik', 'bez limitu: nadwyżka', 'cały rynek USA (VTI, inf.): nadwyżka (CI95)'],
       results.filter((r) => r.k2).map((r) => {
         const k = r.k2!;
         return [
@@ -411,6 +434,7 @@ async function main() {
           `${pct(k.meanExcess)} (${pct(k.lo)} – ${pct(k.hi)})`,
           k.status,
           `${pct(k.noLimit.meanExcess)} (n=${k.noLimit.trades})`,
+          `${pct(k.totalMarket.meanExcess)} (${pct(k.totalMarket.lo)} – ${pct(k.totalMarket.hi)})`,
         ];
       })
     )
@@ -418,7 +442,8 @@ async function main() {
   L.push(
     '**Zastrzeżenie — błąd przetrwania.** Panel zawiera prawie wyłącznie spółki notowane do dziś (krok c2). Zwroty spółek są więc ' +
       'zawyżone względem rzeczywistości, a nadwyżka nad SPY — razem z nimi. Kolumna „bez limitu” pokazuje, ile daje sam wybór ' +
-      'spółek z panelu bez ceny zakupu: dopiero różnica między nią a wynikiem ze zleceniem mówi coś o cenie zakupu.',
+      'spółek z panelu bez ceny zakupu: dopiero różnica między nią a wynikiem ze zleceniem mówi coś o cenie zakupu. ' +
+      'Ostatnia kolumna: te same transakcje względem funduszu całego rynku USA (VTI) — informacyjnie, kryterium K2 liczone jest względem S&P 500.',
     ''
   );
 

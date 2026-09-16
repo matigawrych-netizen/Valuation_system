@@ -8,6 +8,7 @@
  * Notowania czytane po jednej spółce (mało pamięci). Wynik: <UNIVERSE_DATA_DIR>/panel/specialist-extras.csv
  */
 import fs from 'node:fs';
+import os from 'node:os';
 import { parsePanel } from '../src/facts-panel.js';
 import { universeDir } from '../src/paths.js';
 import { EXTRAS_HEADER, momentum12to1, shareChangeByRow } from '../src/specialist-features.js';
@@ -16,6 +17,11 @@ import { loadPriceFile } from '../src/universe.js';
 const cell = (v: number | null) => (v == null || !Number.isFinite(v) ? '' : String(Number(v.toPrecision(8))));
 
 async function main() {
+  try {
+    os.setPriority(0, os.constants.priority.PRIORITY_BELOW_NORMAL);
+  } catch {
+    // bez zmiany priorytetu wynik jest ten sam
+  }
   const panelFile = universeDir('panel', 'facts-panel.csv');
   const pricesDir = universeDir('prices');
   const target = universeDir('panel', 'specialist-extras.csv');

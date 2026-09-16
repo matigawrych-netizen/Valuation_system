@@ -16,6 +16,8 @@ export const FRED_PIT_JSON = 'data/macro/fred-pit.json';
 export const SEC_EVENTS_JSON = 'data/meta/sec-events.json';
 /** SPY z Yahoo (kurs skorygowany o dywidendy) — punkt odniesienia K2. Nie trafia do repozytorium. */
 export const SPY_JSON = 'data/macro/SPY.json';
+/** VTI — fundusz całego rynku akcji USA (wszystkie giełdy, także małe spółki); porównanie informacyjne przy K2. */
+export const VTI_JSON = 'data/macro/VTI.json';
 
 // ── Dataset ──
 export const DATASET_CSV = 'data/backtest-results.csv';
