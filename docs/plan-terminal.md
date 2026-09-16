@@ -109,7 +109,33 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
   użycie modelu z innego okresu zmienia przewidywaną cenę po 5 latach o ok. 21% (wzrost) i 26% (wielokrotność).
   Wniosek: specjaliści uczeni na różnych okresach mają uzasadnienie i wchodzą do kroku (d).
 - **(c) Pełne uniwersum NYSE/Nasdaq** (≥ ~1 mld USD) na dysku E:.
-- **(d) ~10 specjalistów** z osobowościami, każdy zdaje ten sam egzamin.
+- **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową:
+
+  Specjalista = **sposób uczenia się × długość pamięci**. Temperament nie tworzy osobnych modeli.
+
+  | | krótka pamięć (~4 lata) | średnia (~8 lat) | cała historia |
+  |---|---|---|---|
+  | model prosty (liniowy, jak fakty wspólne) | ✓ | ✓ | ✓ |
+  | drzewa decyzyjne (gradient boosting) | ✓ | ✓ | ✓ |
+  | sieć neuronowa | tylko jeśli po kroku (c) danych wystarczy | | |
+
+  Zasady:
+  1. **Pamięć działa w czasie rzeczywistym.** Specjalista w dniu decyzji uczy się wyłącznie na obserwacjach,
+     których wynik był już znany tego dnia (wynik po 5 latach z 2015 r. jest znany dopiero w 2020 r.).
+     „Krótka pamięć” = obserwacje z ostatnich ~4 lat przed dniem decyzji.
+  2. **Temperament = wymagany zwrot**: agresywny 6%, zrównoważony 9%, ostrożny 13% rocznie
+     (liczby z sekcji 4). Każdy specjalista podaje więc trzy ceny zakupu, a konsensus zbiera je razem.
+  3. **Zakryte daty zostają egzaminem, nie osobowością.** W starym systemie 8 ekspertów z jednym zakrytym
+     okresem 2-letnim zachowywało się jak 1,17 eksperta (widzieli 7/8 tych samych danych). Zakrywanie lat
+     służy do sprawdzania każdego specjalisty na latach, których nie widział.
+  4. **Wszyscy zdają ten sam egzamin** (K1–K4, te same dane, te same progi).
+  5. **Specjaliści muszą się naprawdę różnić.** Po zbudowaniu mierzymy korelację ich błędów prognozy.
+     Para z korelacją ≥ 0,95 zostaje połączona w jednego specjalistę. Cel dla całego zespołu: efektywna
+     liczba niezależnych specjalistów (n_eff) > 3 — ten sam próg co w `acceptance-criteria.md`.
+  6. **Drzewa i sieć muszą zapracować na miejsce.** Wchodzą do konsensusu tylko wtedy, gdy zdają K1 i nie są
+     istotnie gorsze od modelu prostego z tą samą pamięcią (test Diebolda-Mariano, p < 0,05).
+  7. Otwarte na później: „szkoła inwestycyjna” (której wielokrotności specjalista ufa: przychody / zyski /
+     wartość księgowa) jako trzecia oś — tylko jeśli pomiar z punktu 5 pokaże, że specjaliści są zbyt podobni.
 - **(e) Konsensus i karta spółki** — wyjście dla terminala.
 
 ## 6. Zasady, które obowiązują w każdym kroku
