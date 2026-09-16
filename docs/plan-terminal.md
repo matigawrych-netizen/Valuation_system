@@ -129,11 +129,16 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
 
   | co się stało | wariant podstawowy | wariant alternatywny |
   |---|---|---|
-  | upadłość (8-K 1.03 między t a ostatnim raportem) | −99% | −70% |
+  | upadłość (8-K 1.03 między t a ostatnim raportem, najwyżej 2 lata przed ostatnim raportem¹) | −99% | −70% |
   | zniknięcie z formularzem 25/15, bez upadłości (zwykle przejęcie) | 0% | +30% (premia za przejęcie) |
   | zniknięcie bez żadnego z tych formularzy | 0% | −50% |
 
   Spółki, które nadal raportują, ale nie mają floatu po h latach, są pomijane w obu grupach i liczone osobno.
+  Spółka, która po upadłości dalej raportuje, ale jej liczba akcji zmieniła się o ponad 50%, trafia do grupy B jak upadłość
+  (stare akcje zastąpione nowymi); przy braku danych o liczbie akcji — do pominiętych.
+
+  ¹ Doprecyzowanie dopisane przed uruchomieniem pomiaru (ten sam dzień): starsze zgłoszenia 8-K 1.03 to zwykle upadłości
+  spółek zależnych, a spółka znika później z innego powodu.
 
   *Kryteria:*
   - **S1 — czy błąd jest istotny:** jeśli w wariancie podstawowym 10. centyl zmiany w grupie B leży o ≥ 5 punktów

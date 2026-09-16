@@ -3,6 +3,7 @@
  * Wspólne dla skryptów pobierających dane i budujących panel.
  */
 import fs from 'node:fs';
+import { slimQuotes, type PriceSeries } from './data-loader.js';
 import { universeDir } from './paths.js';
 import { baseForm, loadFilings } from './sec-events.js';
 
@@ -68,3 +69,20 @@ export function listingOf(cik: string, subsDir = universeDir('submissions')): Li
 
 /** Yahoo zapisuje klasy akcji z myślnikiem: BRK.B → BRK-B. */
 export const yahooSymbol = (ticker: string) => ticker.trim().toUpperCase().replace(/\./g, '-');
+
+/** Notowania zapisane przez `universe-download-prices` (format wykresu Yahoo); null, gdy plik jest pusty lub błędny. */
+export function loadPriceFile(file: string): PriceSeries | null {
+  const raw = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  if (raw.error || !Array.isArray(raw.quotes)) return null;
+  const quotes = slimQuotes(raw.quotes);
+  if (quotes.length === 0) return null;
+  return {
+    quotes,
+    splits: (raw.events?.splits ?? []).map((s: any) => ({
+      date: s.date,
+      t: new Date(s.date).getTime(),
+      numerator: s.numerator,
+      denominator: s.denominator,
+    })),
+  };
+}

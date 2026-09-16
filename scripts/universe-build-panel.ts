@@ -16,11 +16,9 @@ import {
   DEI_CONCEPTS,
   US_GAAP_CONCEPTS,
   buildQuarterlyTimeline,
-  slimQuotes,
   slimTaxonomy,
   type CompanyFacts,
   type ParsedCache,
-  type PriceSeries,
 } from '../src/data-loader.js';
 import { HORIZONS, panelCsvHeader, panelCsvLine } from '../src/facts-panel.js';
 import { buildCompanyRows, emptySkips } from '../src/panel-builder.js';
@@ -28,25 +26,9 @@ import { DATA_END_YEAR, DATA_START_YEAR, UNIVERSE_MIN_MARKET_CAP, universeDir } 
 import { verifyPriceSeries } from '../src/price-verification.js';
 import { companyEvents, loadFilings } from '../src/sec-events.js';
 import { floatImpliedPrices, terminalOutcome } from '../src/terminal-outcomes.js';
-import { exclusionReason, listingOf, readCandidates } from '../src/universe.js';
+import { exclusionReason, listingOf, loadPriceFile, readCandidates } from '../src/universe.js';
 
 const readJson = (file: string) => JSON.parse(fs.readFileSync(file, 'utf-8'));
-
-function loadPrices(file: string): PriceSeries | null {
-  const raw = readJson(file);
-  if (raw.error || !Array.isArray(raw.quotes)) return null;
-  const quotes = slimQuotes(raw.quotes);
-  if (quotes.length === 0) return null;
-  return {
-    quotes,
-    splits: (raw.events?.splits ?? []).map((s: any) => ({
-      date: s.date,
-      t: new Date(s.date).getTime(),
-      numerator: s.numerator,
-      denominator: s.denominator,
-    })),
-  };
-}
 
 /** Czas akceptacji każdego raportu spółki — z jej własnej listy formularzy. */
 function acceptanceTimes(cik: string, subsDir: string): Record<string, number> {
@@ -76,7 +58,7 @@ async function main() {
     process.exit(1);
   }
   for (const f of priceFiles) {
-    const p = loadPrices(`${pricesDir}/${f}`);
+    const p = loadPriceFile(`${pricesDir}/${f}`);
     const last = p?.quotes[p.quotes.length - 1];
     if (last && last.t > endT) endT = last.t;
   }
@@ -115,7 +97,7 @@ async function main() {
       companyStatus[c.cik] = { status: 'no_fundamentals' };
       continue;
     }
-    const prices = loadPrices(pricePath);
+    const prices = loadPriceFile(pricePath);
     if (!prices) {
       companyStatus[c.cik] = { status: 'no_prices' };
       continue;
