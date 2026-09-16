@@ -74,6 +74,7 @@ porównawcze — testem Diebolda-Mariano z korektą Newey-West na nakładanie si
 | K3 | System bije prostą alternatywę „cena się nie zmieni” | niższa strata pinball, DM p < 0.0167 (Bonferroni na 3) | `artifacts/bands-benchmarks.json` |
 | K4 | System bije prostą alternatywę „stała wielokrotność” | niższa strata pinball, DM p < 0.0167 | `artifacts/bands-benchmarks.json` |
 | K5 | Zdarzenia końcowe uwzględnione | udział spółek ze zdarzeniem końcowym w zbiorze uczącym > 0, a wyniki K1–K4 policzone z nimi | `artifacts/sec-events-report.md` |
+| K6 | Cena zakupu nie skacze bez powodu (dopisane 2026-09-16, przed treningiem specjalistów) | mediana \|zmiany\| ceny zrównoważonej między kolejnymi kwartałami ≤ 15% | egzamin specjalistów, `docs/specjalisci.md` |
 
 Doprecyzowania:
 - **Pas 80%** to przedział między 10. a 90. centylem prognozy. Pokrycie poniżej 72% = przedziały za wąskie
@@ -156,7 +157,8 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
   górnej granicy; dolna zgadza się z kursem do 3–4 p.p.). Decyzja: pasy 80% bez poszerzania w dół. Do sprawdzenia
   przy konsensusie: środek prognozy może być zawyżony przez ocalałe spółki o ok. 5–11 p.p. po 5 latach.
 
-- **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową:
+- **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową.
+  **Szczegółowy projekt: `docs/specjalisci.md`** (skład, wejścia, pamięć, cena zakupu, egzamin). Trening wstrzymany do zgody właściciela.
 
   Specjalista = **sposób uczenia się × długość pamięci**. Temperament nie tworzy osobnych modeli.
 
