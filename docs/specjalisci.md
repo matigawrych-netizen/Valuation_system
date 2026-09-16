@@ -1,8 +1,8 @@
 # Specjaliści — projekt (krok d)
 
 **Data zapisu: 2026-09-16, przed jakimkolwiek treningiem.** Właściciel zlecił zaprojektowanie i opis, trenowanie
-na razie wstrzymane. Uzgodnione ramy: `plan-terminal.md`, krok (d). Punkty oznaczone **[do potwierdzenia]** czekają
-na decyzję właściciela; do tego czasu obowiązuje wpisana wartość domyślna.
+na razie wstrzymane. Uzgodnione ramy: `plan-terminal.md`, krok (d). Punkty oznaczone **[decyzja właściciela]**
+zostały rozstrzygnięte przez właściciela 2026-09-16.
 
 ## 1. Co jest wspólne, a co należy do specjalisty
 
@@ -115,19 +115,25 @@ narzędzi na komputerze właściciela. Trening uruchamiany jako **jedno zadanie 
 
 Temperament = wymagany zwrot roczny: **agresywny 6%, zrównoważony 9%, ostrożny 13%** (sekcja 4 planu).
 
-Cena zakupu = najwyższa cena, przy której mediana prognozy za **H lat** daje co najmniej wymagany zwrot:
+Cena zakupu = **średnia z pięciu cen zakupu**, liczonych osobno dla horyzontów H = 1, 2, 3, 4, 5 lat
+**[decyzja właściciela]**. Dla każdego horyzontu: najwyższa cena, przy której mediana prognozy daje co najmniej
+wymagany zwrot:
 
 > prognoza_H(P) + dywidendy_H(P) ≥ P × (1 + r)^H
 
-- **H = 5 lat** **[do potwierdzenia]**.
-- **Dywidendy wliczone** do wymaganego zwrotu **[do potwierdzenia]**; w prognozach cen nadal pokazywane osobno.
+- **Dywidendy wliczone** do wymaganego zwrotu **[decyzja właściciela]**; w prognozach cen nadal pokazywane osobno.
+- Skutek średniej: ceny trzech temperamentów są bliżej siebie i bliżej dzisiejszego kursu niż przy samym horyzoncie
+  5-letnim (krótkie horyzonty dyskontują mniej). Przykład przy prognozach 108/117/127/138/150 za 1–5 lat, bez dywidend:
+  średnia 107,0 / 98,4 / 88,4 zamiast 111,8 / 97,3 / 81,2 dla samego 5-letniego horyzontu. Ostrożny kupuje częściej.
 
 Prognoza sama zależy od ceny: przy niższej cenie spółka jest tańsza, więc jej wycena ma więcej miejsca do powrotu.
 Dlatego cena zakupu jest szukana krok po kroku (bisekcja po cenie), a nie liczona z dzisiejszej prognozy.
 Dla modelu prostego istnieje wzór zamknięty: P* = (K / (1+r)^H)^(1/(1−b)), gdzie b to trwałość wyceny.
 
-**Znane ryzyko:** przy trwałości wyceny b ≈ 0,73 błąd prognozy przenosi się na cenę zakupu ze wzmocnieniem ok. 3,7×,
-a przy b ≈ 0,84 (pamięć z lat 2014–2017) — ok. 6×. Cena zakupu może więc skakać. Stąd warunek K6 w egzaminie.
+**Znane ryzyko:** przy trwałości wyceny b ≈ 0,73 (5 lat) błąd prognozy przenosi się na cenę zakupu ze wzmocnieniem
+ok. 3,7×, a przy b ≈ 0,84 (pamięć z lat 2014–2017) — ok. 6×. Dla krótkich horyzontów trwałość jest wyższa (ok. 0,88 po
+roku), więc wzmocnienie jest największe — średnia z 1–5 lat zawiera właśnie te najbardziej rozchwiane ceny. Stąd warunek
+K6 w egzaminie; jeśli K6 nie zostanie zdany, raport pokaże, które horyzonty psują stabilność, i decyzja wróci do właściciela.
 
 ## 7. Egzamin — taki sam dla wszystkich
 
@@ -149,14 +155,15 @@ Dodatkowo:
 - **Różnorodność:** para specjalistów z korelacją błędów prognozy ≥ 0,95 zostaje połączona w jednego. Cel dla
   zespołu: efektywna liczba niezależnych specjalistów n_eff > 3.
 - **Specjalista, który nie zda K1:** nie ma głosu w konsensusie, ale jest widoczny w szczegółach z oznaczeniem
-  „nie zdał egzaminu” **[do potwierdzenia]**.
+  „nie zdał egzaminu” **[decyzja właściciela]**.
 - K2 wymaga porównania ze zwrotem całkowitym S&P 500 (z dywidendami) — trzeba pobrać notowania funduszu SPY,
   bo w danych jest tylko indeks cenowy ^GSPC.
 
 ## 8. Konsensus (zapowiedź kroku e)
 
 Dla każdego temperamentu: **mediana** cen zakupu specjalistów, którzy mają głos i się nie wstrzymali.
-Wagi **[do potwierdzenia]**: domyślnie równe głosy do czasu egzaminu, potem wagi według wyniku egzaminu.
+Wagi **[decyzja właściciela]**: równe głosy do czasu egzaminu, potem wagi według wyniku egzaminu (sposób liczenia wag
+ustalimy i zapiszemy przed pierwszym egzaminem).
 Do sprawdzenia przy konsensusie: środek prognozy może być zawyżony przez ocalałe spółki o ok. 5–11 p.p. po 5 latach
 (krok c2).
 
