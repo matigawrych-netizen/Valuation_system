@@ -163,6 +163,11 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
   Wynik egzaminu trafi do `artifacts/universe/specialists-exam.md` (K1–K4, K6, bramka, różnorodność), K2 także tam
   (zamiast planowanego wcześniej `artifacts/limit-backtest.json`).
 
+  **Wynik egzaminu (2026-09-17, `docs/RAPORT-KROK-D.md`):** żaden specjalista nie jest lepszy od naiwnych prognoz (K3, K4).
+  Model prosty: K1 zdane na dolnej granicy (72–76%), K6 zdane, K2 niezdane (+1,2–1,5% rocznie nad S&P 500, niepewność ±11%).
+  Drzewa i sieć: K1 niezdane (pasy za wąskie), cena zakupu zdegenerowana (99% na górnej granicy zakresu wyceny), bez głosu.
+  Ceny zakupu tylko dla decyzji 2019–2021. Dalszy kierunek — decyzja właściciela.
+
   Specjalista = **sposób uczenia się × długość pamięci**. Temperament nie tworzy osobnych modeli.
 
   | | krótka pamięć (~4 lata) | średnia (~8 lat) | cała historia |
