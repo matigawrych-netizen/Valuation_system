@@ -1,6 +1,7 @@
 /**
  * Czy fakty wspólne zmieniają się w czasie?
- *   npx tsx scripts/report-facts-stability.ts
+ *   npx tsx scripts/report-facts-stability.ts               (S&P 500)
+ *   npx tsx scripts/report-facts-stability.ts --universe    (pełne uniwersum)
  *
  * Pytanie z uzgodnień: czy warto budować „specjalistów od różnych okresów” (o różnej długości pamięci).
  * Reguła zapisana PRZED pomiarem w docs/plan-terminal.md: fakty uznajemy za różne w czasie, gdy
@@ -14,14 +15,7 @@
 import fs from 'node:fs';
 import { fitLinear, growthObservations, reversionObservations, type Observation } from '../src/facts.js';
 import { HORIZONS, parsePanel, type Horizon, type PanelRecord } from '../src/facts-panel.js';
-import {
-  FACTS_PANEL_CSV,
-  FACTS_STABILITY_JSON,
-  FACTS_STABILITY_REPORT,
-  asOfYear,
-  ensureArtifactsDir,
-  requireArtifact,
-} from '../src/paths.js';
+import { asOfYear, ensureArtifactsDir, factsTarget, requireArtifact } from '../src/paths.js';
 import { bootstrapGroups } from '../src/stats.js';
 
 const PERIODS = [
@@ -51,7 +45,8 @@ function coefficientWithCI(obs: Observation[], which: Coefficient): SlopeCI {
     list.push(o);
     byQuarter.set(o.quarter, list);
   }
-  const groups = [...byQuarter.values()];
+  // Kolejność grup po dacie — wynik bootstrapu nie może zależeć od kolejności wierszy w pliku.
+  const groups = [...byQuarter.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, g]) => g);
   if (groups.length < 4 || obs.length < 60) {
     return { slope: null, lo: null, hi: null, n: obs.length, quarters: groups.length };
   }
@@ -80,8 +75,11 @@ function observationsFor(fact: FactName, rows: PanelRecord[], h: Horizon): Obser
 }
 
 function main() {
-  requireArtifact(FACTS_PANEL_CSV, 'npx tsx scripts/build-facts-panel.ts');
-  const all = parsePanel(FACTS_PANEL_CSV);
+  const target = factsTarget();
+  const FACTS_STABILITY_JSON = target.stabilityJson;
+  const FACTS_STABILITY_REPORT = target.stabilityReport;
+  requireArtifact(target.panel, 'npx tsx scripts/build-facts-panel.ts (albo universe-build-panel.ts)');
+  const all = parsePanel(target.panel);
 
   const byPeriod = PERIODS.map((p) => ({
     ...p,
@@ -91,6 +89,7 @@ function main() {
   const result: any = { generatedAt: new Date().toISOString(), threshold: DIFFERENT_HORIZONS_THRESHOLD, facts: {} };
   const L: string[] = [];
   L.push('# Czy fakty zmieniają się w czasie?', '');
+  L.push(`Zbiór: **${target.label}**.`, '');
   L.push(`Wygenerowano: ${new Date().toISOString()}.`, '');
   L.push('Pytanie: czy budować osobnych specjalistów uczonych na różnych okresach.');
   L.push(`Reguła zapisana przed pomiarem: fakty są różne w czasie, gdy przedziały ufności 95% nie nachodzą`);
@@ -204,6 +203,7 @@ function main() {
   }
 
   ensureArtifactsDir();
+  fs.mkdirSync('artifacts/universe', { recursive: true });
   fs.writeFileSync(FACTS_STABILITY_JSON, JSON.stringify(result, null, 2));
   fs.writeFileSync(FACTS_STABILITY_REPORT, L.join('\n'));
   console.error(`Zapisano ${FACTS_STABILITY_REPORT} i ${FACTS_STABILITY_JSON}.`);

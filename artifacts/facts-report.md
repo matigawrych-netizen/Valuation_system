@@ -1,9 +1,11 @@
 # Fakty wspólne: wzrost, wielokrotność, szerokość błędu
 
-Wygenerowano: 2026-09-16T00:09:40.796Z.
+Zbiór: **S&P 500 (skład indeksu point-in-time)**.
 
-Dane: panel `data/facts-panel.csv`, 20852 wierszy, z tego 13812 w okresie treningowym (do 2021).
-Fakty oceniane są na **innych spółkach** niż te, na których się uczyły: 193 do nauki, 199 do pomiaru.
+Wygenerowano: 2026-09-16T17:45:19.686Z.
+
+Dane: panel `data/facts-panel.csv`, 19699 wierszy, z tego 13020 w okresie treningowym (do 2021).
+Fakty oceniane są na **innych spółkach** niż te, na których się uczyły: 191 do nauki, 199 do pomiaru.
 
 ## 1. Wygasanie wzrostu
 
@@ -12,11 +14,11 @@ Współczynnik bliski 1 oznacza, że wzrost się utrzymuje; bliski 0 — że szy
 
 | horyzont | stała | współczynnik trwałości | obserwacji | błąd dopasowania |
 |---|---|---|---|---|
-| 1 lat | 0.054 | 0.174 | 11033 | 0.158 |
-| 2 lat | 0.053 | 0.134 | 11040 | 0.121 |
-| 3 lat | 0.048 | 0.162 | 11040 | 0.096 |
-| 4 lat | 0.047 | 0.170 | 11040 | 0.080 |
-| 5 lat | 0.047 | 0.164 | 10663 | 0.071 |
+| 1 lat | 0.054 | 0.166 | 10317 | 0.157 |
+| 2 lat | 0.053 | 0.126 | 10292 | 0.121 |
+| 3 lat | 0.048 | 0.157 | 10275 | 0.096 |
+| 4 lat | 0.046 | 0.162 | 10257 | 0.081 |
+| 5 lat | 0.047 | 0.155 | 9903 | 0.072 |
 
 ## 2. Powrót wielokrotności
 
@@ -25,11 +27,11 @@ Współczynnik bliski 1 = wycena się utrzymuje; bliski 0 = wraca do poziomu typ
 
 | horyzont | stała | współczynnik trwałości | obserwacji | błąd dopasowania |
 |---|---|---|---|---|
-| 1 lat | 0.104 | 0.920 | 13778 | 0.338 |
-| 2 lat | 0.157 | 0.888 | 13770 | 0.385 |
-| 3 lat | 0.197 | 0.878 | 13782 | 0.400 |
-| 4 lat | 0.233 | 0.862 | 13792 | 0.438 |
-| 5 lat | 0.277 | 0.842 | 13401 | 0.485 |
+| 1 lat | 0.105 | 0.918 | 12820 | 0.337 |
+| 2 lat | 0.160 | 0.882 | 12747 | 0.384 |
+| 3 lat | 0.201 | 0.872 | 12718 | 0.399 |
+| 4 lat | 0.240 | 0.854 | 12695 | 0.436 |
+| 5 lat | 0.282 | 0.834 | 12315 | 0.481 |
 
 ## 3. Dryf liczby akcji
 
@@ -37,11 +39,11 @@ Mediana rocznej zmiany liczby akcji. Wartość ujemna = spółki średnio skupuj
 
 | horyzont | roczna zmiana | obserwacji |
 |---|---|---|
-| 1 lat | -0.76% | 13805 |
-| 2 lat | -0.95% | 13805 |
-| 3 lat | -1.01% | 13808 |
-| 4 lat | -1.02% | 13810 |
-| 5 lat | -1.05% | 13419 |
+| 1 lat | -0.90% | 12955 |
+| 2 lat | -1.10% | 12930 |
+| 3 lat | -1.14% | 12925 |
+| 4 lat | -1.16% | 12923 |
+| 5 lat | -1.18% | 12553 |
 
 ## 4. Szerokość błędu prognozy
 
@@ -51,21 +53,21 @@ Rozkład log(cena prawdziwa / cena przewidziana). Z centyli 10% i 90% powstaje p
 
 | horyzont | 10% | 25% | 50% | 75% | 90% | obserwacji |
 |---|---|---|---|---|---|---|
-| 1 lat | -0.269 | -0.107 | 0.037 | 0.171 | 0.309 | 11049 |
-| 2 lat | -0.359 | -0.145 | 0.051 | 0.234 | 0.417 | 11049 |
-| 3 lat | -0.397 | -0.152 | 0.071 | 0.290 | 0.508 | 11049 |
-| 4 lat | -0.468 | -0.177 | 0.093 | 0.356 | 0.621 | 11049 |
-| 5 lat | -0.537 | -0.204 | 0.108 | 0.424 | 0.734 | 10672 |
+| 1 lat | -0.270 | -0.108 | 0.035 | 0.170 | 0.311 | 10418 |
+| 2 lat | -0.358 | -0.146 | 0.048 | 0.231 | 0.414 | 10418 |
+| 3 lat | -0.394 | -0.153 | 0.069 | 0.286 | 0.508 | 10418 |
+| 4 lat | -0.462 | -0.178 | 0.090 | 0.354 | 0.622 | 10418 |
+| 5 lat | -0.531 | -0.204 | 0.104 | 0.423 | 0.735 | 10061 |
 
 ### Scenariusz B — powrót do wartości (wielokrotność wraca do typowej)
 
 | horyzont | 10% | 25% | 50% | 75% | 90% | obserwacji |
 |---|---|---|---|---|---|---|
-| 1 lat | -0.311 | -0.142 | 0.002 | 0.145 | 0.290 | 11049 |
-| 2 lat | -0.416 | -0.205 | -0.009 | 0.184 | 0.366 | 11049 |
-| 3 lat | -0.496 | -0.247 | -0.019 | 0.206 | 0.433 | 11049 |
-| 4 lat | -0.577 | -0.296 | -0.020 | 0.249 | 0.522 | 11049 |
-| 5 lat | -0.676 | -0.354 | -0.034 | 0.291 | 0.596 | 10672 |
+| 1 lat | -0.310 | -0.142 | 0.002 | 0.143 | 0.289 | 10418 |
+| 2 lat | -0.412 | -0.206 | -0.011 | 0.181 | 0.364 | 10418 |
+| 3 lat | -0.495 | -0.247 | -0.022 | 0.202 | 0.429 | 10418 |
+| 4 lat | -0.578 | -0.297 | -0.025 | 0.246 | 0.516 | 10418 |
+| 5 lat | -0.671 | -0.354 | -0.037 | 0.285 | 0.591 | 10061 |
 
 ## 5. Kryterium K1: czy pas 80% naprawdę zawiera prawdziwą cenę w 80% przypadków
 
@@ -77,21 +79,21 @@ Przedział ufności liczony bootstrapem po kwartałach, bo obserwacje z jednego 
 
 | horyzont | pokrycie | CI95 | obserwacji | kwartałów | wynik |
 |---|---|---|---|---|---|
-| 1 lat | 81.7% | 77.9–84.8% | 5701 | 45 | PASS |
-| 2 lat | 81.0% | 78.5–83.3% | 5701 | 45 | PASS |
-| 3 lat | 80.6% | 78.6–82.6% | 5701 | 45 | PASS |
-| 4 lat | 79.9% | 78.1–81.5% | 5701 | 45 | PASS |
-| 5 lat | 79.3% | 77.8–80.9% | 5508 | 44 | PASS |
+| 1 lat | 81.5% | 77.7–84.6% | 5325 | 45 | PASS |
+| 2 lat | 80.9% | 78.4–83.3% | 5325 | 45 | PASS |
+| 3 lat | 80.7% | 78.8–82.7% | 5325 | 45 | PASS |
+| 4 lat | 79.6% | 77.9–81.3% | 5325 | 45 | PASS |
+| 5 lat | 79.1% | 77.7–80.6% | 5142 | 44 | PASS |
 
 ### Scenariusz B — powrót do wartości (wielokrotność wraca do typowej)
 
 | horyzont | pokrycie | CI95 | obserwacji | kwartałów | wynik |
 |---|---|---|---|---|---|
-| 1 lat | 81.3% | 78.0–84.5% | 5701 | 45 | PASS |
-| 2 lat | 80.7% | 78.7–82.7% | 5701 | 45 | PASS |
-| 3 lat | 80.7% | 78.8–82.5% | 5701 | 45 | PASS |
-| 4 lat | 78.8% | 77.0–80.6% | 5701 | 45 | PASS |
-| 5 lat | 78.4% | 77.2–79.6% | 5508 | 44 | PASS |
+| 1 lat | 81.5% | 78.1–84.6% | 5325 | 45 | PASS |
+| 2 lat | 81.2% | 79.2–83.2% | 5325 | 45 | PASS |
+| 3 lat | 81.3% | 79.3–83.2% | 5325 | 45 | PASS |
+| 4 lat | 79.2% | 77.4–81.1% | 5325 | 45 | PASS |
+| 5 lat | 78.4% | 77.1–79.8% | 5142 | 44 | PASS |
 
 ### Czego ten pomiar NIE dowodzi
 

@@ -1,6 +1,6 @@
 # Czy fakty zmieniają się w czasie?
 
-Wygenerowano: 2026-09-16T00:10:25.345Z.
+Wygenerowano: 2026-09-16T17:38:21.127Z.
 
 Pytanie: czy budować osobnych specjalistów uczonych na różnych okresach.
 Reguła zapisana przed pomiarem: fakty są różne w czasie, gdy przedziały ufności 95% nie nachodzą
@@ -8,9 +8,9 @@ na siebie dla co najmniej **3 z 5** horyzontów.
 
 | okres | wierszy panelu | kwartałów |
 |---|---|---|
-| 2009-2013 | 3430 | 17 |
-| 2014-2017 | 4607 | 16 |
-| 2018-2021 | 5775 | 16 |
+| 2009-2013 | 3300 | 17 |
+| 2014-2017 | 4318 | 16 |
+| 2018-2021 | 5402 | 16 |
 
 Uwaga: przy horyzoncie 5 lat wynik wiersza z 2013 r. realizuje się w 2018 r., czyli już w następnym okresie.
 Okresy dzielą daty **decyzji**, nie daty wyników — inaczej nie dałoby się ich rozdzielić.
@@ -21,24 +21,24 @@ Współczynnik trwałości (o tym mówi reguła):
 
 | horyzont | 2009-2013 | 2014-2017 | 2018-2021 | ocena |
 |---|---|---|---|---|
-| 1 lat | 0.278 [0.233; 0.345] | 0.292 [0.226; 0.371] | -0.026 [-0.432; 0.206] | RÓŻNE |
-| 2 lat | 0.253 [0.226; 0.285] | 0.221 [0.184; 0.268] | -0.002 [-0.234; 0.160] | RÓŻNE |
-| 3 lat | 0.201 [0.161; 0.255] | 0.221 [0.195; 0.252] | 0.087 [-0.080; 0.221] | zgodne |
-| 4 lat | 0.155 [0.120; 0.203] | 0.249 [0.228; 0.274] | 0.100 [-0.020; 0.195] | RÓŻNE |
-| 5 lat | 0.170 [0.142; 0.215] | 0.219 [0.204; 0.239] | 0.115 [0.007; 0.192] | RÓŻNE |
+| 1 lat | 0.261 [0.215; 0.330] | 0.277 [0.210; 0.358] | -0.013 [-0.416; 0.231] | zgodne |
+| 2 lat | 0.251 [0.224; 0.287] | 0.203 [0.167; 0.251] | -0.003 [-0.242; 0.180] | RÓŻNE |
+| 3 lat | 0.197 [0.163; 0.247] | 0.209 [0.178; 0.243] | 0.091 [-0.087; 0.238] | zgodne |
+| 4 lat | 0.150 [0.117; 0.200] | 0.243 [0.218; 0.269] | 0.096 [-0.035; 0.199] | RÓŻNE |
+| 5 lat | 0.158 [0.130; 0.204] | 0.205 [0.189; 0.227] | 0.111 [-0.000; 0.191] | zgodne |
 
 Stała — poziom niezależny od spółki, czyli wspólny dryf całego rynku w danym okresie.
 Traktujemy ją jako informację dodatkową: reguła z preregistracji dotyczy współczynnika trwałości.
 
 | horyzont | 2009-2013 | 2014-2017 | 2018-2021 | ocena |
 |---|---|---|---|---|
-| 1 lat | 0.030 [0.019; 0.040] | 0.027 [0.009; 0.046] | 0.089 [0.040; 0.151] | RÓŻNE |
-| 2 lat | 0.024 [0.021; 0.030] | 0.033 [0.018; 0.047] | 0.079 [0.048; 0.114] | RÓŻNE |
-| 3 lat | 0.013 [0.008; 0.020] | 0.033 [0.024; 0.042] | 0.071 [0.050; 0.091] | RÓŻNE |
-| 4 lat | 0.016 [0.012; 0.020] | 0.031 [0.028; 0.035] | 0.069 [0.058; 0.080] | RÓŻNE |
-| 5 lat | 0.021 [0.018; 0.023] | 0.037 [0.030; 0.045] | 0.063 [0.053; 0.075] | RÓŻNE |
+| 1 lat | 0.029 [0.018; 0.039] | 0.029 [0.010; 0.048] | 0.087 [0.037; 0.148] | zgodne |
+| 2 lat | 0.023 [0.020; 0.028] | 0.034 [0.018; 0.048] | 0.078 [0.044; 0.114] | RÓŻNE |
+| 3 lat | 0.012 [0.007; 0.019] | 0.033 [0.024; 0.042] | 0.070 [0.048; 0.091] | RÓŻNE |
+| 4 lat | 0.015 [0.011; 0.019] | 0.031 [0.028; 0.035] | 0.068 [0.057; 0.081] | RÓŻNE |
+| 5 lat | 0.021 [0.017; 0.024] | 0.037 [0.030; 0.046] | 0.063 [0.053; 0.076] | RÓŻNE |
 
-**Wniosek z reguły: RÓŻNE W CZASIE (4/5 horyzontów) — specjaliści od okresów mają uzasadnienie.**
+**Wniosek z reguły: STABILNE (2/5 horyzontów różnych) — jeden wspólny fakt wystarcza.**
 
 ### O ile różnią się same prognozy
 
@@ -48,11 +48,11 @@ spółek (całego panelu), a porównywana jest największa rozbieżność międz
 
 | horyzont | średnia rozbieżność prognoz | przełożenie na cenę po tylu latach |
 |---|---|---|
-| 1 lat | 4.65 p.p. rocznie | 4.6% |
-| 2 lat | 4.14 p.p. rocznie | 8.5% |
-| 3 lat | 5.03 p.p. rocznie | 15.9% |
-| 4 lat | 4.97 p.p. rocznie | 21.4% |
-| 5 lat | 3.93 p.p. rocznie | 21.3% |
+| 1 lat | 4.42 p.p. rocznie | 4.4% |
+| 2 lat | 4.12 p.p. rocznie | 8.4% |
+| 3 lat | 5.09 p.p. rocznie | 16.1% |
+| 4 lat | 5.05 p.p. rocznie | 21.8% |
+| 5 lat | 3.98 p.p. rocznie | 21.6% |
 
 Ostatnia kolumna mówi, o ile różniłaby się przewidywana cena, gdyby użyć modelu z innego okresu.
 
@@ -62,22 +62,22 @@ Współczynnik trwałości (o tym mówi reguła):
 
 | horyzont | 2009-2013 | 2014-2017 | 2018-2021 | ocena |
 |---|---|---|---|---|
-| 1 lat | 0.903 [0.879; 0.927] | 0.949 [0.929; 0.968] | 0.914 [0.845; 0.973] | RÓŻNE |
-| 2 lat | 0.864 [0.843; 0.891] | 0.949 [0.926; 0.972] | 0.882 [0.833; 0.936] | RÓŻNE |
-| 3 lat | 0.842 [0.818; 0.872] | 0.960 [0.942; 0.978] | 0.875 [0.851; 0.904] | RÓŻNE |
-| 4 lat | 0.823 [0.798; 0.854] | 0.964 [0.949; 0.978] | 0.869 [0.835; 0.899] | RÓŻNE |
-| 5 lat | 0.817 [0.789; 0.849] | 0.931 [0.904; 0.955] | 0.850 [0.812; 0.890] | RÓŻNE |
+| 1 lat | 0.895 [0.868; 0.922] | 0.944 [0.925; 0.965] | 0.915 [0.845; 0.979] | RÓŻNE |
+| 2 lat | 0.849 [0.824; 0.878] | 0.942 [0.920; 0.965] | 0.884 [0.834; 0.944] | RÓŻNE |
+| 3 lat | 0.824 [0.798; 0.859] | 0.952 [0.938; 0.972] | 0.876 [0.849; 0.912] | RÓŻNE |
+| 4 lat | 0.802 [0.774; 0.838] | 0.960 [0.946; 0.974] | 0.867 [0.829; 0.905] | RÓŻNE |
+| 5 lat | 0.794 [0.762; 0.827] | 0.929 [0.903; 0.951] | 0.850 [0.808; 0.895] | RÓŻNE |
 
 Stała — poziom niezależny od spółki, czyli wspólny dryf całego rynku w danym okresie.
 Traktujemy ją jako informację dodatkową: reguła z preregistracji dotyczy współczynnika trwałości.
 
 | horyzont | 2009-2013 | 2014-2017 | 2018-2021 | ocena |
 |---|---|---|---|---|
-| 1 lat | 0.117 [0.068; 0.164] | 0.085 [0.032; 0.142] | 0.106 [-0.014; 0.246] | zgodne |
-| 2 lat | 0.214 [0.153; 0.270] | 0.113 [0.058; 0.174] | 0.134 [0.012; 0.230] | zgodne |
-| 3 lat | 0.284 [0.230; 0.332] | 0.138 [0.075; 0.193] | 0.157 [0.094; 0.216] | RÓŻNE |
-| 4 lat | 0.351 [0.312; 0.387] | 0.205 [0.157; 0.259] | 0.127 [0.068; 0.191] | RÓŻNE |
-| 5 lat | 0.402 [0.345; 0.448] | 0.245 [0.170; 0.333] | 0.165 [0.107; 0.226] | RÓŻNE |
+| 1 lat | 0.119 [0.070; 0.169] | 0.088 [0.034; 0.145] | 0.104 [-0.020; 0.247] | zgodne |
+| 2 lat | 0.219 [0.158; 0.276] | 0.119 [0.064; 0.178] | 0.126 [0.002; 0.222] | zgodne |
+| 3 lat | 0.292 [0.239; 0.339] | 0.142 [0.078; 0.196] | 0.152 [0.088; 0.208] | RÓŻNE |
+| 4 lat | 0.362 [0.321; 0.397] | 0.208 [0.159; 0.261] | 0.127 [0.066; 0.198] | RÓŻNE |
+| 5 lat | 0.411 [0.355; 0.457] | 0.246 [0.170; 0.333] | 0.165 [0.101; 0.231] | RÓŻNE |
 
 **Wniosek z reguły: RÓŻNE W CZASIE (5/5 horyzontów) — specjaliści od okresów mają uzasadnienie.**
 
@@ -89,10 +89,10 @@ spółek (całego panelu), a porównywana jest największa rozbieżność międz
 
 | horyzont | średnia rozbieżność prognoz | przełożenie na cenę po tylu latach |
 |---|---|---|
-| 1 lat | 3.6% (log) | 3.7% |
+| 1 lat | 3.9% (log) | 3.9% |
 | 2 lat | 9.6% (log) | 10.1% |
-| 3 lat | 13.6% (log) | 14.5% |
-| 4 lat | 22.9% (log) | 25.7% |
-| 5 lat | 23.0% (log) | 25.9% |
+| 3 lat | 13.5% (log) | 14.5% |
+| 4 lat | 23.1% (log) | 26.0% |
+| 5 lat | 22.9% (log) | 25.8% |
 
 Ostatnia kolumna mówi, o ile różniłaby się przewidywana cena, gdyby użyć modelu z innego okresu.

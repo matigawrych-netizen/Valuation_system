@@ -59,6 +59,62 @@ export const FACTS_STABILITY_JSON = 'artifacts/facts-stability.json';
 export const BANDS_CALIBRATION_JSON = 'artifacts/bands-calibration.json';
 export const ACCEPTANCE_CRITERIA_DOC = 'docs/acceptance-criteria.md';
 
+// ── Pełne uniwersum spółek (duże dane poza repozytorium, katalog z .env) ──
+
+/** Kapitalizacja, od której spółka wchodzi do uniwersum w dniu decyzji (liczona point-in-time). */
+export const UNIVERSE_MIN_MARKET_CAP = 1e9;
+/**
+ * Próg wstępnego wyboru spółek do pobrania: wartość akcji w wolnym obrocie. Niższy niż próg kapitalizacji,
+ * bo float nie obejmuje akcji osób powiązanych ze spółką (zmierzone zaniżenie: 10. centyl −14%).
+ */
+export const UNIVERSE_CANDIDATE_MIN_FLOAT = 5e8;
+
+/** Katalog danych pełnego uniwersum. Brak ustawienia to błąd, a nie cicha wartość domyślna. */
+export function universeDir(...parts: string[]): string {
+  const root = process.env.UNIVERSE_DATA_DIR;
+  if (!root) {
+    throw new Error('Brak UNIVERSE_DATA_DIR w pliku .env — to katalog na dane pełnego uniwersum (kilkanaście GB).');
+  }
+  if (!fs.existsSync(root)) {
+    throw new Error(`Katalog UNIVERSE_DATA_DIR nie istnieje: ${root}`);
+  }
+  return [root, ...parts].join('/');
+}
+
+export interface FactsTarget {
+  label: string;
+  panel: string;
+  factsJson: string;
+  factsReport: string;
+  bandsCalibration: string;
+  stabilityReport: string;
+  stabilityJson: string;
+}
+
+/** Panel i artefakty faktów: domyślnie S&P, z flagą `--universe` pełne uniwersum. */
+export function factsTarget(argv: string[] = process.argv): FactsTarget {
+  if (argv.includes('--universe')) {
+    return {
+      label: 'pełne uniwersum (NYSE + Nasdaq, kapitalizacja ≥ 1 mld USD)',
+      panel: universeDir('panel', 'facts-panel.csv'),
+      factsJson: 'artifacts/universe/facts.json',
+      factsReport: 'artifacts/universe/facts-report.md',
+      bandsCalibration: 'artifacts/universe/bands-calibration.json',
+      stabilityReport: 'artifacts/universe/facts-stability.md',
+      stabilityJson: 'artifacts/universe/facts-stability.json',
+    };
+  }
+  return {
+    label: 'S&P 500 (skład indeksu point-in-time)',
+    panel: FACTS_PANEL_CSV,
+    factsJson: FACTS_JSON,
+    factsReport: FACTS_REPORT,
+    bandsCalibration: BANDS_CALIBRATION_JSON,
+    stabilityReport: FACTS_STABILITY_REPORT,
+    stabilityJson: FACTS_STABILITY_JSON,
+  };
+}
+
 // ── Podział czasowy (rok daty decyzji `asOf`) ──
 export const DATA_START_YEAR = 2006;
 export const TRAIN_END_YEAR = 2021;

@@ -1,19 +1,21 @@
 {
-  "generatedAt": "2026-09-16T00:06:20.348Z",
-  "rows": 20852,
-  "ciks": 437,
+  "generatedAt": "2026-09-16T17:37:30.800Z",
+  "rows": 19699,
+  "ciks": 432,
   "lastDataDay": "2026-09-10",
   "skips": {
     "noPrice": 10722,
-    "noFundamentals": 0,
     "noRevenue": 6064,
-    "noShares": 951
+    "staleRevenue": 449,
+    "noShares": 948,
+    "staleShares": 707,
+    "belowMinMarketCap": 0
   },
   "rowsWithForwardPrice": {
-    "1": 19981,
-    "2": 18271,
-    "3": 16610,
-    "4": 14995,
-    "5": 13421
+    "1": 18874,
+    "2": 17249,
+    "3": 15668,
+    "4": 14136,
+    "5": 12650
   }
 }

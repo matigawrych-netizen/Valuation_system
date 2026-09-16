@@ -167,3 +167,15 @@ export function parsePanel(file: string): PanelRecord[] {
   }
   return out;
 }
+
+const formatCell = (v: string | number | null | undefined): string => {
+  if (v == null) return '';
+  if (typeof v === 'number') return Number.isFinite(v) ? String(Number(v.toPrecision(10))) : '';
+  return String(v).replace(/,/g, ' ');
+};
+
+export const panelCsvHeader = () => PANEL_COLUMNS.join(',');
+
+export function panelCsvLine(row: Record<string, string | number | null>): string {
+  return PANEL_COLUMNS.map((c) => formatCell(row[c])).join(',');
+}

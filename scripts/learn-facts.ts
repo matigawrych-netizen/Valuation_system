@@ -1,6 +1,7 @@
 /**
  * Uczy „faktów wspólnych” i sprawdza, czy pasy cenowe są uczciwie szerokie.
- *   npx tsx scripts/learn-facts.ts
+ *   npx tsx scripts/learn-facts.ts               (S&P 500)
+ *   npx tsx scripts/learn-facts.ts --universe    (pełne uniwersum)
  *
  * Uczciwość pomiaru:
  *  • uczenie i pomiar wyłącznie na okresie treningowym (asOf ≤ TRAIN_END_YEAR) — sejf 2023–2025 nietknięty,
@@ -22,16 +23,7 @@ import {
   type SharedFacts,
 } from '../src/facts.js';
 import { HORIZONS, parsePanel, type Horizon, type PanelRecord } from '../src/facts-panel.js';
-import {
-  BANDS_CALIBRATION_JSON,
-  FACTS_JSON,
-  FACTS_PANEL_CSV,
-  FACTS_REPORT,
-  TRAIN_END_YEAR,
-  asOfYear,
-  ensureArtifactsDir,
-  requireArtifact,
-} from '../src/paths.js';
+import { TRAIN_END_YEAR, asOfYear, ensureArtifactsDir, factsTarget, requireArtifact } from '../src/paths.js';
 import { bootstrapGroups, mean } from '../src/stats.js';
 
 /** Stały podział spółek na dwie połowy — ta sama spółka zawsze trafia po tej samej stronie. */
@@ -72,7 +64,8 @@ function coverage(rows: PanelRecord[], facts: SharedFacts, bands: ReturnType<typ
     byQuarter.set(r.asOf, list);
   }
   if (total === 0) return null;
-  const groups = [...byQuarter.values()];
+  // Kolejność grup po dacie — wynik bootstrapu nie może zależeć od kolejności wierszy w pliku.
+  const groups = [...byQuarter.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, g]) => g);
   const ci = bootstrapGroups(groups, (sample) => {
     const flat = sample.flat();
     return flat.length ? mean(flat) : null;
@@ -81,7 +74,12 @@ function coverage(rows: PanelRecord[], facts: SharedFacts, bands: ReturnType<typ
 }
 
 function main() {
-  requireArtifact(FACTS_PANEL_CSV, 'npx tsx scripts/build-facts-panel.ts');
+  const target = factsTarget();
+  const FACTS_PANEL_CSV = target.panel;
+  const FACTS_JSON = target.factsJson;
+  const FACTS_REPORT = target.factsReport;
+  const BANDS_CALIBRATION_JSON = target.bandsCalibration;
+  requireArtifact(FACTS_PANEL_CSV, 'npx tsx scripts/build-facts-panel.ts (albo universe-build-panel.ts)');
   const all = parsePanel(FACTS_PANEL_CSV);
   const train = all.filter((r) => asOfYear(r.asOf) <= TRAIN_END_YEAR);
   if (train.length === 0) {
@@ -116,6 +114,7 @@ function main() {
   }
 
   ensureArtifactsDir();
+  fs.mkdirSync('artifacts/universe', { recursive: true });
   fs.writeFileSync(
     FACTS_JSON,
     JSON.stringify(
@@ -134,6 +133,7 @@ function main() {
   // ── Raport ──
   const L: string[] = [];
   L.push('# Fakty wspólne: wzrost, wielokrotność, szerokość błędu', '');
+  L.push(`Zbiór: **${target.label}**.`, '');
   L.push(`Wygenerowano: ${new Date().toISOString()}.`, '');
   L.push(`Dane: panel \`${FACTS_PANEL_CSV}\`, ${all.length} wierszy, z tego ${train.length} w okresie treningowym (do ${TRAIN_END_YEAR}).`);
   L.push(`Fakty oceniane są na **innych spółkach** niż te, na których się uczyły: ${new Set(fitRows.map((r) => r.cik)).size} do nauki, ${new Set(testRows.map((r) => r.cik)).size} do pomiaru.`, '');

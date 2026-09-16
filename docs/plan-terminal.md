@@ -104,10 +104,11 @@ połowie spółek, a pokrycie pasów mierzymy na drugiej — inaczej 5-letnie ok
   dla co najmniej 3 z 5 horyzontów**. Poniżej tego progu budujemy jeden wspólny fakt i nie tworzymy
   specjalistów od okresów. Pomiar: `artifacts/facts-stability.md`.
 
-  **Wynik pomiaru (2026-09-16): fakty RÓŻNIĄ SIĘ w czasie.** Wygasanie wzrostu: 4 z 5 horyzontów,
-  powrót wielokrotności: 5 z 5. Co ważniejsze, różnica jest też praktyczna, nie tylko statystyczna —
-  użycie modelu z innego okresu zmienia przewidywaną cenę po 5 latach o ok. 21% (wzrost) i 26% (wielokrotność).
-  Wniosek: specjaliści uczeni na różnych okresach mają uzasadnienie i wchodzą do kroku (d).
+  **Wynik pomiaru (2026-09-16, po korekcie danych): warunek spełniony.** Powrót wielokrotności: różny
+  w 5 z 5 horyzontów. Wygasanie wzrostu: 2 z 5, czyli według reguły stabilne (na granicy; przed usunięciem
+  przestarzałych danych było 4 z 5). W praktyce oba fakty dają przy modelu z innego okresu prognozę 5-letnią
+  różną o ok. 22–26%, bo zmienia się poziom wzrostu i wycen całego rynku. Wniosek: specjaliści uczeni na
+  różnych okresach mają uzasadnienie i wchodzą do kroku (d).
 - **(c) Pełne uniwersum NYSE/Nasdaq** (≥ ~1 mld USD) na dysku E:.
 - **(d) Specjaliści** — projekt uzgodniony z właścicielem 2026-09-16, zapisany przed budową:
 

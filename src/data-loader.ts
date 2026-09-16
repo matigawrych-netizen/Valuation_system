@@ -129,7 +129,7 @@ export const US_GAAP_CONCEPTS = [
 /** Koncepty z taksonomii `dei` (strona tytułowa raportu). Liczba akcji jest TYLKO tutaj, nie w us-gaap. */
 export const DEI_CONCEPTS = ['EntityCommonStockSharesOutstanding'] as const;
 
-function slimQuotes(raw: any[]): Quote[] {
+export function slimQuotes(raw: any[]): Quote[] {
   const out: Quote[] = [];
   for (const q of raw ?? []) {
     if (q?.close == null || !Number.isFinite(q.close)) continue;
@@ -143,7 +143,7 @@ function readJson(file: string): any {
   return JSON.parse(fs.readFileSync(file, 'utf-8'));
 }
 
-function slimTaxonomy(
+export function slimTaxonomy(
   source: ConceptMap | undefined,
   concepts: readonly string[],
   accnMap: Record<string, number>,
@@ -329,7 +329,12 @@ export function getAdjCloseAtDate(series: PriceSeries | undefined, dateStr: stri
 export function getFundamentalsAsOf(cache: ParsedCache, cik: string, dateStr: string): CompanyFacts | null {
   const all = cache.fundamentals[cik];
   if (!all) return null;
-  const quote = getQuoteAtDate(cache.prices[cik], dateStr);
+  return factsKnownAt(all, cache.prices[cik], dateStr);
+}
+
+/** Jak `getFundamentalsAsOf`, ale dla jednej spółki wczytanej osobno (bez całego cache w pamięci). */
+export function factsKnownAt(all: CompanyFacts, prices: PriceSeries | undefined, dateStr: string): CompanyFacts {
+  const quote = getQuoteAtDate(prices, dateStr);
   const cutoffT = quote ? quote.t : new Date(`${dateStr.slice(0, 10)}T00:00:00Z`).getTime();
 
   const filterTaxonomy = (tax: ConceptMap): ConceptMap => {
