@@ -133,19 +133,26 @@ function main() {
     console.error(`Brak listy spółek z potwierdzonymi notowaniami (${companiesFile}). Uruchom: npm run universe:panel`);
     process.exit(1);
   }
-  const priceCache = new Map<string, ReturnType<typeof loadPriceFile>>();
-  const proxyPairs = new Map<number, { float: number[]; price: number[] }>(HORIZONS.map((h) => [h, { float: [], price: [] }]));
+  // Notowania wczytywane po jednej spółce i od razu zwalniane — wszystkie naraz zajęłyby kilka GB pamięci.
+  const observedByCik = new Map<string, ValueObservation[]>();
   for (const o of all) {
     if (o.fate !== 'observed' || !verified.has(o.cik) || !o.endDate) continue;
-    if (!priceCache.has(o.cik)) priceCache.set(o.cik, loadPriceFile(universeDir('prices', `CIK${o.cik}.json`)));
-    const series = priceCache.get(o.cik);
+    const list = observedByCik.get(o.cik) ?? [];
+    list.push(o);
+    observedByCik.set(o.cik, list);
+  }
+  const proxyPairs = new Map<number, { float: number[]; price: number[] }>(HORIZONS.map((h) => [h, { float: [], price: [] }]));
+  for (const [cik, list] of observedByCik) {
+    const series = loadPriceFile(universeDir('prices', `CIK${cik}.json`));
     if (!series) continue;
-    const q0 = getQuoteAtDate(series, o.start);
-    const q1 = getQuoteAtDate(series, o.endDate);
-    if (!q0 || !q1 || q0.close <= 0 || q1.close <= 0) continue;
-    const pair = proxyPairs.get(o.horizon)!;
-    pair.float.push(Math.log((o.endValue as number) / o.startValue));
-    pair.price.push(Math.log(q1.close / q0.close));
+    for (const o of list) {
+      const q0 = getQuoteAtDate(series, o.start);
+      const q1 = getQuoteAtDate(series, o.endDate as string);
+      if (!q0 || !q1 || q0.close <= 0 || q1.close <= 0) continue;
+      const pair = proxyPairs.get(o.horizon)!;
+      pair.float.push(Math.log((o.endValue as number) / o.startValue));
+      pair.price.push(Math.log(q1.close / q0.close));
+    }
   }
 
   // ── Wyniki na horyzont ──
