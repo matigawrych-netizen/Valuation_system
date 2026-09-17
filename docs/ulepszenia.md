@@ -83,3 +83,53 @@ To samo dla wielkości (najmniejsze 62–68%, największe 80–83%) i sektorów 
   dostały ten sam rodzaj pasa.
 
 Zgodnie z regułą decyzja o pozostawieniu U1b wraca do właściciela.
+
+### Decyzja właściciela (2026-09-17)
+
+**U1b zostaje.** Wariant `u1` (pas zależny od zmienności) jest bazą dla dalszych ulepszeń, mimo że warunek utrzymania
+nie został spełniony o włos (najbardziej zmienne spółki na 1–2 lata: 69,8% i 70,2% zamiast ≥ 72%). Uzasadnienie:
+wariant jest lepszy od pierwszego egzaminu na każdej mierze (pokrycie ogólne bliżej 80%, grupy dużo równiejsze, niższa
+strata kwantylowa), a dalsze dopasowywanie do tych samych lat groziłoby dopasowaniem do egzaminu. Ostatecznie sprawdzi
+go sejf 2023–2025.
+
+## U2. Naprawa drzew i sieci — SZKIC, jeszcze nie preregistracja
+
+**Status 2026-09-17:** kierunek uzgodniony z właścicielem („lecimy do naprawy drzew i sieci”), szczegóły trzeba zapisać
+tutaj **przed** napisaniem kodu. Punkt wyjścia: wariant `u1`.
+
+*Problem 1 — za wąskie pasy* (drzewa i sieć częściowo zapamiętują dane uczące, a pas liczymy z błędów na tych danych).
+Pomysł: błędy **poza próbą** z podziału po spółkach — 4 treningi na 3/4 spółek z pamięci, prognoza dla pozostałej 1/4
+(liczba drzew / epok wybrana wcześniej na ostatnim roku pamięci). Ta sama metoda dla wszystkich prognozujących, także
+modelu prostego i punktów odniesienia (u modelu prostego wynik powinien być prawie taki sam jak w `u1` — to kontrola).
+Pasy zależne od zmienności (U1b) liczone z tych błędów.
+Odrzucone: podział po czasie — przy horyzontach 3–5 lat okna wyników nakładają się i usunięcie nakładek zabrałoby
+prawie całą pamięć.
+
+*Problem 2 — bezużyteczna cena zakupu* (prognoza drzew i sieci prawie nie zależy od ceny). Pomysł: prognoza w postaci
+„ocena firmy + wpływ ceny”:
+
+> log(cena za h lat / P) = a(cechy niezależne od ceny) + (b − 1) · log(cena/przychody przy cenie P)
+
+- **drzewa:** a(x) uczą się drzewa, b = trwałość wyceny z modelu prostego z tą samą pamięcią i horyzontem;
+- **sieć:** sieć uczy się a(x) **i** b(x) osobno dla każdej spółki, z b w przedziale (0; 0,98), żeby drożej zawsze
+  znaczyło „mniej miejsca na wzrost”.
+
+Cechy niezależne od ceny (propozycja): marża netto, marża wolnych przepływów, EBIT/przychody, wartość księgowa/przychody,
+dywidendy/przychody, wzrost przychodów z roku i z 3 lat, zmiana marży, zobowiązania/aktywa, gotówka/aktywa,
+wielkość mierzona przychodami, zmiana kursu 12-1, zmienność kursu, zmiana liczby akcji, sektor.
+
+*Koszt (szacunek):* ok. 6 treningów na każdy dzień treningu i horyzont zamiast 2; przy kilku procesach naraz ok. 30–60 min.
+
+*Do ustalenia przed kodem:* czy powtarzamy bramkę i K1–K6 bez zmian (propozycja: tak), nazwa wariantu (`u2`).
+
+## Własny specjalista właściciela — sieć neuronowa (POMYSŁ, do ustalenia)
+
+**Status 2026-09-17:** właściciel chce jednego specjalisty „w 100% sieć neuronową” i przedstawi swoją wizję w nowej rozmowie.
+Nic nie zostało jeszcze zaprojektowane ani zapisane jako reguła.
+
+Propozycja Claude'a (nieprzyjęta, do dyskusji): sieć o kształcie z U2 — sama uczy się a(x) i b(x), jedyna wbudowana
+zasada to „drożej = mniej miejsca na wzrost”, dzięki czemu cena zakupu ma sens. Pytania, które zostały otwarte:
+- co widzi: dane spółki / dane spółki + rynek (VIX, rentowność 10-letnich obligacji, zmiana S&P 500) / tylko wycena i wzrost;
+- pamięć: cała historia / ostatnie 4 lata;
+- wielkość: 2 warstwy po 32 / 3 warstwy po 64;
+- nazwa.
