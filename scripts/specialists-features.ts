@@ -3,7 +3,8 @@
  *   npm run specialists:features
  *
  *  • zmiana kursu od 12 do 1 miesiąca przed decyzją (z dywidendami) — z notowań spółki,
- *  • zmiana liczby akcji w roku — z wiersza panelu tej samej spółki sprzed roku.
+ *  • zmiana liczby akcji w roku — z wiersza panelu tej samej spółki sprzed roku,
+ *  • zmienność kursu z ostatnich 12 miesięcy — z notowań spółki (do pasów zależnych od zmienności).
  *
  * Notowania czytane po jednej spółce (mało pamięci). Wynik: <UNIVERSE_DATA_DIR>/panel/specialist-extras.csv
  */
@@ -11,7 +12,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import { parsePanel } from '../src/facts-panel.js';
 import { universeDir } from '../src/paths.js';
-import { EXTRAS_HEADER, momentum12to1, shareChangeByRow } from '../src/specialist-features.js';
+import { EXTRAS_HEADER, momentum12to1, shareChangeByRow, volatility1y } from '../src/specialist-features.js';
 import { loadPriceFile } from '../src/universe.js';
 
 const cell = (v: number | null) => (v == null || !Number.isFinite(v) ? '' : String(Number(v.toPrecision(8))));
@@ -41,6 +42,7 @@ async function main() {
   out.write(EXTRAS_HEADER + '\n');
   let withMomentum = 0;
   let withShareChange = 0;
+  let withVolatility = 0;
   let i = 0;
   const started = Date.now();
   for (const [cik, list] of byCik) {
@@ -55,9 +57,11 @@ async function main() {
     for (const r of list) {
       const m = momentum12to1(series, r.asOf);
       const s = shareChange.get(`${r.cik}|${r.asOf}`) ?? null;
+      const v = volatility1y(series, r.asOf);
       if (m != null) withMomentum++;
       if (s != null) withShareChange++;
-      out.write(`${r.cik},${r.asOf},${cell(m)},${cell(s)}\n`);
+      if (v != null) withVolatility++;
+      out.write(`${r.cik},${r.asOf},${cell(m)},${cell(s)},${cell(v)}\n`);
     }
   }
   await new Promise<void>((resolve) => out.end(resolve));
@@ -65,6 +69,7 @@ async function main() {
   console.error(`Zapisano ${target}: ${rows.length} wierszy.`);
   console.error(`  zmiana kursu 12-1: ${withMomentum} (${((withMomentum / rows.length) * 100).toFixed(1)}%)`);
   console.error(`  zmiana liczby akcji: ${withShareChange} (${((withShareChange / rows.length) * 100).toFixed(1)}%)`);
+  console.error(`  zmienność kursu: ${withVolatility} (${((withVolatility / rows.length) * 100).toFixed(1)}%)`);
 }
 
 main().catch((err) => {

@@ -10,6 +10,7 @@ import {
   keyRanges,
   momentum12to1,
   shareChangeByRow,
+  volatility1y,
 } from '../src/specialist-features.js';
 import {
   MIN_TRAIN_ROWS,
@@ -171,6 +172,24 @@ describe('cechy dopisywane do panelu', () => {
     const series: PriceSeries = { quotes, splits: [] };
     expect(momentum12to1(series, '2017-05-15')).toBeCloseTo(Math.log(12 / 10), 10);
     expect(momentum12to1(series, '2016-06-15')).toBeNull();
+  });
+
+  it('zmienność kursu: odchylenie dziennych zmian z ostatniego roku × √252, bez danych po dniu decyzji', () => {
+    const quotes = [];
+    let adj = 100;
+    let i = 0;
+    for (let t = Date.UTC(2016, 0, 4); t <= Date.UTC(2017, 11, 29); t += 86400000) {
+      const d = new Date(t).toISOString().slice(0, 10);
+      // na zmianę +1% i −1% (log), a po dniu decyzji skoki o 50%, które nie mogą wpłynąć na wynik
+      adj *= Math.exp(d <= '2017-05-15' ? (i++ % 2 === 0 ? 0.01 : -0.01) : 0.5);
+      quotes.push({ date: d, t: t + 14.5 * 3600000, close: adj, adj });
+    }
+    const series: PriceSeries = { quotes, splits: [] };
+    const v = volatility1y(series, '2017-05-15')!;
+    // odchylenie próby ciągu ±0,01 ≈ 0,01 · √(n/(n−1))
+    expect(v).toBeGreaterThan(0.01 * Math.sqrt(252));
+    expect(v).toBeLessThan(0.0101 * Math.sqrt(252));
+    expect(volatility1y(series, '2016-06-15')).toBeNull();
   });
 
   it('zmiana liczby akcji porównuje z wierszem tej samej spółki sprzed roku', () => {

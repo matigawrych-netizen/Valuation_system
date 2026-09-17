@@ -32,6 +32,7 @@ export function row(over: Partial<SpecialistRow> = {}): SpecialistRow {
     terminalKind: null,
     momentum12_1: 0.15,
     shareChange1y: -0.02,
+    volatility1y: 0.3,
     fwd,
     ...over,
   };

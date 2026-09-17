@@ -6,7 +6,7 @@
  * Brak danych = NaN. Model prosty używa tylko wzrostu przychodów, ceny/przychodów i liczby akcji.
  */
 import fs from 'node:fs';
-import { getQuoteAtDate, type PriceSeries } from './data-loader.js';
+import { DAY_MS, getQuoteAtDate, lastQuoteIndexAtOrBefore, type PriceSeries } from './data-loader.js';
 import { cagr, parsePanel, type Horizon, type PanelRecord } from './facts-panel.js';
 import { addMonths } from './purging.js';
 import { quantile } from './stats.js';
@@ -16,6 +16,8 @@ export interface SpecialistRow extends PanelRecord {
   momentum12_1: number | null;
   /** log(liczba akcji dziś / liczba akcji rok temu). */
   shareChange1y: number | null;
+  /** Roczna zmienność kursu z ostatnich 12 miesięcy (odchylenie dziennych zmian × √252). Nie jest cechą modeli — służy do pasów. */
+  volatility1y: number | null;
 }
 
 /** Sektory zwracane przez `sectorFromSic` — kolejność ustala kolumny cech. */
@@ -181,6 +183,29 @@ export function momentum12to1(series: PriceSeries, asOf: string): number | null 
   return Math.log(recent.adj / old.adj);
 }
 
+/** Najmniej dziennych zmian kursu w roku, żeby policzyć zmienność (spółka notowana krócej = brak). */
+export const MIN_VOLATILITY_RETURNS = 200;
+
+/**
+ * Zmienność kursu (z dywidendami) z 12 miesięcy przed decyzją włącznie z dniem decyzji:
+ * odchylenie standardowe dziennych zmian logarytmicznych × √252. Null przy zbyt krótkich notowaniach.
+ */
+export function volatility1y(series: PriceSeries, asOf: string): number | null {
+  const end = new Date(`${asOf.slice(0, 10)}T23:59:59Z`).getTime();
+  const start = addMonths(asOf, -12).getTime();
+  const q = series.quotes;
+  let hi = lastQuoteIndexAtOrBefore(q, end);
+  if (hi < 1 || end - q[hi].t > 10 * DAY_MS) return null;
+  const returns: number[] = [];
+  for (let i = hi; i >= 1 && q[i - 1].t >= start; i--) {
+    if (q[i].adj > 0 && q[i - 1].adj > 0) returns.push(Math.log(q[i].adj / q[i - 1].adj));
+  }
+  if (returns.length < MIN_VOLATILITY_RETURNS) return null;
+  const mean = returns.reduce((a, b) => a + b, 0) / returns.length;
+  const variance = returns.reduce((a, b) => a + (b - mean) ** 2, 0) / (returns.length - 1);
+  return Math.sqrt(variance * 252);
+}
+
 /** Zmiana liczby akcji w roku z wierszy panelu tej samej spółki. Brak wiersza sprzed roku = null. */
 export function shareChangeByRow(rows: PanelRecord[]): Map<string, number | null> {
   const shares = new Map<string, number>();
@@ -193,26 +218,26 @@ export function shareChangeByRow(rows: PanelRecord[]): Map<string, number | null
   return out;
 }
 
-export const EXTRAS_HEADER = 'cik,asOf,momentum12_1,shareChange1y';
+export const EXTRAS_HEADER = 'cik,asOf,momentum12_1,shareChange1y,volatility1y';
 
 /** Panel + cechy dopisane przez `scripts/specialists-features.ts`. Brak pliku albo brak wiersza to błąd. */
 export function loadSpecialistRows(panelFile: string, extrasFile: string): SpecialistRow[] {
   if (!fs.existsSync(extrasFile)) {
     throw new Error(`Brak pliku ${extrasFile}. Uruchom: npm run specialists:features`);
   }
-  const extras = new Map<string, { m: number | null; s: number | null }>();
+  const extras = new Map<string, { m: number | null; s: number | null; v: number | null }>();
   const lines = fs.readFileSync(extrasFile, 'utf-8').split(/\r?\n/).filter((l) => l.length > 0);
   if (lines[0] !== EXTRAS_HEADER) throw new Error(`Nieoczekiwany nagłówek ${extrasFile}: ${lines[0]}`);
   const num = (s: string) => (s === '' ? null : Number(s));
   for (const line of lines.slice(1)) {
-    const [cik, asOf, m, s] = line.split(',');
-    extras.set(`${cik}|${asOf}`, { m: num(m), s: num(s) });
+    const [cik, asOf, m, s, v] = line.split(',');
+    extras.set(`${cik}|${asOf}`, { m: num(m), s: num(s), v: num(v) });
   }
   const out: SpecialistRow[] = [];
   for (const r of parsePanel(panelFile)) {
     const e = extras.get(`${r.cik}|${r.asOf}`);
     if (!e) throw new Error(`Brak cech dodatkowych dla ${r.cik} ${r.asOf} — plik ${extrasFile} jest nieaktualny.`);
-    out.push({ ...r, momentum12_1: e.m, shareChange1y: e.s });
+    out.push({ ...r, momentum12_1: e.m, shareChange1y: e.s, volatility1y: e.v });
   }
   return out;
 }
