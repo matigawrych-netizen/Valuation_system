@@ -3,7 +3,8 @@
  *   npm run specialists:exam -- --method simple      (Reporter, Praktyk, Weteran + punkty odniesienia)
  *   npm run specialists:exam -- --method trees       (Tropiciel, Detektyw, Archiwista)
  *   npm run specialists:exam -- --method nn          (Radar, Sejsmograf, Kompas)
- * Opcje: --only <id>  jeden prognozujący;  --force  licz od nowa;  --probe  zmierz czas jednego treningu i zakończ.
+ * Opcje: --only <id>  jeden prognozujący;  --force  licz od nowa;  --probe  zmierz czas jednego treningu i zakończ;
+ *        --variant <nazwa>  wariant ulepszeń z docs/ulepszenia.md (wyniki w osobnym katalogu).
  *
  * Co roku 15 lutego (2016–2021) każdy prognozujący uczy się na swojej pamięci i ocenia decyzje do następnego lutego:
  * mediana i pas 80% dla 1–5 lat, a specjaliści także cenę zakupu (średnia z 1–5 lat, trzy temperamenty).
@@ -29,7 +30,9 @@ import {
   forecastAt,
   medianLogAtPrice,
   trainForecaster,
+  variantOptions,
   type ForecasterDef,
+  type VariantOptions,
   type HorizonForecaster,
   type Method,
 } from '../src/specialists.js';
@@ -52,6 +55,8 @@ function lowerPriority() {
 interface Context {
   eligible: Map<Horizon, SpecialistRow[]>;
   decisionsByCutoff: Map<string, SpecialistRow[]>;
+  variant: string | null;
+  options: VariantOptions;
 }
 
 function trainAll(def: ForecasterDef, ctx: Context, cutoff: string, log: any): (HorizonForecaster | null)[] {
@@ -66,7 +71,7 @@ function trainAll(def: ForecasterDef, ctx: Context, cutoff: string, log: any): (
       log.cutoffs[cutoff][h] = { model: false, reason: sufficient.reason, rows: split.all.length, validationRows: split.validation.length };
       continue;
     }
-    const outcome = trainForecaster(def, split, h, cutoff);
+    const outcome = trainForecaster(def, split, h, cutoff, ctx.options);
     if (!outcome.ok) {
       models.push(null);
       log.cutoffs[cutoff][h] = { model: false, reason: outcome.reason, rows: split.all.length };
@@ -77,6 +82,7 @@ function trainAll(def: ForecasterDef, ctx: Context, cutoff: string, log: any): (
       model: true,
       ...outcome.forecaster.info,
       errors: outcome.forecaster.errors,
+      volatilityBands: outcome.forecaster.volatilityBands,
       ranges: outcome.forecaster.ranges,
       seconds: (Date.now() - started) / 1000,
     };
@@ -90,7 +96,17 @@ async function runForecaster(def: ForecasterDef, ctx: Context, dir: string) {
   exam.write(EXAM_HEADER + '\n');
   const buy = def.role === 'specialist' ? fs.createWriteStream(`${files.buy}.tmp`) : null;
   buy?.write(BUY_HEADER + '\n');
-  const log: any = { id: def.id, name: def.name, method: def.method, memory: def.memory, role: def.role, startedAt: new Date().toISOString(), cutoffs: {} };
+  const log: any = {
+    id: def.id,
+    name: def.name,
+    method: def.method,
+    memory: def.memory,
+    role: def.role,
+    variant: ctx.variant,
+    options: ctx.options,
+    startedAt: new Date().toISOString(),
+    cutoffs: {},
+  };
   const counts = { decisions: 0, buyPrices: 0, dividendUnknown: 0 };
   const started = Date.now();
 
@@ -105,7 +121,7 @@ async function runForecaster(def: ForecasterDef, ctx: Context, dir: string) {
         const rec: ExamRecord = { cik: r.cik, asOf: r.asOf, cutoff, h, status: 'ok', median: null, q10: null, q90: null, actual: targetLog(r, h) };
         if (!f) rec.status = 'no_model';
         else {
-          const reason = abstainReason(r, f.ranges);
+          const reason = abstainReason(r, f.ranges) ?? (f.volatilityBands && r.volatility1y == null ? 'missing:volatility1y' : null);
           const fc = reason ? null : forecastAt(f, r);
           if (reason) rec.status = reason;
           else if (!fc) rec.status = 'no_forecast';
@@ -169,7 +185,7 @@ function probe(method: Method, ctx: Context) {
   const h: Horizon = 1;
   const split = memoryRows(ctx.eligible.get(h)!, cutoff, h, def.memory);
   const t0 = Date.now();
-  const outcome = trainForecaster(def, split, h, cutoff);
+  const outcome = trainForecaster(def, split, h, cutoff, ctx.options);
   const trainMs = Date.now() - t0;
   if (!outcome.ok) throw new Error(`Próbny trening się nie udał: ${outcome.reason}`);
   const f = outcome.forecaster;
@@ -211,8 +227,11 @@ async function main() {
   }
   const only = arg('--only');
   const force = process.argv.includes('--force');
-  const dir = universeDir('specialists');
+  const variant = arg('--variant');
+  const options = variantOptions(variant);
+  const dir = variant ? universeDir('specialists', variant) : universeDir('specialists');
   fs.mkdirSync(dir, { recursive: true });
+  if (variant) console.error(`Wariant ${variant}: ${JSON.stringify(options)} → ${dir}`);
 
   const rows = loadSpecialistRows(universeDir('panel', 'facts-panel.csv'), universeDir('panel', 'specialist-extras.csv'));
   const eligible = new Map<Horizon, SpecialistRow[]>(HORIZONS.map((h) => [h, eligibleRows(rows, h)]));
@@ -223,7 +242,7 @@ async function main() {
     list.push(r);
     decisionsByCutoff.set(c, list);
   }
-  const ctx: Context = { eligible, decisionsByCutoff };
+  const ctx: Context = { eligible, decisionsByCutoff, variant, options };
   console.error(
     `Panel: ${rows.length} wierszy. Decyzji egzaminu: ${[...decisionsByCutoff.values()].reduce((a, l) => a + l.length, 0)}. ` +
       `Obserwacji z wynikiem: ${HORIZONS.map((h) => `${h} r. ${eligible.get(h)!.length}`).join(', ')}.`

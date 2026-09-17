@@ -1,6 +1,7 @@
 /**
  * Krok (d): raport z egzaminu specjalistów.
  *   npm run specialists:report
+ *   npm run specialists:report -- --variant u1   (wariant z docs/ulepszenia.md → artifacts/universe/u1/)
  *
  * Czyta wyniki `specialists-exam` z <UNIVERSE_DATA_DIR>/specialists, notowania spółek (K2), SPY i VTI.
  * Prognozujący, których egzamin się nie odbył, mają „BRAK POMIARU” — nigdy PASS.
@@ -39,7 +40,7 @@ import {
   type StabilityResult,
 } from '../src/specialist-exam.js';
 import { EXAM_FIRST_YEAR, EXAM_LAST_YEAR } from '../src/specialist-memory.js';
-import { BENCHMARKS, METHOD_LABEL, MEMORY_LABEL, TEAM, benchmarkFor, type ForecasterDef } from '../src/specialists.js';
+import { BENCHMARKS, METHOD_LABEL, MEMORY_LABEL, TEAM, VARIANTS, benchmarkFor, variantOptions, type ForecasterDef } from '../src/specialists.js';
 import { mean, movingBlockBootstrap } from '../src/stats.js';
 import { loadPriceFile } from '../src/universe.js';
 
@@ -153,7 +154,12 @@ async function main() {
   } catch {
     // brak uprawnień do zmiany priorytetu nie zmienia wyników
   }
-  const dir = universeDir('specialists');
+  const variantIdx = process.argv.indexOf('--variant');
+  const variant = variantIdx >= 0 ? (process.argv[variantIdx + 1] ?? null) : null;
+  if (variant) variantOptions(variant);
+  const dir = variant ? universeDir('specialists', variant) : universeDir('specialists');
+  const reportFile = variant ? `artifacts/universe/${variant}/specialists-exam.md` : SPECIALISTS_EXAM_REPORT;
+  const jsonFile = variant ? `artifacts/universe/${variant}/specialists-exam.json` : SPECIALISTS_EXAM_JSON;
   for (const file of [SPY_JSON, VTI_JSON]) {
     if (!fs.existsSync(file)) {
       console.error(`Brak ${file} (potrzebny do K2). Uruchom: npm run download:market`);
@@ -307,7 +313,8 @@ async function main() {
   // ── Raport ──
   const L: string[] = [];
   const now = new Date().toISOString();
-  L.push('# Egzamin specjalistów (krok d)', '');
+  L.push(variant ? `# Egzamin specjalistów — wariant ${variant}` : '# Egzamin specjalistów (krok d)', '');
+  if (variant) L.push(`Wariant: ${VARIANTS[variant].description}. Reguły wariantu: \`docs/ulepszenia.md\`.`, '');
   L.push(`Wygenerowano: ${now}. Projekt i progi: \`docs/specjalisci.md\` (zapisane przed treningiem).`, '');
   L.push(
     `Egzamin kroczący: trening co roku 15 lutego ${EXAM_FIRST_YEAR}–${EXAM_LAST_YEAR}, ocena decyzji do następnego lutego. ` +
@@ -500,13 +507,14 @@ async function main() {
   L.push('- Panel zaczyna się w 2010 r., więc modele dla dłuższych horyzontów powstają dopiero w późniejszych latach egzaminu, a pamięć 8 lat i „cała historia” długo widzą to samo.');
   L.push('- Ostateczny sprawdzian to sejf 2023–2025 (limit 3 użyć), którego ten raport nie dotyka.', '');
 
-  fs.mkdirSync('artifacts/universe', { recursive: true });
-  fs.writeFileSync(SPECIALISTS_EXAM_REPORT, L.join('\n'));
+  fs.mkdirSync(variant ? `artifacts/universe/${variant}` : 'artifacts/universe', { recursive: true });
+  fs.writeFileSync(reportFile, L.join('\n'));
   fs.writeFileSync(
-    SPECIALISTS_EXAM_JSON,
+    jsonFile,
     JSON.stringify(
       {
         generatedAt: now,
+        variant,
         results: results.map((r) => ({
           id: r.def.id,
           name: r.def.name,
@@ -532,7 +540,7 @@ async function main() {
       1
     )
   );
-  console.error(`Zapisano ${SPECIALISTS_EXAM_REPORT} i ${SPECIALISTS_EXAM_JSON}.`);
+  console.error(`Zapisano ${reportFile} i ${jsonFile}.`);
   for (const r of results) {
     console.error(`  ${r.def.name}: ${r.available ? `K1 ${r.k1}, K2 ${r.k2?.status}, K6 ${r.k6?.status}, bramka ${r.gateStatus}, głos ${r.vote ? 'tak' : 'nie'}` : 'brak wyników'}`);
   }

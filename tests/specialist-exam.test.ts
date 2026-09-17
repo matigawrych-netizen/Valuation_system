@@ -17,7 +17,7 @@ import {
   type BuyRecord,
   type ExamRecord,
 } from '../src/specialist-exam.js';
-import { trainBenchmark, trainSimple, forecastAt } from '../src/specialists.js';
+import { forecastAt, trainBenchmark, trainForecaster, trainSimple, variantOptions, volatilityBands, TEAM } from '../src/specialists.js';
 import { mulberry32, movingBlockBootstrap } from '../src/stats.js';
 import { row } from './specialist-fixtures.js';
 
@@ -296,5 +296,51 @@ describe('model prosty specjalisty', () => {
     if (!none.ok || !typical.ok) throw new Error('brak modelu');
     expect(forecastAt(none.forecaster, rows[0])!.median).toBe(0);
     expect(forecastAt(typical.forecaster, rows[0])!.median).toBeCloseTo(typical.forecaster.errors.q50, 12);
+  });
+});
+
+describe('U1b: pas zależny od zmienności', () => {
+  function panel(n: number) {
+    const rnd = mulberry32(5);
+    return Array.from({ length: n }, (_, i) => {
+      const volatility1y = 0.1 + (i % 10) * 0.08; // 0,10 … 0,82
+      const r = row({ cik: String(i), volatility1y, revenueTTM_3y: 25_000 / 1.331, price: 50 });
+      for (const h of HORIZONS) {
+        // błąd proporcjonalny do zmienności
+        const shock = (rnd() - 0.5) * 4 * volatility1y;
+        r.fwd[h] = { price: 50 * Math.exp(shock), totalRatio: null, revenueTTM: 30_000, netIncomeTTM: null, shares: 1000 };
+      }
+      return r;
+    });
+  }
+
+  it('spółki zmienne dostają szerszy pas, mediana bez zmian', () => {
+    const rows = panel(2000);
+    const bands = volatilityBands(rows, 1, () => 0)!;
+    expect(bands.bounds).toHaveLength(4);
+    expect(bands.n.reduce((a, b) => a + b, 0)).toBe(2000);
+    expect(bands.q90[4] - bands.q10[4]).toBeGreaterThan(3 * (bands.q90[0] - bands.q10[0]));
+
+    const split = { all: rows, train: rows, validation: [] };
+    const base = trainForecaster(TEAM.find((d) => d.id === 'weteran')!, split, 1, '2018-02-15');
+    const u1 = trainForecaster(TEAM.find((d) => d.id === 'weteran')!, split, 1, '2018-02-15', variantOptions('u1'));
+    if (!base.ok || !u1.ok) throw new Error('brak modelu');
+    const calm = rows.find((r) => r.volatility1y === 0.1)!;
+    const wild = rows.find((r) => Math.abs(r.volatility1y! - 0.82) < 1e-9)!;
+    const fb = forecastAt(base.forecaster, calm)!;
+    const fc = forecastAt(u1.forecaster, calm)!;
+    const fw = forecastAt(u1.forecaster, wild)!;
+    expect(fc.median).toBeCloseTo(fb.median, 12);
+    expect(fc.q90 - fc.q10).toBeLessThan(fb.q90 - fb.q10);
+    expect(fw.q90 - fw.q10).toBeGreaterThan(fb.q90 - fb.q10);
+  });
+
+  it('bez zmienności brak prognozy, a za mało błędów w grupie = brak pasa', () => {
+    const rows = panel(2000);
+    const u1 = trainForecaster(TEAM.find((d) => d.id === 'weteran')!, { all: rows, train: rows, validation: [] }, 1, '2018-02-15', variantOptions('u1'));
+    if (!u1.ok) throw new Error('brak modelu');
+    expect(forecastAt(u1.forecaster, { ...rows[0], volatility1y: null })).toBeNull();
+    expect(volatilityBands(rows.slice(0, 400), 1, () => 0)).toBeNull();
+    expect(() => variantOptions('nieznany')).toThrow(/Nieznany wariant/);
   });
 });

@@ -8,6 +8,7 @@
  * Mediana = surowa prognoza + 50. centyl błędów, pas 80% = surowa prognoza + 10. i 90. centyl.
  * Jedna metoda pasa dla wszystkich; wyjątek to „cena się nie zmieni”, którego mediana z definicji wynosi 0.
  */
+import { GROUP_COUNT, groupOf } from './band-groups.js';
 import { cagr, type Horizon } from './facts-panel.js';
 import { fitLinear, growthObservations, reversionObservations, shareDriftFact } from './facts.js';
 import { GBM_PARAMS, explainGbm, predictGbm, trainGbm } from './gbm.js';
@@ -100,6 +101,36 @@ export interface HorizonForecaster {
   info: Record<string, number | string>;
   /** Cechy, które najbardziej przesunęły prognozę (drzewa); model prosty i sieć nie mają. */
   explain?: (r: SpecialistRow) => string[];
+  /** Wariant U1b: 10. i 90. centyl błędów osobno w grupach zmienności pamięci. */
+  volatilityBands?: VolatilityBands;
+}
+
+export interface VolatilityBands {
+  /** Granice grup zmienności (kwintyle w pamięci), rosnąco. */
+  bounds: number[];
+  q10: number[];
+  q90: number[];
+  n: number[];
+}
+
+// ── Warianty ulepszeń (docs/ulepszenia.md) ──
+
+export interface VariantOptions {
+  bands: 'global' | 'volatility';
+}
+
+export const BASE_VARIANT: VariantOptions = { bands: 'global' };
+
+export const VARIANTS: Record<string, VariantOptions & { description: string }> = {
+  u1: { bands: 'volatility', description: 'pas 80% zależny od zmienności kursu (U1b)' },
+};
+
+/** Ustawienia wariantu; brak nazwy = pierwszy egzamin. Nieznany wariant to błąd. */
+export function variantOptions(name: string | null): VariantOptions {
+  if (name == null) return BASE_VARIANT;
+  const v = VARIANTS[name];
+  if (!v) throw new Error(`Nieznany wariant „${name}”. Dostępne: ${Object.keys(VARIANTS).join(', ')}.`);
+  return v;
 }
 
 export type TrainOutcome = { ok: true; forecaster: HorizonForecaster } | { ok: false; reason: string };
@@ -134,10 +165,42 @@ export interface Forecast {
 export function forecastAt(f: HorizonForecaster, r: SpecialistRow, price = r.price): Forecast | null {
   const raw = f.raw(r, price);
   if (raw == null || !Number.isFinite(raw)) return null;
+  let q10 = f.errors.q10;
+  let q90 = f.errors.q90;
+  if (f.volatilityBands) {
+    if (r.volatility1y == null) return null;
+    const g = groupOf(r.volatility1y, f.volatilityBands.bounds) - 1;
+    q10 = f.volatilityBands.q10[g];
+    q90 = f.volatilityBands.q90[g];
+  }
   return {
     median: raw + (f.shiftMedian ? f.errors.q50 : 0),
-    q10: raw + f.errors.q10,
-    q90: raw + f.errors.q90,
+    q10: raw + q10,
+    q90: raw + q90,
+  };
+}
+
+/**
+ * U1b: centyle 10 i 90 błędów w 5 grupach zmienności pamięci. Null, gdy którakolwiek grupa ma mniej niż MIN_ERRORS błędów.
+ */
+export function volatilityBands(rows: SpecialistRow[], h: Horizon, raw: HorizonForecaster['raw']): VolatilityBands | null {
+  const items: { vol: number; err: number }[] = [];
+  for (const r of rows) {
+    const y = targetLog(r, h);
+    const p = raw(r, r.price);
+    if (y != null && p != null && Number.isFinite(p) && r.volatility1y != null) items.push({ vol: r.volatility1y, err: y - p });
+  }
+  if (items.length < GROUP_COUNT * MIN_ERRORS) return null;
+  const vols = items.map((x) => x.vol).sort((a, b) => a - b);
+  const bounds = Array.from({ length: GROUP_COUNT - 1 }, (_, k) => quantile(vols, (k + 1) / GROUP_COUNT));
+  const groups: number[][] = Array.from({ length: GROUP_COUNT }, () => []);
+  for (const x of items) groups[groupOf(x.vol, bounds) - 1].push(x.err);
+  if (groups.some((g) => g.length < MIN_ERRORS)) return null;
+  return {
+    bounds,
+    q10: groups.map((g) => quantile(g, 0.1)),
+    q90: groups.map((g) => quantile(g, 0.9)),
+    n: groups.map((g) => g.length),
   };
 }
 
@@ -297,9 +360,24 @@ export function trainNn(split: MemorySplit<SpecialistRow>, h: Horizon, seed: num
 }
 
 /** Trening jednego prognozującego dla jednego horyzontu w dniu treningu. */
-export function trainForecaster(def: ForecasterDef, split: MemorySplit<SpecialistRow>, h: Horizon, cutoff: string): TrainOutcome {
-  if (def.role === 'benchmark') return trainBenchmark(split, h, def.benchmark!);
-  if (def.method === 'simple') return trainSimple(split, h, 'B');
-  if (def.method === 'trees') return trainTrees(split, h);
-  return trainNn(split, h, seedFor(def.id, cutoff, h));
+export function trainForecaster(
+  def: ForecasterDef,
+  split: MemorySplit<SpecialistRow>,
+  h: Horizon,
+  cutoff: string,
+  options: VariantOptions = BASE_VARIANT
+): TrainOutcome {
+  const outcome =
+    def.role === 'benchmark'
+      ? trainBenchmark(split, h, def.benchmark!)
+      : def.method === 'simple'
+        ? trainSimple(split, h, 'B')
+        : def.method === 'trees'
+          ? trainTrees(split, h)
+          : trainNn(split, h, seedFor(def.id, cutoff, h));
+  if (!outcome.ok || options.bands === 'global') return outcome;
+  const bands = volatilityBands(split.all, h, outcome.forecaster.raw);
+  if (!bands) return { ok: false, reason: 'za mało błędów w grupach zmienności do wyznaczenia pasa' };
+  outcome.forecaster.volatilityBands = bands;
+  return outcome;
 }
