@@ -1,0 +1,1472 @@
+{
+ "generatedAt": "2026-09-17T16:29:11.921Z",
+ "variant": "u1",
+ "results": [
+  {
+   "id": "reporter",
+   "name": "Reporter",
+   "method": "simple",
+   "memory": 4,
+   "available": true,
+   "k1": "PASS",
+   "coverage": {
+    "1": {
+     "coverage": 0.7761980234943129,
+     "n": 21452,
+     "quarters": 24,
+     "lo": 0.7411260212124278,
+     "hi": 0.8082701805036985,
+     "status": "PASS"
+    },
+    "2": {
+     "coverage": 0.7973353349596547,
+     "n": 21316,
+     "quarters": 24,
+     "lo": 0.7659829208344396,
+     "hi": 0.8270068010678168,
+     "status": "PASS"
+    },
+    "3": {
+     "coverage": 0.8052268244575936,
+     "n": 18252,
+     "quarters": 20,
+     "lo": 0.7641690135357283,
+     "hi": 0.8403938623258774,
+     "status": "PASS"
+    },
+    "4": {
+     "coverage": 0.8216872317596566,
+     "n": 14912,
+     "quarters": 16,
+     "lo": 0.8053304402200064,
+     "hi": 0.838999527472154,
+     "status": "PASS"
+    },
+    "5": {
+     "coverage": 0.8235985887887103,
+     "n": 10204,
+     "quarters": 11,
+     "lo": 0.8095530031850758,
+     "hi": 0.8382626855832451,
+     "status": "PASS"
+    }
+   },
+   "abstention": {
+    "1": {
+     "noModel": 0,
+     "abstained": 3900,
+     "total": 25352
+    },
+    "2": {
+     "noModel": 0,
+     "abstained": 4036,
+     "total": 25352
+    },
+    "3": {
+     "noModel": 3421,
+     "abstained": 3679,
+     "total": 25352
+    },
+    "4": {
+     "noModel": 7130,
+     "abstained": 3310,
+     "total": 25352
+    },
+    "5": {
+     "noModel": 11084,
+     "abstained": 2914,
+     "total": 25352
+    }
+   },
+   "k3": {
+    "status": [
+     "FAIL",
+     "FAIL",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {
+     "1": {
+      "rows": 21452,
+      "quarters": 24,
+      "lossA": 0.25448118210981585,
+      "lossB": 0.25446545949755844,
+      "dm": {
+       "n": 24,
+       "horizon": 4,
+       "meanLossDiff": -0.0008278287751528173,
+       "se": 0.0046607645934323505,
+       "dmStat": -0.15166897568675144,
+       "pValue": 0.8807705437947593,
+       "ci95": [
+        -0.009962927378280225,
+        0.008307269827974589
+       ]
+      },
+      "independentPeriods": 6
+     },
+     "2": {
+      "rows": 21316,
+      "quarters": 24,
+      "lossA": 0.34724614487429856,
+      "lossB": 0.35235360045119585,
+      "dm": {
+       "n": 24,
+       "horizon": 8,
+       "meanLossDiff": -0.006359744267760543,
+       "se": 0.0076395489948259945,
+       "dmStat": -0.5720646900677069,
+       "pValue": 0.5728276301303437,
+       "ci95": [
+        -0.02133326029761949,
+        0.008613771762098406
+       ]
+      },
+      "independentPeriods": 3
+     },
+     "3": {
+      "rows": 18252,
+      "quarters": 20,
+      "lossA": 0.41675402945079587,
+      "lossB": 0.42743496961313476,
+      "dm": null,
+      "independentPeriods": 1.6666666666666667
+     },
+     "4": {
+      "rows": 14912,
+      "quarters": 16,
+      "lossA": 0.4866433420737384,
+      "lossB": 0.5052571802978711,
+      "dm": null,
+      "independentPeriods": 1
+     },
+     "5": {
+      "rows": 10204,
+      "quarters": 11,
+      "lossA": 0.5900901911042887,
+      "lossB": 0.6199432146375207,
+      "dm": null,
+      "independentPeriods": 0.55
+     }
+    }
+   },
+   "k4": {
+    "status": [
+     "FAIL",
+     "FAIL",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {
+     "1": {
+      "rows": 21452,
+      "quarters": 24,
+      "lossA": 0.25448118210981585,
+      "lossB": 0.2502231586544298,
+      "dm": {
+       "n": 24,
+       "horizon": 4,
+       "meanLossDiff": 0.004464199111415139,
+       "se": 0.0023875064079371885,
+       "dmStat": 1.5966598858134868,
+       "pValue": 0.12399119451308138,
+       "ci95": [
+        -0.0002153134481417511,
+        0.009143711670972028
+       ]
+      },
+      "independentPeriods": 6
+     },
+     "2": {
+      "rows": 21316,
+      "quarters": 24,
+      "lossA": 0.34724614487429856,
+      "lossB": 0.3412487325456211,
+      "dm": {
+       "n": 24,
+       "horizon": 8,
+       "meanLossDiff": 0.007115486817081525,
+       "se": 0.006752886122394134,
+       "dmStat": 0.7240830856806014,
+       "pValue": 0.4763159792889191,
+       "ci95": [
+        -0.006120169982810978,
+        0.02035114361697403
+       ]
+      },
+      "independentPeriods": 3
+     },
+     "3": {
+      "rows": 18252,
+      "quarters": 20,
+      "lossA": 0.41675402945079587,
+      "lossB": 0.41485584994450697,
+      "dm": null,
+      "independentPeriods": 1.6666666666666667
+     },
+     "4": {
+      "rows": 14912,
+      "quarters": 16,
+      "lossA": 0.4866433420737384,
+      "lossB": 0.49582947862435706,
+      "dm": null,
+      "independentPeriods": 1
+     },
+     "5": {
+      "rows": 10204,
+      "quarters": 11,
+      "lossA": 0.5900901911042887,
+      "lossB": 0.6037463911471982,
+      "dm": null,
+      "independentPeriods": 0.55
+     }
+    }
+   },
+   "typicalReturn": {
+    "1": {
+     "rows": 21452,
+     "quarters": 24,
+     "lossA": 0.25448118210981585,
+     "lossB": 0.24886738016376148,
+     "dm": {
+      "n": 24,
+      "horizon": 4,
+      "meanLossDiff": 0.005875170149226685,
+      "se": 0.0014272420361579798,
+      "dmStat": 3.515088175631713,
+      "pValue": 0.001858414775134598,
+      "ci95": [
+       0.0030777757583570443,
+       0.008672564540096326
+      ]
+     },
+     "independentPeriods": 6
+    },
+    "2": {
+     "rows": 21316,
+     "quarters": 24,
+     "lossA": 0.34724614487429856,
+     "lossB": 0.34228182727146417,
+     "dm": {
+      "n": 24,
+      "horizon": 8,
+      "meanLossDiff": 0.006056222486516133,
+      "se": 0.00514574903493439,
+      "dmStat": 0.8087726015727732,
+      "pValue": 0.4269333012415526,
+      "ci95": [
+       -0.0040294456219552716,
+       0.016141890594987537
+      ]
+     },
+     "independentPeriods": 3
+    },
+    "3": {
+     "rows": 18252,
+     "quarters": 20,
+     "lossA": 0.41675402945079587,
+     "lossB": 0.4155904996541899,
+     "dm": null,
+     "independentPeriods": 1.6666666666666667
+    },
+    "4": {
+     "rows": 14912,
+     "quarters": 16,
+     "lossA": 0.4866433420737384,
+     "lossB": 0.49450353435043093,
+     "dm": null,
+     "independentPeriods": 1
+    },
+    "5": {
+     "rows": 10204,
+     "quarters": 11,
+     "lossA": 0.5900901911042887,
+     "lossB": 0.6010270953727751,
+     "dm": null,
+     "independentPeriods": 0.55
+    }
+   },
+   "gate": {
+    "status": "nie dotyczy",
+    "comparisons": {}
+   },
+   "k2": {
+    "orders": 11270,
+    "fills": 5703,
+    "trades": 5703,
+    "withoutOutcome": 0,
+    "quarters": 12,
+    "meanStock": 0.18569205255928783,
+    "meanMarket": 0.17190408861833428,
+    "noLimit": {
+     "trades": 11270,
+     "meanExcess": -0.003747020848358929
+    },
+    "totalMarket": {
+     "trades": 5703,
+     "meanExcess": 0.012700684600329172,
+     "lo": -0.09634715182334148,
+     "hi": 0.10505390391824065
+    },
+    "meanExcess": 0.013787963940960261,
+    "lo": -0.10966117903534071,
+    "hi": 0.11974501869158169,
+    "status": "FAIL"
+   },
+   "k6": {
+    "medianChange": 0.0692679844085109,
+    "pairs": 9623,
+    "byHorizon": [
+     0.09429950978628376,
+     0.0676763765249827,
+     0.0674714826278846,
+     0.062245437462516984,
+     0.07980528111642182
+    ],
+    "status": "PASS"
+   },
+   "vote": true,
+   "weight": 0.33331113816243074,
+   "buyPricesByYear": {
+    "2019": 3388,
+    "2020": 3574,
+    "2021": 4308
+   }
+  },
+  {
+   "id": "praktyk",
+   "name": "Praktyk",
+   "method": "simple",
+   "memory": 8,
+   "available": true,
+   "k1": "PASS",
+   "coverage": {
+    "1": {
+     "coverage": 0.7733513917429479,
+     "n": 21412,
+     "quarters": 24,
+     "lo": 0.7349635627422368,
+     "hi": 0.8071354438989711,
+     "status": "PASS"
+    },
+    "2": {
+     "coverage": 0.7979959542738863,
+     "n": 21257,
+     "quarters": 24,
+     "lo": 0.7672643480595819,
+     "hi": 0.827177418212819,
+     "status": "PASS"
+    },
+    "3": {
+     "coverage": 0.802109078925688,
+     "n": 18207,
+     "quarters": 20,
+     "lo": 0.7615269645468487,
+     "hi": 0.8373364341671587,
+     "status": "PASS"
+    },
+    "4": {
+     "coverage": 0.8187185508218718,
+     "n": 14905,
+     "quarters": 16,
+     "lo": 0.8012750923253259,
+     "hi": 0.836262961442254,
+     "status": "PASS"
+    },
+    "5": {
+     "coverage": 0.8232239098481137,
+     "n": 10205,
+     "quarters": 11,
+     "lo": 0.8091500251583158,
+     "hi": 0.8377378762512704,
+     "status": "PASS"
+    }
+   },
+   "abstention": {
+    "1": {
+     "noModel": 0,
+     "abstained": 3940,
+     "total": 25352
+    },
+    "2": {
+     "noModel": 0,
+     "abstained": 4095,
+     "total": 25352
+    },
+    "3": {
+     "noModel": 3421,
+     "abstained": 3724,
+     "total": 25352
+    },
+    "4": {
+     "noModel": 7130,
+     "abstained": 3317,
+     "total": 25352
+    },
+    "5": {
+     "noModel": 11084,
+     "abstained": 2916,
+     "total": 25352
+    }
+   },
+   "k3": {
+    "status": [
+     "FAIL",
+     "FAIL",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {
+     "1": {
+      "rows": 21412,
+      "quarters": 24,
+      "lossA": 0.2553362752227792,
+      "lossB": 0.25507749973171223,
+      "dm": {
+       "n": 24,
+       "horizon": 4,
+       "meanLossDiff": -0.0004792589935738352,
+       "se": 0.004918430655893232,
+       "dmStat": -0.08320647470160997,
+       "pValue": 0.934407307309213,
+       "ci95": [
+        -0.01011938307912457,
+        0.009160865091976899
+       ]
+      },
+      "independentPeriods": 6
+     },
+     "2": {
+      "rows": 21257,
+      "quarters": 24,
+      "lossA": 0.3446671856444629,
+      "lossB": 0.35001294686245465,
+      "dm": {
+       "n": 24,
+       "horizon": 8,
+       "meanLossDiff": -0.006481480229734465,
+       "se": 0.00762155444901664,
+       "dmStat": -0.5843914513833378,
+       "pValue": 0.5646457291650682,
+       "ci95": [
+        -0.02141972694980708,
+        0.008456766490338148
+       ]
+      },
+      "independentPeriods": 3
+     },
+     "3": {
+      "rows": 18207,
+      "quarters": 20,
+      "lossA": 0.41564595375313557,
+      "lossB": 0.4269697010680005,
+      "dm": null,
+      "independentPeriods": 1.6666666666666667
+     },
+     "4": {
+      "rows": 14905,
+      "quarters": 16,
+      "lossA": 0.48645855081733275,
+      "lossB": 0.5052138454945554,
+      "dm": null,
+      "independentPeriods": 1
+     },
+     "5": {
+      "rows": 10205,
+      "quarters": 11,
+      "lossA": 0.5898612107845387,
+      "lossB": 0.6198806315706803,
+      "dm": null,
+      "independentPeriods": 0.55
+     }
+    }
+   },
+   "k4": {
+    "status": [
+     "FAIL",
+     "FAIL",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {
+     "1": {
+      "rows": 21412,
+      "quarters": 24,
+      "lossA": 0.2553362752227792,
+      "lossB": 0.25153570739143066,
+      "dm": {
+       "n": 24,
+       "horizon": 4,
+       "meanLossDiff": 0.004201032728305823,
+       "se": 0.002968960332583861,
+       "dmStat": 1.208273006678811,
+       "pValue": 0.23921915885517753,
+       "ci95": [
+        -0.0016181295235585449,
+        0.010020194980170191
+       ]
+      },
+      "independentPeriods": 6
+     },
+     "2": {
+      "rows": 21257,
+      "quarters": 24,
+      "lossA": 0.3446671856444629,
+      "lossB": 0.3383483853384251,
+      "dm": {
+       "n": 24,
+       "horizon": 8,
+       "meanLossDiff": 0.007501118266172564,
+       "se": 0.006904833907693386,
+       "dmStat": 0.7465278029647108,
+       "pValue": 0.4629118489472779,
+       "ci95": [
+        -0.006032356192906471,
+        0.0210345927252516
+       ]
+      },
+      "independentPeriods": 3
+     },
+     "3": {
+      "rows": 18207,
+      "quarters": 20,
+      "lossA": 0.41564595375313557,
+      "lossB": 0.4143224509000152,
+      "dm": null,
+      "independentPeriods": 1.6666666666666667
+     },
+     "4": {
+      "rows": 14905,
+      "quarters": 16,
+      "lossA": 0.48645855081733275,
+      "lossB": 0.49666130850994183,
+      "dm": null,
+      "independentPeriods": 1
+     },
+     "5": {
+      "rows": 10205,
+      "quarters": 11,
+      "lossA": 0.5898612107845387,
+      "lossB": 0.6038945152470133,
+      "dm": null,
+      "independentPeriods": 0.55
+     }
+    }
+   },
+   "typicalReturn": {
+    "1": {
+     "rows": 21412,
+     "quarters": 24,
+     "lossA": 0.2553362752227792,
+     "lossB": 0.2502672611156455,
+     "dm": {
+      "n": 24,
+      "horizon": 4,
+      "meanLossDiff": 0.0055381049708025515,
+      "se": 0.0021161359684199947,
+      "dmStat": 2.2347606604449064,
+      "pValue": 0.03543726589527818,
+      "ci95": [
+       0.001390478472699362,
+       0.00968573146890574
+      ]
+     },
+     "independentPeriods": 6
+    },
+    "2": {
+     "rows": 21257,
+     "quarters": 24,
+     "lossA": 0.3446671856444629,
+     "lossB": 0.3395285819378126,
+     "dm": {
+      "n": 24,
+      "horizon": 8,
+      "meanLossDiff": 0.00629510730295034,
+      "se": 0.005362147060981384,
+      "dmStat": 0.8067474974570785,
+      "pValue": 0.428075871537029,
+      "ci95": [
+       -0.004214700936573173,
+       0.016804915542473854
+      ]
+     },
+     "independentPeriods": 3
+    },
+    "3": {
+     "rows": 18207,
+     "quarters": 20,
+     "lossA": 0.41564595375313557,
+     "lossB": 0.4153635332374328,
+     "dm": null,
+     "independentPeriods": 1.6666666666666667
+    },
+    "4": {
+     "rows": 14905,
+     "quarters": 16,
+     "lossA": 0.48645855081733275,
+     "lossB": 0.49511832820987256,
+     "dm": null,
+     "independentPeriods": 1
+    },
+    "5": {
+     "rows": 10205,
+     "quarters": 11,
+     "lossA": 0.5898612107845387,
+     "lossB": 0.6010543308331531,
+     "dm": null,
+     "independentPeriods": 0.55
+    }
+   },
+   "gate": {
+    "status": "nie dotyczy",
+    "comparisons": {}
+   },
+   "k2": {
+    "orders": 11292,
+    "fills": 5956,
+    "trades": 5956,
+    "withoutOutcome": 0,
+    "quarters": 12,
+    "meanStock": 0.1785759896743946,
+    "meanMarket": 0.16750163308227545,
+    "noLimit": {
+     "trades": 11292,
+     "meanExcess": -0.004207203513483002
+    },
+    "totalMarket": {
+     "trades": 5956,
+     "meanExcess": 0.01105371615591569,
+     "lo": -0.09413632336526956,
+     "hi": 0.10295623138887006
+    },
+    "meanExcess": 0.011074356592125939,
+    "lo": -0.10769282240235131,
+    "hi": 0.11626985416604788,
+    "status": "FAIL"
+   },
+   "k6": {
+    "medianChange": 0.06434781463978373,
+    "pairs": 9646,
+    "byHorizon": [
+     0.06794160063062576,
+     0.065469732808773,
+     0.06813996404417344,
+     0.06038519915425622,
+     0.07885367841681779
+    ],
+    "status": "PASS"
+   },
+   "vote": true,
+   "weight": 0.33334166081416566,
+   "buyPricesByYear": {
+    "2019": 3393,
+    "2020": 3576,
+    "2021": 4323
+   }
+  },
+  {
+   "id": "weteran",
+   "name": "Weteran",
+   "method": "simple",
+   "memory": "all",
+   "available": true,
+   "k1": "PASS",
+   "coverage": {
+    "1": {
+     "coverage": 0.7731178778255184,
+     "n": 21412,
+     "quarters": 24,
+     "lo": 0.7349612083607329,
+     "hi": 0.8066423906224255,
+     "status": "PASS"
+    },
+    "2": {
+     "coverage": 0.7979959542738863,
+     "n": 21257,
+     "quarters": 24,
+     "lo": 0.7672643480595819,
+     "hi": 0.827177418212819,
+     "status": "PASS"
+    },
+    "3": {
+     "coverage": 0.802109078925688,
+     "n": 18207,
+     "quarters": 20,
+     "lo": 0.7615269645468487,
+     "hi": 0.8373364341671587,
+     "status": "PASS"
+    },
+    "4": {
+     "coverage": 0.8187185508218718,
+     "n": 14905,
+     "quarters": 16,
+     "lo": 0.8012750923253259,
+     "hi": 0.836262961442254,
+     "status": "PASS"
+    },
+    "5": {
+     "coverage": 0.8232239098481137,
+     "n": 10205,
+     "quarters": 11,
+     "lo": 0.8091500251583158,
+     "hi": 0.8377378762512704,
+     "status": "PASS"
+    }
+   },
+   "abstention": {
+    "1": {
+     "noModel": 0,
+     "abstained": 3940,
+     "total": 25352
+    },
+    "2": {
+     "noModel": 0,
+     "abstained": 4095,
+     "total": 25352
+    },
+    "3": {
+     "noModel": 3421,
+     "abstained": 3724,
+     "total": 25352
+    },
+    "4": {
+     "noModel": 7130,
+     "abstained": 3317,
+     "total": 25352
+    },
+    "5": {
+     "noModel": 11084,
+     "abstained": 2916,
+     "total": 25352
+    }
+   },
+   "k3": {
+    "status": [
+     "FAIL",
+     "FAIL",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {
+     "1": {
+      "rows": 21412,
+      "quarters": 24,
+      "lossA": 0.25530732307261395,
+      "lossB": 0.25506482911294875,
+      "dm": {
+       "n": 24,
+       "horizon": 4,
+       "meanLossDiff": -0.0004929946405688226,
+       "se": 0.004918937741782201,
+       "dmStat": -0.08558236342508192,
+       "pValue": 0.9325390644277736,
+       "ci95": [
+        -0.010134112614461935,
+        0.009148123333324291
+       ]
+      },
+      "independentPeriods": 6
+     },
+     "2": {
+      "rows": 21257,
+      "quarters": 24,
+      "lossA": 0.3446607863404579,
+      "lossB": 0.3500082718582221,
+      "dm": {
+       "n": 24,
+       "horizon": 8,
+       "meanLossDiff": -0.006482787483264948,
+       "se": 0.007621306405631459,
+       "dmStat": -0.5845283411031075,
+       "pValue": 0.5645552059789347,
+       "ci95": [
+        -0.02142054803830261,
+        0.00845497307177271
+       ]
+      },
+      "independentPeriods": 3
+     },
+     "3": {
+      "rows": 18207,
+      "quarters": 20,
+      "lossA": 0.41564595375313557,
+      "lossB": 0.4269697010680005,
+      "dm": null,
+      "independentPeriods": 1.6666666666666667
+     },
+     "4": {
+      "rows": 14905,
+      "quarters": 16,
+      "lossA": 0.48645855081733275,
+      "lossB": 0.5052138454945554,
+      "dm": null,
+      "independentPeriods": 1
+     },
+     "5": {
+      "rows": 10205,
+      "quarters": 11,
+      "lossA": 0.5898612107845387,
+      "lossB": 0.6198806315706803,
+      "dm": null,
+      "independentPeriods": 0.55
+     }
+    }
+   },
+   "k4": {
+    "status": [
+     "FAIL",
+     "FAIL",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {
+     "1": {
+      "rows": 21412,
+      "quarters": 24,
+      "lossA": 0.25530732307261395,
+      "lossB": 0.2515250220715509,
+      "dm": {
+       "n": 24,
+       "horizon": 4,
+       "meanLossDiff": 0.004186034761969462,
+       "se": 0.00297508013095619,
+       "dmStat": 1.2014828234982233,
+       "pValue": 0.24179027475219783,
+       "ci95": [
+        -0.0016451222947046701,
+        0.010017191818643596
+       ]
+      },
+      "independentPeriods": 6
+     },
+     "2": {
+      "rows": 21257,
+      "quarters": 24,
+      "lossA": 0.3446607863404579,
+      "lossB": 0.33833809465062303,
+      "dm": {
+       "n": 24,
+       "horizon": 8,
+       "meanLossDiff": 0.007504197053025481,
+       "se": 0.006902713398700836,
+       "dmStat": 0.7470636375857689,
+       "pValue": 0.46259460725330226,
+       "ci95": [
+        -0.006025121208428157,
+        0.02103351531447912
+       ]
+      },
+      "independentPeriods": 3
+     },
+     "3": {
+      "rows": 18207,
+      "quarters": 20,
+      "lossA": 0.41564595375313557,
+      "lossB": 0.4143224509000152,
+      "dm": null,
+      "independentPeriods": 1.6666666666666667
+     },
+     "4": {
+      "rows": 14905,
+      "quarters": 16,
+      "lossA": 0.48645855081733275,
+      "lossB": 0.49666130850994183,
+      "dm": null,
+      "independentPeriods": 1
+     },
+     "5": {
+      "rows": 10205,
+      "quarters": 11,
+      "lossA": 0.5898612107845387,
+      "lossB": 0.6038945152470133,
+      "dm": null,
+      "independentPeriods": 0.55
+     }
+    }
+   },
+   "typicalReturn": {
+    "1": {
+     "rows": 21412,
+     "quarters": 24,
+     "lossA": 0.25530732307261395,
+     "lossB": 0.25025486484815535,
+     "dm": {
+      "n": 24,
+      "horizon": 4,
+      "meanLossDiff": 0.005522734920785737,
+      "se": 0.0021209469232178414,
+      "dmStat": 2.2235034191268466,
+      "pValue": 0.036286965254821224,
+      "ci95": [
+       0.001365678951278768,
+       0.009679790890292706
+      ]
+     },
+     "independentPeriods": 6
+    },
+    "2": {
+     "rows": 21257,
+     "quarters": 24,
+     "lossA": 0.3446607863404579,
+     "lossB": 0.33951971294947886,
+     "dm": {
+      "n": 24,
+      "horizon": 8,
+      "meanLossDiff": 0.00629716276663234,
+      "se": 0.005360623667066516,
+      "dmStat": 0.8072402529094789,
+      "pValue": 0.4277976827399339,
+      "ci95": [
+       -0.004209659620818031,
+       0.016803985154082712
+      ]
+     },
+     "independentPeriods": 3
+    },
+    "3": {
+     "rows": 18207,
+     "quarters": 20,
+     "lossA": 0.41564595375313557,
+     "lossB": 0.4153635332374328,
+     "dm": null,
+     "independentPeriods": 1.6666666666666667
+    },
+    "4": {
+     "rows": 14905,
+     "quarters": 16,
+     "lossA": 0.48645855081733275,
+     "lossB": 0.49511832820987256,
+     "dm": null,
+     "independentPeriods": 1
+    },
+    "5": {
+     "rows": 10205,
+     "quarters": 11,
+     "lossA": 0.5898612107845387,
+     "lossB": 0.6010543308331531,
+     "dm": null,
+     "independentPeriods": 0.55
+    }
+   },
+   "gate": {
+    "status": "nie dotyczy",
+    "comparisons": {}
+   },
+   "k2": {
+    "orders": 11292,
+    "fills": 5953,
+    "trades": 5953,
+    "withoutOutcome": 0,
+    "quarters": 12,
+    "meanStock": 0.17862520378938454,
+    "meanMarket": 0.16751761480757632,
+    "noLimit": {
+     "trades": 11292,
+     "meanExcess": -0.004207203513483002
+    },
+    "totalMarket": {
+     "trades": 5953,
+     "meanExcess": 0.011080982838469278,
+     "lo": -0.09428619223521825,
+     "hi": 0.10302729469064265
+    },
+    "meanExcess": 0.011107588981815035,
+    "lo": -0.10775804477861249,
+    "hi": 0.1163517896699785,
+    "status": "FAIL"
+   },
+   "k6": {
+    "medianChange": 0.06436302778411163,
+    "pairs": 9646,
+    "byHorizon": [
+     0.0681245910710021,
+     0.06551583959691043,
+     0.06813996404417344,
+     0.06038519915425622,
+     0.07885367841681779
+    ],
+    "status": "PASS"
+   },
+   "vote": true,
+   "weight": 0.33334720102340354,
+   "buyPricesByYear": {
+    "2019": 3393,
+    "2020": 3576,
+    "2021": 4323
+   }
+  },
+  {
+   "id": "tropiciel",
+   "name": "Tropiciel",
+   "method": "trees",
+   "memory": 4,
+   "available": false,
+   "k1": "BRAK POMIARU",
+   "coverage": {},
+   "abstention": {},
+   "k3": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "k4": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "typicalReturn": {},
+   "gate": {
+    "status": "BRAK POMIARU",
+    "comparisons": {}
+   },
+   "k2": null,
+   "k6": null,
+   "vote": false,
+   "weight": 0,
+   "buyPricesByYear": {}
+  },
+  {
+   "id": "detektyw",
+   "name": "Detektyw",
+   "method": "trees",
+   "memory": 8,
+   "available": false,
+   "k1": "BRAK POMIARU",
+   "coverage": {},
+   "abstention": {},
+   "k3": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "k4": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "typicalReturn": {},
+   "gate": {
+    "status": "BRAK POMIARU",
+    "comparisons": {}
+   },
+   "k2": null,
+   "k6": null,
+   "vote": false,
+   "weight": 0,
+   "buyPricesByYear": {}
+  },
+  {
+   "id": "archiwista",
+   "name": "Archiwista",
+   "method": "trees",
+   "memory": "all",
+   "available": false,
+   "k1": "BRAK POMIARU",
+   "coverage": {},
+   "abstention": {},
+   "k3": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "k4": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "typicalReturn": {},
+   "gate": {
+    "status": "BRAK POMIARU",
+    "comparisons": {}
+   },
+   "k2": null,
+   "k6": null,
+   "vote": false,
+   "weight": 0,
+   "buyPricesByYear": {}
+  },
+  {
+   "id": "radar",
+   "name": "Radar",
+   "method": "nn",
+   "memory": 4,
+   "available": false,
+   "k1": "BRAK POMIARU",
+   "coverage": {},
+   "abstention": {},
+   "k3": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "k4": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "typicalReturn": {},
+   "gate": {
+    "status": "BRAK POMIARU",
+    "comparisons": {}
+   },
+   "k2": null,
+   "k6": null,
+   "vote": false,
+   "weight": 0,
+   "buyPricesByYear": {}
+  },
+  {
+   "id": "sejsmograf",
+   "name": "Sejsmograf",
+   "method": "nn",
+   "memory": 8,
+   "available": false,
+   "k1": "BRAK POMIARU",
+   "coverage": {},
+   "abstention": {},
+   "k3": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "k4": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "typicalReturn": {},
+   "gate": {
+    "status": "BRAK POMIARU",
+    "comparisons": {}
+   },
+   "k2": null,
+   "k6": null,
+   "vote": false,
+   "weight": 0,
+   "buyPricesByYear": {}
+  },
+  {
+   "id": "kompas",
+   "name": "Kompas",
+   "method": "nn",
+   "memory": "all",
+   "available": false,
+   "k1": "BRAK POMIARU",
+   "coverage": {},
+   "abstention": {},
+   "k3": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "k4": {
+    "status": [
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU",
+     "BRAK POMIARU"
+    ],
+    "comparisons": {}
+   },
+   "typicalReturn": {},
+   "gate": {
+    "status": "BRAK POMIARU",
+    "comparisons": {}
+   },
+   "k2": null,
+   "k6": null,
+   "vote": false,
+   "weight": 0,
+   "buyPricesByYear": {}
+  }
+ ],
+ "diversity": [
+  {
+   "ids": [
+    "reporter",
+    "praktyk",
+    "weteran"
+   ],
+   "rows": 21390,
+   "corr": [
+    [
+     1,
+     0.9737332534919421,
+     0.9732557742138302
+    ],
+    [
+     0.9737332534919421,
+     1,
+     0.9999932891793663
+    ],
+    [
+     0.9732557742138302,
+     0.9999932891793663,
+     1
+    ]
+   ],
+   "meanPairwiseCorr": 0.9823274389617128,
+   "nEff": 1.011922170887335,
+   "mergePairs": [
+    [
+     "reporter",
+     "praktyk",
+     0.9737332534919421
+    ],
+    [
+     "reporter",
+     "weteran",
+     0.9732557742138302
+    ],
+    [
+     "praktyk",
+     "weteran",
+     0.9999932891793663
+    ]
+   ],
+   "meanPairwiseErrorCorr": 0.9995161470115463
+  },
+  {
+   "ids": [
+    "reporter",
+    "praktyk",
+    "weteran"
+   ],
+   "rows": 21247,
+   "corr": [
+    [
+     1,
+     0.995812745022072,
+     0.9958335034624208
+    ],
+    [
+     0.995812745022072,
+     1,
+     0.9999998538150846
+    ],
+    [
+     0.9958335034624208,
+     0.9999998538150846,
+     1
+    ]
+   ],
+   "meanPairwiseCorr": 0.9972153674331925,
+   "nEff": 1.001859874422463,
+   "mergePairs": [
+    [
+     "reporter",
+     "praktyk",
+     0.995812745022072
+    ],
+    [
+     "reporter",
+     "weteran",
+     0.9958335034624208
+    ],
+    [
+     "praktyk",
+     "weteran",
+     0.9999998538150846
+    ]
+   ],
+   "meanPairwiseErrorCorr": 0.9998721064350339
+  },
+  {
+   "ids": [
+    "reporter",
+    "praktyk",
+    "weteran"
+   ],
+   "rows": 18197,
+   "corr": [
+    [
+     1,
+     0.9990441278662695,
+     0.9990441278662695
+    ],
+    [
+     0.9990441278662695,
+     1,
+     1
+    ],
+    [
+     0.9990441278662695,
+     1,
+     1
+    ]
+   ],
+   "meanPairwiseCorr": 0.9993627519108464,
+   "nEff": 1.0004250126184215,
+   "mergePairs": [
+    [
+     "reporter",
+     "praktyk",
+     0.9990441278662695
+    ],
+    [
+     "reporter",
+     "weteran",
+     0.9990441278662695
+    ],
+    [
+     "praktyk",
+     "weteran",
+     1
+    ]
+   ],
+   "meanPairwiseErrorCorr": 0.9999710563040262
+  },
+  {
+   "ids": [
+    "reporter",
+    "praktyk",
+    "weteran"
+   ],
+   "rows": 14897,
+   "corr": [
+    [
+     1,
+     0.9983143211323827,
+     0.9983143211323827
+    ],
+    [
+     0.9983143211323827,
+     1,
+     1
+    ],
+    [
+     0.9983143211323827,
+     1,
+     1
+    ]
+   ],
+   "meanPairwiseCorr": 0.9988762140882551,
+   "nEff": 1.0007497523152227,
+   "mergePairs": [
+    [
+     "reporter",
+     "praktyk",
+     0.9983143211323827
+    ],
+    [
+     "reporter",
+     "weteran",
+     0.9983143211323827
+    ],
+    [
+     "praktyk",
+     "weteran",
+     1
+    ]
+   ],
+   "meanPairwiseErrorCorr": 0.999960705599244
+  },
+  {
+   "ids": [
+    "reporter",
+    "praktyk",
+    "weteran"
+   ],
+   "rows": 10201,
+   "corr": [
+    [
+     1,
+     0.9998448265523896,
+     0.9998448265523896
+    ],
+    [
+     0.9998448265523896,
+     1,
+     1
+    ],
+    [
+     0.9998448265523896,
+     1,
+     1
+    ]
+   ],
+   "meanPairwiseCorr": 0.9998965510349264,
+   "nEff": 1.0000689707333499,
+   "mergePairs": [
+    [
+     "reporter",
+     "praktyk",
+     0.9998448265523896
+    ],
+    [
+     "reporter",
+     "weteran",
+     0.9998448265523896
+    ],
+    [
+     "praktyk",
+     "weteran",
+     1
+    ]
+   ],
+   "meanPairwiseErrorCorr": 0.9999974418517387
+  }
+ ]
+}

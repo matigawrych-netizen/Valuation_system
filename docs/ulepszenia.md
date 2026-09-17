@@ -52,3 +52,34 @@ przypadków w raporcie.
 *Poprawka zostaje, gdy u Weterana:* pokrycie ogólne na każdym horyzoncie nadal mieści się w 72–88% **oraz** we wszystkich
 5 grupach zmienności pokrycie mieści się w 72–88% na każdym horyzoncie, na którym było mierzone. Inaczej raportujemy
 wynik i decyzja wraca do właściciela.
+
+### Wynik U1 i U1b (2026-09-17)
+
+Pełne tabele: `artifacts/universe/band-groups.md` (pierwszy egzamin), `artifacts/universe/u1/band-groups.md` i
+`artifacts/universe/u1/specialists-exam.md` (wariant u1).
+
+**U1 — próg przekroczony na 5 z 5 horyzontów.** Pas o jednej szerokości myli się w przeciwne strony (Weteran):
+
+| grupa zmienności | 1 r. | 2 r. | 3 r. | 4 r. | 5 r. |
+|---|---|---|---|---|---|
+| najspokojniejsze | 87,5% | 89,8% | 87,9% | 89,5% | 87,3% |
+| najbardziej zmienne | 52,7% | 54,8% | 56,1% | 60,6% | 59,9% |
+
+To samo dla wielkości (najmniejsze 62–68%, największe 80–83%) i sektorów (usługi 64–72%, energetyka komunalna 87–92%).
+
+**U1b — warunek utrzymania NIESPEŁNIONY, ale na granicy.** Po poprawce (Weteran):
+
+| | 1 r. | 2 r. | 3 r. | 4 r. | 5 r. |
+|---|---|---|---|---|---|
+| pokrycie ogólne (było) | 77,3% (72,3%) | 79,8% (74,9%) | 80,2% (74,7%) | 81,9% (75,6%) | 82,3% (73,7%) |
+| najspokojniejsze (było) | 79,7% (87,5%) | 82,0% (89,8%) | 80,8% (87,9%) | 85,3% (89,5%) | 87,0% (87,3%) |
+| najbardziej zmienne (było) | **69,8%** (52,7%) | **70,2%** (54,8%) | 73,7% (56,1%) | 74,5% (60,6%) | 73,3% (59,9%) |
+| strata kwantylowa (było) | 0,255 (0,261) | 0,345 (0,350) | 0,416 (0,422) | 0,486 (0,496) | 0,590 (0,600) |
+
+- Najbardziej zmienne spółki na 1 i 2 lata nadal nieznacznie poniżej 72% — dlatego warunek niespełniony.
+- Wszystkie grupy wielkości mieszczą się teraz w 72–88% (73,6–86,9%).
+- Sektory poza progiem: górnictwo i energia 1–2 lata (63–65%), usługi 1–2 lata (71%), energetyka komunalna 2 lata (88,6%).
+- K2 i K6 bez zmian co do wniosków (mediana i cena zakupu nie zmieniły się); K3 i K4 nadal niezdane — punkty odniesienia
+  dostały ten sam rodzaj pasa.
+
+Zgodnie z regułą decyzja o pozostawieniu U1b wraca do właściciela.
