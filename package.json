@@ -28,6 +28,7 @@
     "specialists:features": "tsx scripts/specialists-features.ts",
     "specialists:exam": "tsx scripts/specialists-exam.ts",
     "specialists:report": "tsx scripts/specialists-report.ts",
+    "specialists:band-groups": "tsx scripts/specialists-band-groups.ts",
     "train:default-model": "tsx scripts/train-default-model.ts",
     "dataset": "tsx scripts/generate-dataset.ts",
     "report:dataset": "tsx scripts/report-dataset.ts",
